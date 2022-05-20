@@ -1,0 +1,99 @@
+shader StaticVIOSO2D_TextureFX : FilterBase
+{
+    float4x4 matView;
+    float4 bBorder;
+    float4 blackBias;
+    float4 offsScale;
+    float4 mapSize;
+
+    float4 Filter(float4 tex0col)
+    {
+        float2 tx = streams.TexCoord.xy;// * mapSize.xy;
+        //tx.y = mapSize.y - tx.y;
+
+        float4 tex = Texture1.SampleLevel(Sampler0, tx, 0); 
+	    float4 blend = Texture2.SampleLevel(Sampler0, tx, 0); 
+	    float4 black = Texture3.SampleLevel(Sampler0, tx, 0) * blackBias.x;   
+        float4 vOut  = float4( 0,0,0,1 );
+        
+        if( 0.5 < blend.a ) // blend.a is 0 or 1, indicating valid warp
+        {
+            if( 0.5 < bBorder.x ) // border
+            {
+                tex.x *= 1.02;
+                tex.x -= 0.01;
+                tex.y *= 1.02;
+                tex.y -= 0.01;
+            }
+            if( 0.5 < bBorder.z ) // 3D
+            {
+                tex = mul( tex, matView );
+                tex.xy /= tex.w;
+                tex.x /= 2;
+                tex.y /= -2;
+                tex.xy += 0.5;
+            }
+            tex.xy =  ( tex.xy - offsScale.xy ) * offsScale.zw;// * ViewSize.xy;
+            //tex.y = ViewSize.y - tex.y;
+            
+            if( 0.5 < bBorder.w ) // bicubic
+            {
+                vOut = tex2DBC( Texture0, tex.xy );
+            }
+            else
+            {
+                vOut = tex2DLin( Texture0, tex.xy );
+            }
+            if( 0.5 < bBorder.y ) // blend
+               vOut.rgb *= pow( blend.rgb, 2.2 ); // try 1/2.4 to 2.4
+            if( 0.5 < blackBias.w ) // blacklevel
+            {
+                vOut += blackBias.y * black;// offset color to get min average black
+                vOut *= float4( 1,1,1,1 ) - blackBias.z * black; // scale down to avoid clipping 
+                vOut = max( vOut, black ); // do lower clamp to stay above common black, upper is done anyways
+            }
+            vOut.a = 1;
+        }
+        
+	    return vOut;
+    }
+
+    float4 tex2DLin(Texture2D texCnt, float2 vPos)
+    {
+        float2 t = floor( vPos - 0.5 ) + 0.5; // the nearest pixel
+        float2 w = vPos - t; // weight
+        float4 tl = texCnt.SampleLevel(Sampler0, t, 0);
+        float4 tr = texCnt.SampleLevel(Sampler0, float2(t.x + 1, t.y), 0);
+        float4 bl = texCnt.SampleLevel(Sampler0, float2(t.x, t.y + 1), 0);
+        float4 br = texCnt.SampleLevel(Sampler0, float2(t.x + 1, t.y + 1), 0);
+        return lerp( lerp( tl, tr, w.x ), lerp( bl,br,w.x), w.y);
+    }
+
+    float4 tex2DBC(Texture2D texCnt, float2 vPos)
+    {
+        float2 t = floor( vPos - 0.5 ) + 0.5; // the nearest pixel
+        float2 w0 = 1;
+        float2 w1 = vPos - t;
+        float2 w2 = w1 * w1;
+        float2 w3 = w2 * w1;
+
+        w0 = w2 - 0.5 * ( w3 + w1 );
+        w1 = 1.5 * w3 - 2.5 * w2 + 1.0;
+        w3 = 0.5 * ( w3 - w2 );
+        w2 = 1.0 - w0 - w1 - w3;
+
+        float2 s0 = w0 + w1;
+        float2 s1 = w2 + w3;
+        float2 f0 = w1 / s0;
+        float2 f1 = w3 / s1;
+
+        float2 t0 = t - 1 + f0;
+        float2 t1 = t + 1 + f1;
+
+        return
+            ( tex2DLin( texCnt, t0 ) * s0.x +
+              tex2DLin( texCnt, float2( t1.x, t0.y ) ) * s1.x ) * s0.y +
+            ( tex2DLin( texCnt, float2( t0.x, t1.y ) ) * s0.x +
+              tex2DLin( texCnt, t1 ) * s1.x ) * s1.y;
+    }
+};

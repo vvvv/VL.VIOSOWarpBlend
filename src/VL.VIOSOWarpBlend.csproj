@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
+    <BaseOutputPath>..\lib</BaseOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="bin\**" />
+    <EmbeddedResource Remove="bin\**" />
+    <None Remove="bin\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="VIOSOOld.cs" />
+    <Compile Remove="VIOSOWarpBlendPP.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Stride.Core.Mathematics" Version="4.0.1.1428" />
+    <PackageReference Include="Stride.Engine" Version="4.0.1.1428" />
+    <PackageReference Include="Stride.Graphics" Version="4.0.1.1428" />
+    <PackageReference Include="VL.Core" Version="2021.4.8" />
+    <PackageReference Include="VL.Stride.Runtime" Version="2021.4.8" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,346 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="MyRBDehz5BmLwPDGABp3KW" LanguageVersion="2021.4.8.947" Version="0.128">
+  <Patch Id="HwDsnHoEpmtMd0XjUheelZ">
+    <Canvas Id="OQEtU8KkpI6LeYJjHsJmMw" DefaultCategory="Main" CanvasType="FullCategory">
+      <!--
+
+    ************************ VIOSO ************************
+
+-->
+      <Node Name="VIOSO" Bounds="489,270" Id="PvjQ1f0ds9gM0SrgDHfCsA">
+        <p:NodeReference>
+          <Choice Kind="ClassDefinition" Name="Class" />
+          <FullNameCategoryReference ID="Primitive" />
+        </p:NodeReference>
+        <Patch Id="MVGW5VfMOYIMPhBmta8vQ6">
+          <Canvas Id="JLTvfF7kp3cOqeLEF31Tpd" CanvasType="Group">
+            <Node Bounds="265,88,153,138" Id="BD8OE0qqxPPLjokaHy2m0d">
+              <p:NodeReference>
+                <Choice Kind="ProcessStatefulRegion" Name="Cache" />
+                <FullNameCategoryReference ID="Primitive" />
+              </p:NodeReference>
+              <Pin Id="FaaqlWnbVghMv8RYpCGWKm" Name="Force" Kind="InputPin" />
+              <Pin Id="BJk1vQXWKRJMqhYsKTMkEP" Name="Dispose Cached Outputs" Kind="InputPin" DefaultValue="True" />
+              <Pin Id="FLW5dxvdCXAM8l4b4oh2C2" Name="Has Changed" Kind="OutputPin" />
+              <ControlPoint Id="OqrZ44nulVaMpxnH5YfgMJ" Bounds="279,219" Alignment="Bottom" />
+              <ControlPoint Id="RVkrvMQz92SM9YYaebpBA4" Bounds="351,95" Alignment="Top" />
+              <ControlPoint Id="Cm9V3YoKtZUNCgLjsozVL8" Bounds="394,94" Alignment="Top" />
+              <Patch Id="RyT3n9tGoecLuydE0fMIHZ" ManuallySortedPins="true">
+                <Patch Id="JV5iNeLFkG8PdTlEa6sHpc" Name="Create" ManuallySortedPins="true" />
+                <Patch Id="AQU1XLNbatdMOqdziDBtmH" Name="Then" ManuallySortedPins="true" />
+                <Node Bounds="277,111,46,26" Id="Ap4HO8WBhxTMFPrcGFNf72">
+                  <p:NodeReference LastCategoryFullName="VL.VIOSOWarpBlend.WarpBlendSDK" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="Create" />
+                    <CategoryReference Kind="AssemblyCategory" Name="WarpBlendSDK" NeedsToBeDirectParent="true" />
+                  </p:NodeReference>
+                  <Pin Id="NjvORfGYJZPMZ3g0ITc7ra" Name="Output" Kind="StateOutputPin" />
+                </Node>
+                <Node Bounds="277,176,68,26" Id="HTNkLpegRCIQDBeXI6cGVu">
+                  <p:NodeReference LastCategoryFullName="VL.VIOSOWarpBlend.WarpBlendSDK" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="LoadFile" />
+                  </p:NodeReference>
+                  <Pin Id="AZOYFYXxBZVNYvYh1WCGMn" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="DmEmQMwgp6RP1RAYkp3BNm" Name="Ini Filename" Kind="InputPin" />
+                  <Pin Id="L920KHYqy0bPYowNjlvHeq" Name="Channel Name" Kind="InputPin" />
+                  <Pin Id="KhgD3HjqbrsMjsxZzP6aXQ" Name="Output" Kind="StateOutputPin" />
+                </Node>
+                <Node Bounds="351,114,55,19" Id="FA7XDiWcZzPOyIb4gtT75r">
+                  <p:NodeReference LastCategoryFullName="IO.Path" LastSymbolSource="CoreLibBasics.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <CategoryReference Kind="RecordType" Name="Path" />
+                    <Choice Kind="OperationCallFlag" Name="ToString" />
+                  </p:NodeReference>
+                  <Pin Id="Bn6IDp9nPHiQb5PNisoU0T" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="BIZPigPynqmMxxpUBXoKyc" Name="Result" Kind="OutputPin" />
+                </Node>
+              </Patch>
+            </Node>
+            <ControlPoint Id="GktyOYgNtjDMbotElRcQ9F" Bounds="351,48" />
+            <Node Bounds="564,803,345,19" Id="Jj0VLa3TkgjMMyXWtJkA1c">
+              <p:NodeReference LastCategoryFullName="Stride.Cameras" LastSymbolSource="VL.Stride.Engine.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="ProcessAppFlag" Name="Camera" />
+              </p:NodeReference>
+              <Pin Id="N9Vv6jYAlW6OOYoHW34of5" Name="Initial Name" Kind="InputPin" />
+              <Pin Id="Rs3yOV3havvMvs4L8IBcK1" Name="Base Components" Kind="InputPin" />
+              <Pin Id="GZ8fV0JiR2qMgqaMIKDq0t" Name="Transformation" Kind="InputPin" />
+              <Pin Id="IfUDB34AmqrQLypESO3hGS" Name="Components" Kind="InputPin" />
+              <Pin Id="MRvU3254CzSOQMnG0I7lgd" Name="Children" Kind="InputPin" />
+              <Pin Id="HuDLHD8nJTfPclNVSV0Zxl" Name="Name" Kind="InputPin" />
+              <Pin Id="RGymexyJrWOMrcXPaESyau" Name="Use Custom View Matrix" Kind="InputPin" />
+              <Pin Id="Qz2utuW2bnzLnufKVBGRKJ" Name="View Matrix" Kind="InputPin" />
+              <Pin Id="OEzmg7KX7gbMXfJwyushNE" Name="Projection" Kind="InputPin" />
+              <Pin Id="RTp8sLvu2FWPkEdTLqPu8l" Name="Vertical Field Of View" Kind="InputPin" />
+              <Pin Id="RCRGLoOQwOGLYcyhfUakMz" Name="Orthographic Size" Kind="InputPin" />
+              <Pin Id="NGe9MOVfGpnOjPjmnAvblo" Name="Use Custom Aspect Ratio" Kind="InputPin" />
+              <Pin Id="CtFKDcdqJmoNtgJWXUb65n" Name="Aspect Ratio" Kind="InputPin" />
+              <Pin Id="NBG42QvZcl0OCkaNuglH3B" Name="Near Clip Plane" Kind="InputPin" />
+              <Pin Id="LDU9cUD94AaNGjJRY45aAE" Name="Far Clip Plane" Kind="InputPin" />
+              <Pin Id="KzjOD9PXpFUMOZADmHtNks" Name="Show Helper" Kind="InputPin" />
+              <Pin Id="MSmeJl95q1pOceLYsCLVrj" Name="Enabled" Kind="InputPin" />
+              <Pin Id="LCbxbtx2U9rNcDgUyMBhhR" Name="Projection Matrix" Kind="InputPin" />
+              <Pin Id="PR5S9ycrazdOWcSqBaCwCP" Name="Output" Kind="OutputPin" />
+              <Pin Id="I1CK1aHnzNhMcRIHRw3RMf" Name="Camera Component" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="VxFEGLCflBmLryTr2V2Sac" Bounds="571,862" />
+            <Node Bounds="123,970,225,19" Id="JhGJnw3XZpFMhweqZxh0do">
+              <p:NodeReference LastCategoryFullName="Stride.Textures" LastSymbolSource="VL.Stride.Rendering.EffectShaderNodes">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="ProcessNode" Name="StaticVIOSO2D" />
+              </p:NodeReference>
+              <Pin Id="EG1qzOmXKvYO7RR4WjmeOA" Name="Input" Kind="InputPin" />
+              <Pin Id="CtuX1n4oyvFO0CtLGbGOpi" Name="Input 2" Kind="InputPin" />
+              <Pin Id="UCC6ktb3puuOsU1aIwJDUs" Name="Input 3" Kind="InputPin" />
+              <Pin Id="FpcjcDdSE9XPj7gqVCDCWk" Name="Input 4" Kind="InputPin" />
+              <Pin Id="Gux4bKDKtAtLh5t51lktr4" Name="Mat View" Kind="InputPin" />
+              <Pin Id="H97lABAfudpMMDdxX96C1Z" Name="B Border" Kind="InputPin" />
+              <Pin Id="MNUPKYGwOAqOpIIghwnOOR" Name="Black Bias" Kind="InputPin" />
+              <Pin Id="TIDrY0vqphNPoBnqYAInIc" Name="Offs Scale" Kind="InputPin" />
+              <Pin Id="IfPHTdxmLKyLFmshqowmDD" Name="Map Size" Kind="InputPin" />
+              <Pin Id="CT52SMQyOv8OAPPxJYPfDD" Name="Control" Kind="InputPin" />
+              <Pin Id="RlHkbnIS9WoLaMNjvCTSoq" Name="Apply" Kind="InputPin" />
+              <Pin Id="Bpflqy8GRThM1fg9P6rpGU" Name="Output" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="99,1028,145,19" Id="DcSQ7WASkywMnnsTIuYgdm">
+              <p:NodeReference LastCategoryFullName="Stride.Rendering" LastSymbolSource="VL.Stride.Rendering.ShaderFX.vl">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="ProcessAppFlag" Name="FullscreenQuadRenderer" />
+              </p:NodeReference>
+              <Pin Id="KscanJZSttOO4yqtwTlSH2" Name="Transformation" Kind="InputPin" />
+              <Pin Id="B2BsRWgPrTAMt6ZHdMwRvf" Name="Texture" Kind="InputPin" />
+              <Pin Id="GZS97NXvZJbMAgEtYy54vX" Name="Sampler" Kind="InputPin" />
+              <Pin Id="VMB0yvvopWBQIt9kKQLAeu" Name="Sample Mode" Kind="InputPin" />
+              <Pin Id="CLsqOYyvOMFOMoNR6IfNx1" Name="Blend State" Kind="InputPin" />
+              <Pin Id="IFKioHpKuRVNusP4Sqzslz" Name="Color" Kind="InputPin" />
+              <Pin Id="CeG8mVWx3TfMXlmbjjb2Rp" Name="Rasterizer State" Kind="InputPin" />
+              <Pin Id="Ei2CkfqQW4YN6ECPb438pB" Name="Depth Stencil State" Kind="InputPin" />
+              <Pin Id="JRLOeLxO94ANAkJMuormpm" Name="Output" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="SBcY7mXnd4OOLVpmRLLd2D" Bounds="100,1077" />
+            <ControlPoint Id="NdwccGgzQmrQaJJ8ESiaNg" Bounds="77,905" />
+            <Pad Id="EcV3R8HzxBzOvsYISQSvTv" Comment="Offs Scale" Bounds="425,901,35,57" ShowValueBox="true" isIOBox="true" Value="0, 0, 1, 1">
+              <p:TypeAnnotation LastCategoryFullName="3D" LastSymbolSource="CoreLibBasics.vl">
+                <Choice Kind="TypeFlag" Name="Vector4" />
+              </p:TypeAnnotation>
+            </Pad>
+            <ControlPoint Id="JWqBD1lPyAJQU7yNlGmHVv" Bounds="422,46" />
+            <Node Bounds="275,275,68,26" Id="C56c98KPDiRQJFD8FQUNyB">
+              <p:NodeReference LastCategoryFullName="VL.VIOSOWarpBlend.WarpBlendSDK" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="WarperSet" />
+              </p:NodeReference>
+              <Pin Id="SUYP90KYXsnPXDzkqYeszk" Name="Input" Kind="StateInputPin" />
+              <Pin Id="VvBCCm7G1qIMWoRT43gAzE" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="By5V9z9G2FyLVJM9rVdSjm" Name="Warper Set" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="133,526,58,26" Id="D97t73WAjYoPS2IjHishZz">
+              <p:NodeReference LastCategoryFullName="VL.VIOSOWarpBlend.WarperSet" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="AssemblyCategory" Name="WarperSet" />
+                <Choice Kind="OperationCallFlag" Name="_texWarp" />
+              </p:NodeReference>
+              <Pin Id="AZWMriLGLllNpe3bx6IRte" Name="Input" Kind="StateInputPin" />
+              <Pin Id="JtOSvDlqzQ3P84RRAFqVPQ" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="UQATfekXvawMdazt4IkOBr" Name="_tex Warp" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="276,427,68,26" Id="Gg8M08ARShJMdzZrxqyc5v">
+              <p:NodeReference LastCategoryFullName="VL.VIOSOWarpBlend.WarpBlendSDK" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="AssemblyCategory" Name="WarpBlendSDK" />
+                <Choice Kind="OperationCallFlag" Name="Update" />
+              </p:NodeReference>
+              <Pin Id="LJmqjorirycOAso4oX0Pd5" Name="Input" Kind="StateInputPin" />
+              <Pin Id="FnCBcj5lzH9Np5Nh8h59Lz" Name="Eye" Kind="InputPin" />
+              <Pin Id="JIYyx5nCN4GLHsFfckK4lz" Name="Output" Kind="StateOutputPin" />
+            </Node>
+            <Node Bounds="412,493" Id="RtEZ0QBPab4NRnJGtg5LTz">
+              <p:NodeReference LastCategoryFullName="VL.VIOSOWarpBlend.WarpBlendSDK" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="ViewMatrix" />
+                <CategoryReference Kind="AssemblyCategory" Name="WarpBlendSDK" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="F47gNt4JjcbPt9k7szhLGU" Name="Input" Kind="StateInputPin" />
+              <Pin Id="FfARLRT9OPAPZFrAdOPyvh" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="VHjWtr4WTV4NYIgqLTmRJq" Name="View Matrix" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="413,560" Id="PxMb7lgYnLiNHpiMkiRQQ2">
+              <p:NodeReference LastCategoryFullName="VL.VIOSOWarpBlend.WarpBlendSDK" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="ProjectionMatrix" />
+                <CategoryReference Kind="AssemblyCategory" Name="WarpBlendSDK" NeedsToBeDirectParent="true" />
+              </p:NodeReference>
+              <Pin Id="NQEfOWMeZLuLV1DSbrCdfO" Name="Input" Kind="StateInputPin" />
+              <Pin Id="Urvow7O86waN7sRROjfZqA" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="BzS3objzOicNz45bkDtdGE" Name="Projection Matrix" Kind="OutputPin" />
+            </Node>
+            <Pad Id="VSxBfGABdJ1POIWN5VRqhN" Comment="View Matrix" Bounds="616,486,177,59" ShowValueBox="true" isIOBox="true" />
+            <Pad Id="EbE1iynCYPeOMNGU45HFTT" Comment="Projection Matrix" Bounds="622,587,119,61" ShowValueBox="true" isIOBox="true" />
+            <Node Bounds="242,711,57,26" Id="CxjWQp0M5XLQEsrVfGSrcU">
+              <p:NodeReference LastCategoryFullName="VL.VIOSOWarpBlend.WarperSet" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="AssemblyCategory" Name="WarperSet" />
+                <Choice Kind="OperationCallFlag" Name="_bBorder" />
+              </p:NodeReference>
+              <Pin Id="IkvN5rzvsauPaQK1zls8c2" Name="Input" Kind="StateInputPin" />
+              <Pin Id="KZh0Lc6TDD4OOKhAWu3i2v" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="AR5cOAKwCwBMR7h24QtTzg" Name="_b Border" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="241,767,63,26" Id="FNTuVW0hb6cLdn8VxIPTE9">
+              <p:NodeReference LastCategoryFullName="VL.VIOSOWarpBlend.WarperSet" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="AssemblyCategory" Name="WarperSet" />
+                <Choice Kind="OperationCallFlag" Name="_blackBias" />
+              </p:NodeReference>
+              <Pin Id="HTgRyMBSXcfOftJWQiErmj" Name="Input" Kind="StateInputPin" />
+              <Pin Id="Eaq6i3YIK2mPcOcU7FQYK8" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="RFYSL3YVtxBOPBes6CWKF6" Name="_black Bias" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="241,819,52,26" Id="QBVFdGr5vPCNPn2DZHLWry">
+              <p:NodeReference LastCategoryFullName="VL.VIOSOWarpBlend.WarperSet" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="AssemblyCategory" Name="WarperSet" />
+                <Choice Kind="OperationCallFlag" Name="_size" />
+              </p:NodeReference>
+              <Pin Id="Uick3yjkt95QcHF22AZ4sv" Name="Input" Kind="StateInputPin" />
+              <Pin Id="DDvCtwHkKCVOcEyAsOXszT" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="QgyCirIOCU2Lxuo0iMdt4T" Name="_size" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="136,593,61,26" Id="CXfz6e3fMehPNgzsUwpQfj">
+              <p:NodeReference LastCategoryFullName="VL.VIOSOWarpBlend.WarperSet" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="AssemblyCategory" Name="WarperSet" />
+                <Choice Kind="OperationCallFlag" Name="_texBlend" />
+              </p:NodeReference>
+              <Pin Id="I5pcg2wB5p5QPkSHLMUMsL" Name="Input" Kind="StateInputPin" />
+              <Pin Id="OmCwVas6g9VMXuVtVZtmRK" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="Qn875WjHooBLdmSSuSVlTY" Name="_tex Blend" Kind="OutputPin" />
+            </Node>
+            <Node Bounds="139,662,59,26" Id="CEazw5FVzeyPV3T7Zl3H03">
+              <p:NodeReference LastCategoryFullName="VL.VIOSOWarpBlend.WarperSet" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="AssemblyCategory" Name="WarperSet" />
+                <Choice Kind="OperationCallFlag" Name="_texBlack" />
+              </p:NodeReference>
+              <Pin Id="E0AlWgWllWjNLAD1cHM59r" Name="Input" Kind="StateInputPin" />
+              <Pin Id="FUpSTV8y5hTNRjiioQtCXd" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="LpwjgQ5EnLQNgVHW1Gq7Cc" Name="_tex Black" Kind="OutputPin" />
+            </Node>
+            <Pad Id="PdQRhEMlHFeNpX5E1XjdCz" Comment="_black Bias" Bounds="325,820,35,57" ShowValueBox="true" isIOBox="true" />
+            <Pad Id="IL0SqQxysXKObHSb6J1MzZ" Comment="_size" Bounds="324,891,49,57" ShowValueBox="true" isIOBox="true" />
+            <Pad Id="DLYkg026n4TOJeymri9R02" Comment="_b Border" Bounds="319,744,35,57" ShowValueBox="true" isIOBox="true" />
+            <Node Bounds="271,510" Id="P0KIPZ1UoSDO8HYKMgYom5">
+              <p:NodeReference LastCategoryFullName="VL.VIOSOWarpBlend.WarpBlendSDK" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="Resolution" />
+              </p:NodeReference>
+              <Pin Id="QWtj6OIlJbJN6Ps623UXXQ" Name="Input" Kind="StateInputPin" />
+              <Pin Id="SY5AEqvRByBPGrmxoinV1n" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="LrcpHTThuW2NptltdwlTbE" Name="Resolution" Kind="OutputPin" />
+            </Node>
+            <ControlPoint Id="TGLXRXWChKvMktIgFRAjSS" Bounds="332,587" />
+            <ControlPoint Id="LnwKBJ9LU3PQPKLFuwinDY" Bounds="385,365" />
+            <Node Bounds="211,872,62,26" Id="EizXp3zQs52Ocj6wXrqBVx">
+              <p:NodeReference LastCategoryFullName="VL.VIOSOWarpBlend.WarperSet" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <CategoryReference Kind="AssemblyCategory" Name="WarperSet" />
+                <Choice Kind="OperationCallFlag" Name="_ppMatrix" />
+              </p:NodeReference>
+              <Pin Id="SM5JIiNjl87L5GsUaJ8L1i" Name="Input" Kind="StateInputPin" />
+              <Pin Id="MJ5tOyjxKwdNNsaFgRQJ2H" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="NAHkBWcSocxPK1VUtQE23c" Name="_pp Matrix" Kind="OutputPin" />
+            </Node>
+          </Canvas>
+          <ProcessDefinition Id="MB2taZyyHwjMvvF50k98CN" HasStateOut="true">
+            <Fragment Id="FTqlCpCTPXRN03pyc14MoN" Patch="S3FQPiHm4n3LL5ME9WWH0t" Enabled="true" />
+            <Fragment Id="ElBHukMwbyANlAWc41X3lP" Patch="SrcI3hIOACdQcktWkTNxRw" Enabled="true" />
+            <Fragment Id="ThMddgZ1zP3MSWO4WjDKt3" Patch="N6BQYb8dyEMMWdjJ90YZPg" />
+          </ProcessDefinition>
+          <Link Id="BIMxrJ0ybUtNtUDNliyjVc" Ids="NjvORfGYJZPMZ3g0ITc7ra,AZOYFYXxBZVNYvYh1WCGMn" />
+          <Link Id="EQwrKOzMd0mLQUkLC5AnsQ" Ids="KhgD3HjqbrsMjsxZzP6aXQ,OqrZ44nulVaMpxnH5YfgMJ" />
+          <Link Id="F7boaeUJ44eNgnIkSvYQIE" Ids="RVkrvMQz92SM9YYaebpBA4,Bn6IDp9nPHiQb5PNisoU0T" />
+          <Link Id="NRtpidNBIITLUq8NLBT6yC" Ids="GktyOYgNtjDMbotElRcQ9F,RVkrvMQz92SM9YYaebpBA4" />
+          <Link Id="ODvzxZLJNALLV2KE3buTWi" Ids="OLUsheRkkJUN1AcVdeenxp,GktyOYgNtjDMbotElRcQ9F" IsHidden="true" />
+          <Link Id="HDoJwtmGmbZOPlEtyUgfae" Ids="PR5S9ycrazdOWcSqBaCwCP,VxFEGLCflBmLryTr2V2Sac" />
+          <Link Id="CsmFARkyJx3OKI6mK3fMgj" Ids="VxFEGLCflBmLryTr2V2Sac,PtnOBchtP8bMWBKeUg7pcb" IsHidden="true" />
+          <Link Id="DLHlbPNAzqmOTOayxgQFuz" Ids="JRLOeLxO94ANAkJMuormpm,SBcY7mXnd4OOLVpmRLLd2D" />
+          <Link Id="HGH3nHj2JRmPvWSq1b6ENB" Ids="SBcY7mXnd4OOLVpmRLLd2D,ESdvt8Y88B8MCuEpeuiOWc" IsHidden="true" />
+          <Link Id="Ba45T19ry7dOi9wZ4WI4P1" Ids="NdwccGgzQmrQaJJ8ESiaNg,EG1qzOmXKvYO7RR4WjmeOA" />
+          <Link Id="TR7wOoh6hEJOLd3ZqeuMKW" Ids="Q1GCTfqHuFPLda7PBCNpPI,NdwccGgzQmrQaJJ8ESiaNg" IsHidden="true" />
+          <Link Id="CPf1NyuIHdHMzzWy6u1PRD" Ids="Bpflqy8GRThM1fg9P6rpGU,B2BsRWgPrTAMt6ZHdMwRvf" />
+          <Link Id="H1qZdpUk7K1OO7tQ1sHOjL" Ids="EcV3R8HzxBzOvsYISQSvTv,TIDrY0vqphNPoBnqYAInIc" />
+          <Link Id="Hc7DixRwyMtQZGZJDZly8A" Ids="JWqBD1lPyAJQU7yNlGmHVv,Cm9V3YoKtZUNCgLjsozVL8" />
+          <Link Id="RdzrtoZiDcwLfsN9TBIyCn" Ids="HThttxTe8auQcwfby4wDoS,JWqBD1lPyAJQU7yNlGmHVv" IsHidden="true" />
+          <Link Id="Udg2ACxwYfROHoc7wicFXd" Ids="OqrZ44nulVaMpxnH5YfgMJ,SUYP90KYXsnPXDzkqYeszk" />
+          <Link Id="P1N4b9Men0mLmeTrshLKuP" Ids="By5V9z9G2FyLVJM9rVdSjm,AZWMriLGLllNpe3bx6IRte" />
+          <Link Id="TDQi1kB8dgqPGYhTGA91N7" Ids="VvBCCm7G1qIMWoRT43gAzE,LJmqjorirycOAso4oX0Pd5" />
+          <Link Id="RiXrWDhGRvlP9ZmvgJ4PPQ" Ids="JIYyx5nCN4GLHsFfckK4lz,F47gNt4JjcbPt9k7szhLGU" />
+          <Link Id="Pt2pSfQv8HBMkEf2RJkgZm" Ids="FfARLRT9OPAPZFrAdOPyvh,NQEfOWMeZLuLV1DSbrCdfO" />
+          <Link Id="TlwM0TzPlBWME4LxYIE4M6" Ids="VHjWtr4WTV4NYIgqLTmRJq,VSxBfGABdJ1POIWN5VRqhN" />
+          <Link Id="BNzgJtOrmjLL95400YUUWJ" Ids="BzS3objzOicNz45bkDtdGE,EbE1iynCYPeOMNGU45HFTT" />
+          <Link Id="GZfbn6LxUDQQSJIbTiEjyr" Ids="VHjWtr4WTV4NYIgqLTmRJq,Qz2utuW2bnzLnufKVBGRKJ" />
+          <Link Id="AsfX2x3Z6knOOeqM0t8vPT" Ids="BzS3objzOicNz45bkDtdGE,LCbxbtx2U9rNcDgUyMBhhR" />
+          <Link Id="G0E8QEE7r0cOfmIpuikVRC" Ids="AR5cOAKwCwBMR7h24QtTzg,H97lABAfudpMMDdxX96C1Z" />
+          <Link Id="OO6LL7tZpC6OT4pY6Dg7Lp" Ids="KZh0Lc6TDD4OOKhAWu3i2v,HTgRyMBSXcfOftJWQiErmj" />
+          <Link Id="LK0Z3fptUOMPQJxqYLRQzX" Ids="RFYSL3YVtxBOPBes6CWKF6,MNUPKYGwOAqOpIIghwnOOR" />
+          <Link Id="UD80YY7qD5OOPuqTGdL5F0" Ids="Eaq6i3YIK2mPcOcU7FQYK8,Uick3yjkt95QcHF22AZ4sv" />
+          <Link Id="Mq9Ryb4HX1pOOpAxg7gVpp" Ids="JtOSvDlqzQ3P84RRAFqVPQ,I5pcg2wB5p5QPkSHLMUMsL" />
+          <Link Id="UfB0PVlBIgFMhblP6N1w16" Ids="OmCwVas6g9VMXuVtVZtmRK,E0AlWgWllWjNLAD1cHM59r" />
+          <Link Id="MsZtsAlr6MENo80JQyLNTn" Ids="QgyCirIOCU2Lxuo0iMdt4T,IfPHTdxmLKyLFmshqowmDD" />
+          <Link Id="JrJbxWlooz8Og1eJxgg2cy" Ids="UQATfekXvawMdazt4IkOBr,CtuX1n4oyvFO0CtLGbGOpi" />
+          <Link Id="UlbzZ6zyHIVMqaeCIYdAen" Ids="Qn875WjHooBLdmSSuSVlTY,UCC6ktb3puuOsU1aIwJDUs" />
+          <Link Id="Ob0hHQLpIvdMlIKBgETQEF" Ids="FUpSTV8y5hTNRjiioQtCXd,IkvN5rzvsauPaQK1zls8c2" />
+          <Link Id="D3Imk0QXVVQOvsm0rQgtD7" Ids="LpwjgQ5EnLQNgVHW1Gq7Cc,FpcjcDdSE9XPj7gqVCDCWk" />
+          <Link Id="TIDTcHFqm14LnAfbz9ahTs" Ids="RFYSL3YVtxBOPBes6CWKF6,PdQRhEMlHFeNpX5E1XjdCz" />
+          <Link Id="NMdM7AILiDdO6J7w6fLrZk" Ids="QgyCirIOCU2Lxuo0iMdt4T,IL0SqQxysXKObHSb6J1MzZ" />
+          <Link Id="GHUK6jhY2tSOvC5SzTKMjg" Ids="AR5cOAKwCwBMR7h24QtTzg,DLYkg026n4TOJeymri9R02" />
+          <Link Id="PQpbePln6RPOjA5Jqzu06b" Ids="Cm9V3YoKtZUNCgLjsozVL8,L920KHYqy0bPYowNjlvHeq" />
+          <Link Id="UQjiRNl9oGkMdxrIpZEEmy" Ids="BIZPigPynqmMxxpUBXoKyc,DmEmQMwgp6RP1RAYkp3BNm" />
+          <Link Id="BrOrovLMdcfPnNCN8Lkqsc" Ids="JIYyx5nCN4GLHsFfckK4lz,QWtj6OIlJbJN6Ps623UXXQ" />
+          <Link Id="EZdbcrLZ8NrQO8w6M23Hze" Ids="LrcpHTThuW2NptltdwlTbE,TGLXRXWChKvMktIgFRAjSS" />
+          <Link Id="KsB2s3oHKwaO8fJdOVSKeY" Ids="TGLXRXWChKvMktIgFRAjSS,B3KKws3nQNnOCOI9EnIUFV" IsHidden="true" />
+          <Link Id="Dlr81HYFvsnLa1Nommn1am" Ids="LnwKBJ9LU3PQPKLFuwinDY,FnCBcj5lzH9Np5Nh8h59Lz" />
+          <Link Id="CRDxGryWBE9MgFvAk5NlMx" Ids="P1orU9HVjATOOvhBCptAmi,LnwKBJ9LU3PQPKLFuwinDY" IsHidden="true" />
+          <Patch Id="S3FQPiHm4n3LL5ME9WWH0t" Name="Create" />
+          <Patch Id="SrcI3hIOACdQcktWkTNxRw" Name="Update" ManuallySortedPins="true">
+            <Pin Id="OLUsheRkkJUN1AcVdeenxp" Name="Filename" Kind="InputPin" Bounds="494,194" />
+            <Pin Id="HThttxTe8auQcwfby4wDoS" Name="Display Name" Kind="InputPin" Bounds="422,46" />
+            <Pin Id="P1orU9HVjATOOvhBCptAmi" Name="Eye" Kind="InputPin" Bounds="385,365" />
+            <Pin Id="B3KKws3nQNnOCOI9EnIUFV" Name="Resolution" Kind="OutputPin" Bounds="332,589" />
+            <Pin Id="PtnOBchtP8bMWBKeUg7pcb" Name="Camera" Kind="OutputPin" Bounds="820,773" />
+          </Patch>
+          <Patch Id="N6BQYb8dyEMMWdjJ90YZPg" Name="SetTexture">
+            <Pin Id="Q1GCTfqHuFPLda7PBCNpPI" Name="Input" Kind="InputPin" />
+            <Pin Id="ESdvt8Y88B8MCuEpeuiOWc" Name="Output" Kind="OutputPin" />
+          </Patch>
+          <Link Id="JgyouQ4IPRsOgFY0dmwcqQ" Ids="DDvCtwHkKCVOcEyAsOXszT,SM5JIiNjl87L5GsUaJ8L1i" />
+          <Link Id="JzUXQcJ3GaNPYuMZa6yokR" Ids="NAHkBWcSocxPK1VUtQE23c,Gux4bKDKtAtLh5t51lktr4" />
+        </Patch>
+      </Node>
+    </Canvas>
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="KwO97OLUrIUN7A5iGG7HLS">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <FullNameCategoryReference ID="Primitive" />
+      </p:NodeReference>
+      <Patch Id="EMQ33IbywhqMh0euoJcahx">
+        <Canvas Id="UJdnt5fLfz3OVbSCLTTZJW" CanvasType="Group" />
+        <Patch Id="HgDbsFeDAO8PLlpzzEnPfQ" Name="Create" />
+        <Patch Id="KZowgRSpoQMLQezy6ZYy0c" Name="Update" />
+        <ProcessDefinition Id="LxB4BWjZwjpLHj1dwsCQmF">
+          <Fragment Id="NMZnIW0BUUnQEyG2hHXnzy" Patch="HgDbsFeDAO8PLlpzzEnPfQ" Enabled="true" />
+          <Fragment Id="NExvfUbaRFmPYET9EKbZby" Patch="KZowgRSpoQMLQezy6ZYy0c" Enabled="true" />
+        </ProcessDefinition>
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="GzaUff0DP1pQb025GasXpY" Location="VL.CoreLib" Version="2021.4.8" />
+  <PlatformDependency Id="DNCtz5avvJSPm6qUWYcpkv" Location="./lib/Debug/netstandard2.0/VL.VIOSOWarpBlend.dll" />
+  <NugetDependency Id="Lux2phtNZqyMoaTG1bLOev" Location="VL.Stride" Version="2021.4.8" />
+</Document>

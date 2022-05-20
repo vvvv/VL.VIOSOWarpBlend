@@ -1,0 +1,7 @@
+bin/
+obj/
+/lib
+.vs/
+*.log
+*.bak
+.vl/
