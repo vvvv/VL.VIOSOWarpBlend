@@ -120,11 +120,6 @@
             </Node>
             <ControlPoint Id="SBcY7mXnd4OOLVpmRLLd2D" Bounds="100,1077" />
             <ControlPoint Id="NdwccGgzQmrQaJJ8ESiaNg" Bounds="77,905" />
-            <Pad Id="EcV3R8HzxBzOvsYISQSvTv" Comment="Offs Scale" Bounds="425,901,35,57" ShowValueBox="true" isIOBox="true" Value="0, 0, 1, 1">
-              <p:TypeAnnotation LastCategoryFullName="3D" LastSymbolSource="CoreLibBasics.vl">
-                <Choice Kind="TypeFlag" Name="Vector4" />
-              </p:TypeAnnotation>
-            </Pad>
             <ControlPoint Id="JWqBD1lPyAJQU7yNlGmHVv" Bounds="422,46" />
             <Node Bounds="275,275,68,26" Id="C56c98KPDiRQJFD8FQUNyB">
               <p:NodeReference LastCategoryFullName="VL.VIOSOWarpBlend.WarpBlendSDK" LastSymbolSource="VL.VIOSOWarpBlend.dll">
@@ -251,6 +246,15 @@
               <Pin Id="MJ5tOyjxKwdNNsaFgRQJ2H" Name="Output" Kind="StateOutputPin" />
               <Pin Id="NAHkBWcSocxPK1VUtQE23c" Name="_pp Matrix" Kind="OutputPin" />
             </Node>
+            <Node Bounds="300,644,68,26" Id="K58lgLQsUE6QDc3HjI0uaQ">
+              <p:NodeReference LastCategoryFullName="VL.VIOSOWarpBlend.WarpBlendSDK" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                <Choice Kind="OperationCallFlag" Name="OffScale" />
+              </p:NodeReference>
+              <Pin Id="LTnDCn55NI2L2uDz0tyUnM" Name="Input" Kind="StateInputPin" />
+              <Pin Id="IO3zw4PZxoxLrTZWLVFx4s" Name="Output" Kind="StateOutputPin" />
+              <Pin Id="CSO2neVGcwdMdYmS4nmgf5" Name="Off Scale" Kind="OutputPin" />
+            </Node>
           </Canvas>
           <ProcessDefinition Id="MB2taZyyHwjMvvF50k98CN" HasStateOut="true">
             <Fragment Id="FTqlCpCTPXRN03pyc14MoN" Patch="S3FQPiHm4n3LL5ME9WWH0t" Enabled="true" />
@@ -269,7 +273,6 @@
           <Link Id="Ba45T19ry7dOi9wZ4WI4P1" Ids="NdwccGgzQmrQaJJ8ESiaNg,EG1qzOmXKvYO7RR4WjmeOA" />
           <Link Id="TR7wOoh6hEJOLd3ZqeuMKW" Ids="Q1GCTfqHuFPLda7PBCNpPI,NdwccGgzQmrQaJJ8ESiaNg" IsHidden="true" />
           <Link Id="CPf1NyuIHdHMzzWy6u1PRD" Ids="Bpflqy8GRThM1fg9P6rpGU,B2BsRWgPrTAMt6ZHdMwRvf" />
-          <Link Id="H1qZdpUk7K1OO7tQ1sHOjL" Ids="EcV3R8HzxBzOvsYISQSvTv,TIDrY0vqphNPoBnqYAInIc" />
           <Link Id="Hc7DixRwyMtQZGZJDZly8A" Ids="JWqBD1lPyAJQU7yNlGmHVv,Cm9V3YoKtZUNCgLjsozVL8" />
           <Link Id="RdzrtoZiDcwLfsN9TBIyCn" Ids="HThttxTe8auQcwfby4wDoS,JWqBD1lPyAJQU7yNlGmHVv" IsHidden="true" />
           <Link Id="Udg2ACxwYfROHoc7wicFXd" Ids="OqrZ44nulVaMpxnH5YfgMJ,SUYP90KYXsnPXDzkqYeszk" />
@@ -316,6 +319,8 @@
           </Patch>
           <Link Id="JgyouQ4IPRsOgFY0dmwcqQ" Ids="DDvCtwHkKCVOcEyAsOXszT,SM5JIiNjl87L5GsUaJ8L1i" />
           <Link Id="JzUXQcJ3GaNPYuMZa6yokR" Ids="NAHkBWcSocxPK1VUtQE23c,Gux4bKDKtAtLh5t51lktr4" />
+          <Link Id="LZRC177jdmuP4bIuvppiEH" Ids="SY5AEqvRByBPGrmxoinV1n,LTnDCn55NI2L2uDz0tyUnM" />
+          <Link Id="LGZSW6TEy6gNGYm2tjAp3a" Ids="CSO2neVGcwdMdYmS4nmgf5,TIDrY0vqphNPoBnqYAInIc" />
         </Patch>
       </Node>
     </Canvas>
