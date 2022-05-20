@@ -265,21 +265,22 @@ namespace VL.VIOSOWarpBlend
                     WarperSet._ppMatrix = mVP; // update matrix for post process call later
 
                     // manipulate actual camera settings
+                    //////Vector3 p = mV.GetColumn(3);
+                    //mV.Transpose();
+                    //////Quaternion q = mV.rotation;
+                    //mV.Decompose(out var scale, out Quaternion rotation, out var translation);
+                    ////Quaternion q = Quaternion.Inverse(mV.rotation);
+                    //var q = Quaternion.Invert(rotation);
+                    ////cam.transform.localRotation = s._orig_rot * q;
+                    //var localRot = WarperSet._orig_rot * q;
                     ////Vector3 p = mV.GetColumn(3);
-                    mV.Transpose();
-                    ////Quaternion q = mV.rotation;
-                    mV.Decompose(out var scale, out Quaternion rotation, out var translation);
-                    //Quaternion q = Quaternion.Inverse(mV.rotation);
-                    var q = Quaternion.Invert(rotation);
-                    //cam.transform.localRotation = s._orig_rot * q;
-                    var localRot = WarperSet._orig_rot * q;
-                    //Vector3 p = mV.GetColumn(3);
-                    //cam.transform.localPosition = s._orig_pos + p;
-                    var localPos = WarperSet._orig_pos + translation;
-                    var m = new Matrix();
-                    m.TranslationVector = localPos;
-                    var qm = Matrix.RotationQuaternion(localRot);
-                    ViewMatrix = m * qm;
+                    ////cam.transform.localPosition = s._orig_pos + p;
+                    //var localPos = WarperSet._orig_pos + translation;
+                    //var m = new Matrix();
+                    //m.TranslationVector = localPos;
+                    //var qm = Matrix.RotationQuaternion(localRot);
+                    //ViewMatrix = m * qm;
+                    ViewMatrix = mV;
                     
                     //FrustumPlanes pl = new FrustumPlanes();
                     //pl.left = -clip.l;
