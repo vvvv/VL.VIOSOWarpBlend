@@ -26,7 +26,7 @@
             <Pin Id="HYZNq8HVJcNMEpOcSRHeHN" Name="Resolution" Kind="OutputPin" />
             <Pin Id="E2eMT9Hiz1tLjaqB9smkNX" Name="Camera" Kind="OutputPin" />
           </Node>
-          <Pad Id="I9RIYdOlrjKLYMb6FZJCUG" Comment="Filename" Bounds="98,182,361,15" ShowValueBox="true" isIOBox="true" Value="SimpleDistortionMap\VIOSOWarpBlend.ini">
+          <Pad Id="I9RIYdOlrjKLYMb6FZJCUG" Comment="Filename" Bounds="98,182,361,15" ShowValueBox="true" isIOBox="true" Value="..\..\..\..\..\..\..\temp\vioso\Cylinder_5x1_Landscape\VIOSOWarpBlend.ini">
             <p:TypeAnnotation LastCategoryFullName="IO" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Path" />
             </p:TypeAnnotation>
@@ -330,6 +330,24 @@
             <Pin Id="VpdggWOAojVMCAjRubx5t7" Name="Radius" Kind="InputPin" />
             <Pin Id="E2qMbaE7Kd5LQ4Ggz6uWuz" Name="Output" Kind="OutputPin" />
           </Node>
+          <Pad Id="MdXYAQD0JO2L4EQDacL4fw" Bounds="87,116,338,28" ShowValueBox="true" isIOBox="true" Value="https://bitbucket.org/vioso/vioso_api/src/master/">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="AoXNABkJ46DNzGOKO19Npd" Bounds="91,94,117,19" ShowValueBox="true" isIOBox="true" Value="sample files from:">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
         </Canvas>
         <Patch Id="LAX25CSsW2ZOMutweiHzHe" Name="Create" />
         <Patch Id="HeBpuZMxWgaLzpxOcXdKtf" Name="Update" />

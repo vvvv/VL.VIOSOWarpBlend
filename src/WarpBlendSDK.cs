@@ -268,12 +268,19 @@ namespace VL.VIOSOWarpBlend
                     ////Vector3 p = mV.GetColumn(3);
                     mV.Transpose();
                     ////Quaternion q = mV.rotation;
+                    mV.Decompose(out var scale, out Quaternion rotation, out var translation);
                     //Quaternion q = Quaternion.Inverse(mV.rotation);
-                    //Vector3 p = mV.GetColumn(3);
+                    var q = Quaternion.Invert(rotation);
                     //cam.transform.localRotation = s._orig_rot * q;
+                    var localRot = WarperSet._orig_rot * q;
+                    //Vector3 p = mV.GetColumn(3);
                     //cam.transform.localPosition = s._orig_pos + p;
-                    ViewMatrix = mV;
-
+                    var localPos = WarperSet._orig_pos + translation;
+                    var m = new Matrix();
+                    m.TranslationVector = localPos;
+                    var qm = Matrix.RotationQuaternion(localRot);
+                    ViewMatrix = m * qm;
+                    
                     //FrustumPlanes pl = new FrustumPlanes();
                     //pl.left = -clip.l;
                     //pl.right = clip.r;

@@ -8,14 +8,15 @@ shader StaticVIOSO2D_TextureFX : FilterBase
 
     float4 Filter(float4 tex0col)
     {
-        float2 tx = streams.TexCoord.xy;// * mapSize.xy;
-        //tx.y = mapSize.y - tx.y;
+        float2 tx = streams.TexCoord.xy * mapSize.xy;
+        tx.y = mapSize.y - tx.y;
 
-        float4 tex = Texture1.SampleLevel(Sampler0, tx, 0); 
-	    float4 blend = Texture2.SampleLevel(Sampler0, tx, 0); 
-	    float4 black = Texture3.SampleLevel(Sampler0, tx, 0) * blackBias.x;   
-        float4 vOut  = float4( 0,0,0,1 );
-        
+        int3 uv = int3(tx, 0);
+        float4 tex = Texture1.Load(uv); 
+	    float4 blend = Texture2.Load(uv); 
+	    float4 black = Texture3.Load(uv) * blackBias.x;   
+        float4 vOut  = float4(0, 0, 0, 1);
+
         if( 0.5 < blend.a ) // blend.a is 0 or 1, indicating valid warp
         {
             if( 0.5 < bBorder.x ) // border
@@ -33,8 +34,8 @@ shader StaticVIOSO2D_TextureFX : FilterBase
                 tex.y /= -2;
                 tex.xy += 0.5;
             }
-            tex.xy =  ( tex.xy - offsScale.xy ) * offsScale.zw;// * ViewSize.xy;
-            //tex.y = ViewSize.y - tex.y;
+            tex.xy =  ( tex.xy - offsScale.xy ) * offsScale.zw * ViewSize.xy;
+            tex.y = ViewSize.y - tex.y;
             
             if( 0.5 < bBorder.w ) // bicubic
             {
@@ -62,10 +63,10 @@ shader StaticVIOSO2D_TextureFX : FilterBase
     {
         float2 t = floor( vPos - 0.5 ) + 0.5; // the nearest pixel
         float2 w = vPos - t; // weight
-        float4 tl = texCnt.SampleLevel(Sampler0, t, 0);
-        float4 tr = texCnt.SampleLevel(Sampler0, float2(t.x + 1, t.y), 0);
-        float4 bl = texCnt.SampleLevel(Sampler0, float2(t.x, t.y + 1), 0);
-        float4 br = texCnt.SampleLevel(Sampler0, float2(t.x + 1, t.y + 1), 0);
+        float4 tl = texCnt.Load(int3(t, 0));
+        float4 tr = texCnt.Load(int3(t.x + 1, t.y, 0));
+        float4 bl = texCnt.Load(int3(t.x, t.y + 1, 0));
+        float4 br = texCnt.Load(int3(t.x + 1, t.y + 1, 0));
         return lerp( lerp( tl, tr, w.x ), lerp( bl,br,w.x), w.y);
     }
 
