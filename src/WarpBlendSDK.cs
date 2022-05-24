@@ -315,9 +315,9 @@ namespace VL.VIOSOWarpBlend
 
         public void Dispose()
         {
-            WarperSet._texWarp.Dispose();
-            WarperSet._texBlack.Dispose();
-            WarperSet._texBlack.Dispose();
+            WarperSet._texWarp?.Dispose();
+            WarperSet._texBlack?.Dispose();
+            WarperSet._texBlack?.Dispose();
             WarperSet._warper = null;
         }
     }

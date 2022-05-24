@@ -9,7 +9,7 @@ shader StaticVIOSO2D_TextureFX : FilterBase
     float4 Filter(float4 tex0col)
     {
         float2 tx = streams.TexCoord.xy * mapSize.xy;
-        tx.y = mapSize.y - tx.y;
+        //tx.y = mapSize.y - tx.y;
 
         int3 uv = int3(tx, 0);
         float4 tex = Texture1.Load(uv); 
@@ -35,7 +35,7 @@ shader StaticVIOSO2D_TextureFX : FilterBase
                 tex.xy += 0.5;
             }
             tex.xy =  ( tex.xy - offsScale.xy ) * offsScale.zw * ViewSize.xy;
-            tex.y = ViewSize.y - tex.y;
+            //tex.y = ViewSize.y - tex.y;
             
             if( 0.5 < bBorder.w ) // bicubic
             {
