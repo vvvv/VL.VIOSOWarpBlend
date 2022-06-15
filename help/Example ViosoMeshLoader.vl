@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Document xmlns:p="property" Id="Oqy9P2EqCLpOMfrUVrRbC7" LanguageVersion="2021.4.9.982" Version="0.128">
   <Patch Id="UF0vrGRxqz7LMCD9AndiJ0">
-    <Canvas Id="R8qxmTwFimULjGm8M5aRQz" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory" />
+    <Canvas Id="R8qxmTwFimULjGm8M5aRQz" DefaultCategory="Main" CanvasType="FullCategory" />
     <!--
 
     ************************ Application ************************
@@ -14,7 +14,7 @@
       </p:NodeReference>
       <Patch Id="JqdeGvLPLyrQQE4uL8FX88">
         <Canvas Id="OxtvZ1FrBqELOz1Te8M3xy" CanvasType="Group">
-          <Pad Id="I9RIYdOlrjKLYMb6FZJCUG" Comment="Filename" Bounds="98,182,361,15" ShowValueBox="true" isIOBox="true" Value="..\..\..\..\..\..\..\temp\vioso\Curved_2x1_Landscape\VIOSOWarpBlend.ini">
+          <Pad Id="I9RIYdOlrjKLYMb6FZJCUG" Comment="Filename" Bounds="98,182,361,15" ShowValueBox="true" isIOBox="true" Value="..\..\..\..\..\..\..\temp\vioso\SimpleDistortionMap\VIOSOWarpBlend.ini">
             <p:TypeAnnotation LastCategoryFullName="IO" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Path" />
             </p:TypeAnnotation>
@@ -330,9 +330,9 @@
             <Pin Id="GRAL9uXvo0eMHzqdRSk160" Name="Already Loaded" Kind="OutputPin" />
           </Node>
           <Node Bounds="96,252,-23,19" Id="UwHUKXgvgGzLGGN1KEL53h">
-            <p:NodeReference LastCategoryFullName="Main" LastSymbolSource="VL.VIOSO.vl">
+            <p:NodeReference>
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="ProcessAppFlag" Name="VIOSO2" />
+              <Choice Kind="ProcessAppFlag" Name="VIOSO" />
             </p:NodeReference>
             <Pin Id="REXLDRjvcxhMDFXLGAiubL" Name="Filename" Kind="InputPin" />
             <Pin Id="GD6YvNAAMMKPyFF3KRMgDk" Name="Channel Name" Kind="InputPin" />
@@ -347,10 +347,10 @@
             </p:TypeAnnotation>
           </Pad>
           <Node Bounds="98,625,65,26" Id="T2aAdQf78YoOIXFfB3ijkD">
-            <p:NodeReference LastCategoryFullName="Main.VIOSO2" LastSymbolSource="VL.VIOSO.vl">
+            <p:NodeReference>
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="SetTexture" />
-              <CategoryReference Kind="ClassType" Name="VIOSO2" NeedsToBeDirectParent="true" />
+              <CategoryReference Kind="ClassType" Name="VIOSO" NeedsToBeDirectParent="true" />
             </p:NodeReference>
             <Pin Id="Gfjy1ZUjgGSPAbCekeA9Bu" Name="State Input" Kind="StateInputPin" />
             <Pin Id="GyYToGRqiiENGc60zigapz" Name="Input" Kind="InputPin" />
