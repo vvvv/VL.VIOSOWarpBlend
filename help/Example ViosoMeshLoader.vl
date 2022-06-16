@@ -14,7 +14,7 @@
       </p:NodeReference>
       <Patch Id="JqdeGvLPLyrQQE4uL8FX88">
         <Canvas Id="OxtvZ1FrBqELOz1Te8M3xy" CanvasType="Group">
-          <Pad Id="I9RIYdOlrjKLYMb6FZJCUG" Comment="Filename" Bounds="98,182,361,15" ShowValueBox="true" isIOBox="true" Value="..\..\..\..\..\..\..\temp\vioso\SimpleDistortionMap\VIOSOWarpBlend.ini">
+          <Pad Id="I9RIYdOlrjKLYMb6FZJCUG" Comment="Filename" Bounds="98,182,361,15" ShowValueBox="true" isIOBox="true" Value="..\..\..\Users\Public\Documents\AutoCal\Calibration\VIOSOWarpBlend.ini">
             <p:TypeAnnotation LastCategoryFullName="IO" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Path" />
             </p:TypeAnnotation>
@@ -291,7 +291,7 @@
             <Pin Id="LgBp0cGyS2ZOiUbayE4Hji" Name="Rotation" Kind="InputPin" DefaultValue="0, 0.37, 0.15" />
             <Pin Id="MN6Djz3nzelPHCSXKOUdOR" Name="Output" Kind="OutputPin" />
           </Node>
-          <Pad Id="MEhWBrwHOq7QJXsPrCZRqA" Comment="Display Name" Bounds="120,217,47,15" ShowValueBox="true" isIOBox="true" Value="Display2">
+          <Pad Id="MEhWBrwHOq7QJXsPrCZRqA" Comment="Display Name" Bounds="120,217,47,15" ShowValueBox="true" isIOBox="true" Value="Display1">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
