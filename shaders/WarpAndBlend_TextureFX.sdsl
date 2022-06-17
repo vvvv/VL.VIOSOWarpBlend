@@ -1,4 +1,4 @@
-shader StaticVIOSO2D_TextureFX : FilterBase
+shader WarpAndBlend_TextureFX : FilterBase
 {
     float4x4 matView;
     float4 bBorder;

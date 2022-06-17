@@ -89,8 +89,7 @@ namespace VL.VIOSOWarpBlend
                 }
 
                 // get warp file header, to have flags and sizes handy
-                Warper.WarpFileHeader4 header;
-                w.GetWarpBlendHeader(out header);
+                w.GetWarpBlendHeader(out var header);
 
                 Resolution = new Int2((int)header.width, (int)header.height);
 

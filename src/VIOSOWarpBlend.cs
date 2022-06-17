@@ -5,6 +5,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 
+// use with VIOSOWarpBlend 1.6.9 or newer
+
 // make sure to set x64 as build target
 namespace VIOSOWarpBlend
 {
@@ -89,7 +91,7 @@ namespace VIOSOWarpBlend
         public struct SIZE
         {
             public Int32 cx, cy;
-            SIZE( Int32 vcx, Int32 vcy)
+            SIZE(Int32 vcx, Int32 vcy)
             {
                 cx = vcx;
                 cy = vcy;
@@ -99,7 +101,7 @@ namespace VIOSOWarpBlend
         public struct RECT
         {
             public Int32 left, top, right, bottom;
-            RECT(Int32 l, Int32 t, Int32 r, Int32 b )
+            RECT(Int32 l, Int32 t, Int32 r, Int32 b)
             {
                 left = l;
                 top = t;
@@ -125,7 +127,7 @@ namespace VIOSOWarpBlend
 
             /// the calibration index in mapping file, defaults to 0,
             /// you also might set this to negated display number, to search for a certain display:
-            Int32 calibIndex;
+            public Int32 calibIndex;
 
             /// set to true to make the world turn and move with view direction and eye position, this is the case if the viewer gets
             /// moved by a motion platform, defaults to false
@@ -168,7 +170,7 @@ namespace VIOSOWarpBlend
             ///				0x00010000 change sign of x movement, 0x00020000 use input y as x, 0x00040000 use input z as x
             ///				0x00100000 change sign of y movement, 0x00200000 use input x as y, 0x00400000 use input z as y
             ///				0x01000000 change sign of z movement, 0x02000000 use input x as z, 0x04000000 use input y as z
-            Int32 splice;
+            public Int32 splice;
 
             /// the transformation matrix to go from VIOSO coordinates to IG coordinates, defaults to indentity
             /// note VIOSO maps are always right-handed, to use with a left-handed world like DirectX, invert the z!
@@ -260,7 +262,7 @@ namespace VIOSOWarpBlend
         }
 
         [StructLayout(LayoutKind.Sequential, Pack = 4, CharSet = CharSet.Ansi)]
-        public struct WarpFileHeader4
+        public struct WarpFileHeader5
         {
             public UInt32 magicNumber;                            ///<   "vwf0"
             public UInt32 szHdr;                                 ///<   used to communicate the size of this header struct
@@ -312,13 +314,28 @@ namespace VIOSOWarpBlend
             ///<   [7] => optional relative content position transform scale in x direction
             ///<   [8] => optional relative content position transform scale in y direction
             [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 256)]
-            public String primName;     ///<   optional, human readable name for high level calibration the display is assigned to
+            public String primName;     ///<   optional, human readable name of the compound or super compound
             [MarshalAs(UnmanagedType.ByValArray, SizeConst = 16)]
             public float[] vReserved2;                           ///<   used to define additional informations in further versions
             [MarshalAs(UnmanagedType.ByValArray, SizeConst = 256)]
             public UInt16[] displayID;   ///<   Windows display identifier, use EnumDisplayDevices using EDD_GET_DEVICE_INTERFACE_NAME flag to find it
             [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 256)]
-            public String hostname;	///<   network name or IP in dotted decimal
+            public String hostname; ///<   network name or IP in dotted decimal
+            public UInt32 szKey;                                 ///<   the key size, 0 if not used
+            [MarshalAs(UnmanagedType.ByValArray, SizeConst = 128)]
+            public byte[] key;                              ///<   some PGP encrypted key
+            [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 16)]
+            public String keyIdent;                          ///<   describes the used encryption method
+            [MarshalAs(UnmanagedType.ByValTStr, SizeConst = 256)]
+            public String keyDesc;                          ///<   human readable description of used         
+        }
+
+        [StructLayout(LayoutKind.Sequential, Pack = 4, CharSet = CharSet.Ansi)]
+        public struct WarpBlendHeader
+        {
+            public WarpFileHeader5 header;
+            [MarshalAs(UnmanagedType.ByValTStr, SizeConst = MAX_PATH)]
+            public String path;
         }
 
         public enum ERROR
@@ -363,6 +380,7 @@ namespace VIOSOWarpBlend
         };
 
         public static IntPtr DummyDevice;
+        public static IntPtr cryptoKeyMem;
 
         [DllImport("VIOSOWarpBlend64.dll", EntryPoint = "VWB_CreateA", CallingConvention = CallingConvention.Cdecl)]
         public static extern int VWB_Create(IntPtr dxDevice, [MarshalAs(UnmanagedType.LPStr)] String szCnfigFile, [MarshalAs(UnmanagedType.LPStr)] String szChannelName, out IntPtr warper, Int32 logLevel, [MarshalAs(UnmanagedType.LPStr)] String szLogFile);
@@ -373,6 +391,38 @@ namespace VIOSOWarpBlend
         [DllImport("VIOSOWarpBlend64.dll", EntryPoint = "VWB_Destroy", CallingConvention = CallingConvention.Cdecl)]
         public static extern int VWB_Destroy(IntPtr warper);
 
+        /** set the new dynamic eye position and direction
+        * @param [IN]			pWarper	a valid warper
+        * @param [IN,OUT,OPT]	pEye	sets the new eye position, if a eye point provider is present, the value is getted from there, pEye is updated
+        * @param [IN,OUT,OPT]	pRot	the new rotation in radian, if a eye point provider is present, the value is getted from there, pRot is updated
+        * @param [OUT]			pView	it gets the updated view matrix to translate and rotate into the viewer's perspective
+        * @param [OUT]			pProj	it gets the updated projection matrix
+        * @param [OUT]			pClip	it gets the updated clip planes: left, top, right, bottom, near, far, where all components are usually positive
+        * @param [OUT]			pPos    it gets the updated relative position: x,y,z
+        * @param [OUT]			pDir	it gets the updated relative direction: euler angles around x,y,z rotation order is y,x,z
+        * @param [IN,OPT]		symmetric set to true, to force symmetric frustum, NOTE: symmetric frusta are worse in quality, as the image plane is no longer parallel to the screen plane
+        * @param [IN,OPT]		aspect	set to some ratio, to force clip planes to form a rect with this ratio, if set to 0, optimal aspect ratio is used. NOTE: Non-optimal aspect ratia are worse in quality, as part of the input image is rendered but not used.
+        * @return VWB_ERROR_NONE on success, VWB_ERROR_GENERIC otherwise
+        * @remarks If EyePointProvider is used, the eye point is set by calling it's getEye function. eye and rot are set to that if not NULL.
+        * Else, if eye and rot are not NULL, values taken from here.
+        * Else the eye and rot are set to 0-vectors.
+        * The internal view and projection matrices are calculated to render. You should set pView and pProj to get these matrices for rendering, if updated.
+        * positive rotation means turning right, up and clockwise.
+        * Calculate view Matrix from pDir and pPos for left handed direct X
+        XMMATRIX R = XMMatrixRotationRollPitchYaw( -pDir[0], pDir[1], pDir[2] );
+        XMMATRIX T = XMMatrixTranslation( pPos[0], pPos[1], pPos[2] );
+        XMMATRIX V = XMMatrixMultiply( R, T );
+        * for right handed openGL
+        V = glm::transpose( glm::yawPitchRoll( -dir[1],  dir[0], -dir[2] ) );
+        V[0].w = pos[0];
+        V[1].w = pos[1];
+        V[2].w = pos[2];
+
+        Use pClip this way to get the same matrix like from VWB_getViewProjection in left handed DX:
+        P = XMMatrixPerspectiveOffCenterLH( -pClip[0], pClip[2], -pClip[3], pClip[1], pClip[4], pClip[5] );
+        * for right handed openGL
+        P = glm::frustum( -pClip[0], pClip[2], -pClip[3], pClip[1], pClip[4], pClip[5] );
+        */
         //VWB_getViewProj, ( VWB_Warper* pWarper, VWB_float* pEye, VWB_float* pRot, VWB_float* pView, VWB_float* pProj));
         [DllImport("VIOSOWarpBlend64.dll", EntryPoint = "VWB_getViewProj", CallingConvention = CallingConvention.Cdecl)]
         public static extern int VWB_getViewProj(IntPtr warper, ref VEC3 eye, ref VEC3 dir, ref MAT4X4 view, ref MAT4X4 proj);
@@ -381,17 +431,81 @@ namespace VIOSOWarpBlend
         [DllImport("VIOSOWarpBlend64.dll", EntryPoint = "VWB_getViewClip", CallingConvention = CallingConvention.Cdecl)]
         public static extern int VWB_getViewClip(IntPtr warper, ref VEC3 eye, ref VEC3 dir, ref MAT4X4 view, ref CLIP clip);
 
+        //VIOSOWARPBLEND_API(VWB_ERROR, VWB_getPosDirClip, (VWB_Warper* pWarper, VWB_float* pEye, VWB_float* pRot, VWB_float* pPos, VWB_float* pDir, VWB_float* pClip, bool symmetric, VWB_float aspect) );
+        [DllImport("VIOSOWarpBlend64.dll", EntryPoint = "VWB_getPosDirClip", CallingConvention = CallingConvention.Cdecl)]
+        public static extern int VWB_getPosDirClip(IntPtr warper, ref VEC3 eye, ref VEC3 dir, ref VEC3 rot, ref VEC3 pos, ref CLIP clip);
+
+        /** query the corners of the screen plane
+        * @param [IN]			pWarper	a valid warper 
+        * @param [OUT]			pTL	it gets the top-left corner
+        * @param [OUT]			pTR	it gets the top-right corner
+        * @param [OUT]			pBL	it gets the bottom-left corner
+        * @param [OUT]			pBR	it gets the bottom-right corner
+        * @return VWB_ERROR_NONE on success, VWB_ERROR_GENERIC otherwise 
+        NOTE: This is static to a mapping, just call once a session. */
+        //VIOSOWARPBLEND_API(VWB_ERROR, VWB_getScreenplane, (VWB_Warper* pWarper, VWB_float* pTL, VWB_float* pTR, VWB_float* pBL, VWB_float* pBR) );
+        [DllImport("VIOSOWarpBlend64.dll", EntryPoint = "VWB_getScreenplane", CallingConvention = CallingConvention.Cdecl)]
+        public static extern int VWB_getScreenplane(IntPtr warper, ref VEC3 tl, ref VEC3 tr, ref VEC3 bl, ref VEC3 br);
+
+
+        /** render a warped and blended source texture into the current back buffer
+        * @remark for DirectX 9, call inside BeginScene/EndScene statements
+        * @param [IN]			pWarper	a valid warper
+        * @param [IN,OPT]		pSrc    the source texture, a IDirect3DTexture9*, ID3D10Texture2D*, ID3D11Texture2D*, VWB_D3D12_RENDERINPUT* or a GLint texture index; 
+        * if current backbuffer must be read, set to NULL in any DX mode except 12 or to -1 in OpenGL mode
+        * in case of directX 12 you need to provide a @see VWB_D3D12_RENDERINPUT as parameter.
+        * @param [IN,OPT]		stateMask @see VWB_STATEMASK enumeration, default is 0 to restore usual stuff
+        * In D3D12 all flags except VWB_STATEMASK_CLEARBACKBUFFER are ignored.
+        * The application is required to set inputs and shader in each term anyway.
+        * @return VWB_ERROR_NONE on success, VWB_ERROR_GENERIC otherwise */
         //VIOSOWARPBLEND_API( VWB_ERROR, VWB_render, ( VWB_Warper* pWarper, VWB_param src, VWB_uint stateMask ) );  
         [DllImport("VIOSOWarpBlend64.dll", EntryPoint = "VWB_render", CallingConvention = CallingConvention.Cdecl)]
         public static extern int VWB_render(IntPtr warper, IntPtr src, UInt32 stateMask);
 
+        /** get info about .vwf, reads all warp headers
+        * @param [IN]			path	the file name or a comma separated list of filenames, set to NULL to release data from a previous set
+        * @param [OUT]			set		a warp blend header set
+        * @return VWB_ERROR_NONE on success, VWB_ERROR_PARAM if fname is not set or empty, VWB_ERROR_VWF_FILE_NOT_FOUND if path did not resolve, VWB_ERROR_GENERIC otherwise
+        * @remarks The list is empied and all found headers are appended. */
+        //VIOSOWARPBLEND_API(VWB_ERROR, VWB_vwfInfo, (char const* path, VWB_WarpBlendHeaderSet* set ) );  
+        [DllImport("VIOSOWarpBlend64.dll", EntryPoint = "VWB_vwfInfoC", CallingConvention = CallingConvention.Cdecl)]
+        public static extern int VWB_vwfInfo([MarshalAs(UnmanagedType.LPStr)] String path, IntPtr set, ref uint size);
+
+        /** fills a float[16] with the currently set internally used matrix for render shader. Warper needs to be initialized as VWB_DUMMYDEVICE.
+         * @param [IN]			pWarper	a valid warper
+         * @param [OUT]			pMPV	the internal view-projection matrix
+         * @return VWB_ERROR_NONE on success, VWB_ERROR_PARAMETER, if parameters are out of range, VWB_ERROR_GENERIC otherwise */
         //VIOSOWARPBLEND_API(VWB_ERROR, VWB_getShaderVPMatrix, (VWB_Warper* pWarper, VWB_float* pMPV) );
         [DllImport("VIOSOWarpBlend64.dll", EntryPoint = "VWB_getShaderVPMatrix", CallingConvention = CallingConvention.Cdecl)]
-        public static extern int VWB_getShaderVPMatrix(IntPtr warper, ref MAT4X4 mat );
+        public static extern int VWB_getShaderVPMatrix(IntPtr warper, ref MAT4X4 mat);
 
+        /** fills a VWB_WarpBlend from currently loaded data. Warper needs to be initialized as VWB_DUMMYDEVICE.
+        * @param [IN]			pWarper	a valid warper
+        * @param [OUT]			mesh	the resulting mesh, the mesh will be emptied before filled
+        * @return VWB_ERROR_NONE on success, VWB_ERROR_PARAMETER, if parameters are out of range, VWB_ERROR_GENERIC otherwise */
         //VIOSOWARPBLEND_API( VWB_ERROR, VWB_getWarpBlend, ( VWB_Warper* pWarper, VWB_WarpBlend src, VWB_uint stateMask ) );  
         [DllImport("VIOSOWarpBlend64.dll", EntryPoint = "VWB_getWarpBlend", CallingConvention = CallingConvention.Cdecl)]
         public static extern int VWB_getWarpBlend(IntPtr warper, out IntPtr wb);
+
+        /* get the version of the API
+        * @param[OUT]			major	major version
+        * @param[OUT]			minor	minor version
+        * @param[OUT]			maintenance	maintenance revision
+        * @param[OUT]			build	build number
+        * @return VWB_ERROR_NONE on success, VWB_ERROR_PARAMETER, if parameters are out of range */
+        //VIOSOWARPBLEND_API(VWB_ERROR, VWB_getVersion, (VWB_int* major, VWB_int* minor, VWB_int* maintenance, VWB_int* build) );
+        [DllImport("VIOSOWarpBlend64.dll", EntryPoint = "VWB_getVersion", CallingConvention = CallingConvention.Cdecl)]
+        public static extern int VWB_getVersion(IntPtr warper, out Int32 major, out Int32 minor, out Int32 maintenance, out Int32 build);
+
+        /* set a 128bit AES key for encryption and decryption of mappings
+        * @param[IN]			key	    a key of 16 bytes (128 bit) provided for encryption/decryption of AES128 algorythm loading and saving vwf files, set to nullptr to disable encryption/decryption
+        * @return VWB_ERROR_NONE on success, VWB_ERROR_PARAMETER, if parameters are out of range 
+        * @remark Internally we keep only the pointer to your buffer. Make sure to keep the key there as long as it is needed. It will be used during VWB_init VWB_initExt */
+        // use Marshal.AllocCoTaskMem to allocate memory (16 bytes) for the key and Marshal.copy from a string or byte array
+        //VIOSOWARPBLEND_API(VWB_ERROR, VWB_setCryptoKey, (uint8_t const* key ) );
+        [DllImport("VIOSOWarpBlend64.dll", EntryPoint = "VWB_setCryptoKey", CallingConvention = CallingConvention.Cdecl)]
+        public static extern int VWB_setCryptoKey(IntPtr pKey);
+
 
         IntPtr _warper = IntPtr.Zero;// = Marshal.AllocHGlobal(sizeof(Int64));
 
@@ -430,6 +544,31 @@ namespace VIOSOWarpBlend
             return (ERROR)VWB_render(_warper, src, stateMask);
         }
 
+        static public ERROR GetVwfInfo(String path, out WarpBlendHeader[] headers)
+        {
+            headers = new WarpBlendHeader[0];
+            uint len = 0;
+            IntPtr ob = IntPtr.Zero;
+            ERROR err = (ERROR)VWB_vwfInfo(path, ob, ref len );
+            if (ERROR.NONE == err )
+            {
+                headers = new WarpBlendHeader[len];
+                int sz = Marshal.SizeOf(headers[0]);
+                ob = Marshal.AllocHGlobal((int)len * sz);
+                err = (ERROR)VWB_vwfInfo(path, ob, ref len);
+                if( ERROR.NONE == err )
+                {
+                    IntPtr p = ob;
+                    for (uint i = 0; i != len; i++)
+                    {
+                        headers[i] = Marshal.PtrToStructure<WarpBlendHeader>(p);
+                        p += sz;
+                    }
+                }
+                Marshal.FreeHGlobal(ob);
+            }
+            return err;
+        }
         public ERROR GetViewProj(ref MAT4X4 view, ref MAT4X4 proj)
         {
             VEC3 eye = new VEC3(0, 0, 0);
@@ -453,16 +592,16 @@ namespace VIOSOWarpBlend
             return (ERROR)VWB_getViewClip(_warper, ref eye, ref dir, ref view, ref clip);
         }
 
-        public ERROR GetShaderVPMatrix( ref MAT4X4 mat )
+        public ERROR GetShaderVPMatrix(ref MAT4X4 mat)
         {
             return (ERROR)VWB_getShaderVPMatrix(_warper, ref mat);
         }
 
-        public ERROR GetWarpBlendHeader(out WarpFileHeader4 header)
+        public ERROR GetWarpBlendHeader(out WarpFileHeader5 header)
         {
             IntPtr wb;
             ERROR err = (ERROR)VWB_getWarpBlend(_warper, out wb);
-            header = (WarpFileHeader4)Marshal.PtrToStructure(wb, typeof(WarpFileHeader4));
+            header = (WarpFileHeader5)Marshal.PtrToStructure(wb, typeof(WarpFileHeader5));
             return err;
         }
         public ERROR GetMappingFilePath(out String path)
@@ -471,7 +610,7 @@ namespace VIOSOWarpBlend
             ERROR err = (ERROR)VWB_getWarpBlend(_warper, out wb);
             if (ERROR.NONE == err)
             {
-                WarpFileHeader4 header = (WarpFileHeader4)Marshal.PtrToStructure(wb, typeof(WarpFileHeader4));
+                WarpFileHeader5 header = (WarpFileHeader5)Marshal.PtrToStructure(wb, typeof(WarpFileHeader5));
                 IntPtr ipo = new IntPtr(wb.ToInt64() + header.szHdr);
                 path = Marshal.PtrToStringAnsi(ipo, 260);
             }
@@ -485,7 +624,7 @@ namespace VIOSOWarpBlend
             ERROR err = (ERROR)VWB_getWarpBlend(_warper, out wb);
             if (ERROR.NONE == err)
             {
-                WarpFileHeader4 header = (WarpFileHeader4)Marshal.PtrToStructure(wb, typeof(WarpFileHeader4));
+                WarpFileHeader5 header = (WarpFileHeader5)Marshal.PtrToStructure(wb, typeof(WarpFileHeader5));
                 IntPtr ipo = new IntPtr(wb.ToInt64() + header.szHdr + 260 /*MAX_PATH*/);
                 warp = Marshal.PtrToStructure<IntPtr>(ipo);
             }
@@ -499,7 +638,7 @@ namespace VIOSOWarpBlend
             ERROR err = (ERROR)VWB_getWarpBlend(_warper, out wb);
             if (ERROR.NONE == err)
             {
-                WarpFileHeader4 header = (WarpFileHeader4)Marshal.PtrToStructure(wb, typeof(WarpFileHeader4));
+                WarpFileHeader5 header = (WarpFileHeader5)Marshal.PtrToStructure(wb, typeof(WarpFileHeader5));
                 IntPtr ipo = new IntPtr(wb.ToInt64() + header.szHdr + 260 /*MAX_PATH*/ + IntPtr.Size);
                 blend = Marshal.PtrToStructure<IntPtr>(ipo);
             }
@@ -513,7 +652,7 @@ namespace VIOSOWarpBlend
             ERROR err = (ERROR)VWB_getWarpBlend(_warper, out wb);
             if (ERROR.NONE == err)
             {
-                WarpFileHeader4 header = (WarpFileHeader4)Marshal.PtrToStructure(wb, typeof(WarpFileHeader4));
+                WarpFileHeader5 header = (WarpFileHeader5)Marshal.PtrToStructure(wb, typeof(WarpFileHeader5));
                 IntPtr ipo = new IntPtr(wb.ToInt64() + header.szHdr + 260 /*MAX_PATH*/ + 2 * IntPtr.Size);
                 black = Marshal.PtrToStructure<IntPtr>(ipo);
             }
@@ -527,13 +666,37 @@ namespace VIOSOWarpBlend
             ERROR err = (ERROR)VWB_getWarpBlend(_warper, out wb);
             if (ERROR.NONE == err)
             {
-                WarpFileHeader4 header = (WarpFileHeader4)Marshal.PtrToStructure(wb, typeof(WarpFileHeader4));
+                WarpFileHeader5 header = (WarpFileHeader5)Marshal.PtrToStructure(wb, typeof(WarpFileHeader5));
                 IntPtr ipo = new IntPtr(wb.ToInt64() + header.szHdr + 260 /*MAX_PATH*/ + 3 * IntPtr.Size);
                 white = Marshal.PtrToStructure<IntPtr>(ipo);
             }
             else
                 white = IntPtr.Zero;
             return err;
+        }
+
+        static public ERROR SetCryptoKey(byte[] key)
+        {
+            if (null == key)
+            {
+                if (null != cryptoKeyMem)
+                {
+                    Marshal.FreeHGlobal(cryptoKeyMem);
+                }
+                return (ERROR)VWB_setCryptoKey(IntPtr.Zero);
+            }
+            else
+            {
+                if (key.Length < 16)
+                    return ERROR.PARAMETER;
+
+                if (cryptoKeyMem == null)
+                {
+                    cryptoKeyMem = Marshal.AllocHGlobal(16);
+                }
+                Marshal.Copy(key, 0, cryptoKeyMem, 16);
+                return (ERROR)VWB_setCryptoKey(cryptoKeyMem); ;
+            }
         }
 
         public VWB_Warper Get()
@@ -545,7 +708,4 @@ namespace VIOSOWarpBlend
             Marshal.StructureToPtr(warper, _warper, false);
         }
     }
-
 }
-
-
