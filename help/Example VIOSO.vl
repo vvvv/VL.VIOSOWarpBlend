@@ -172,7 +172,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="SceneWindow" />
             </p:NodeReference>
-            <Pin Id="UCM1C8AEPj2LvP0FId23RH" Name="Bounds" Kind="InputPin" DefaultValue="1920, 0, 3840, 1080" />
+            <Pin Id="UCM1C8AEPj2LvP0FId23RH" Name="Bounds" Kind="InputPin" DefaultValue="957, 826, 958, 331" />
             <Pin Id="ChSlVgxBUl2Nr8QE8mXGDu" Name="Back Buffer Format" Kind="InputPin" />
             <Pin Id="QidqrEV95f1LCku6eOO1Mg" Name="Input" Kind="InputPin" />
             <Pin Id="QNe3IzTJor8LftGRFpybze" Name="Camera" Kind="InputPin" />
@@ -262,9 +262,9 @@
                 <Pin Id="OuvWKBxFW4SQCDeBWUeMGr" Name="Channel Name" Kind="InputPin" />
                 <Pin Id="NiBgD0Dxt0VLNtl18HEGqf" Name="Enable Blacklevel Compensation" Kind="InputPin" DefaultValue="True" />
                 <Pin Id="J4UHLAEW64GLPmrqLRV07i" Name="Enable Blending" Kind="InputPin" DefaultValue="True" />
-                <Pin Id="ACsETf4xNA3LbmQIKmqzGg" Name="Bicubic" Kind="InputPin" DefaultValue="False" />
-                <Pin Id="V4587la0jbSP9yxUkEeOwW" Name="Reload" Kind="InputPin" />
+                <Pin Id="HZSEm3Pk5DzMTbzRGXazH7" Name="Bicubic Sampling" Kind="InputPin" />
                 <Pin Id="CnwNpc5LRbBOfe07Ao6Uyl" Name="Path" Kind="InputPin" />
+                <Pin Id="V4587la0jbSP9yxUkEeOwW" Name="Reload" Kind="InputPin" />
                 <Pin Id="Q9NnIxg8s6INNKAZRzqwBi" Name="Base" Kind="InputPin" />
                 <Pin Id="KdZe2JKZKkqL6OYGoabXGP" Name="Eye" Kind="InputPin" />
                 <Pin Id="Prp4dcDndRBMV9GNxUyHgn" Name="World" Kind="InputPin" />
@@ -272,6 +272,7 @@
                 <Pin Id="AMww5u4mGWNPmw7rHR7JRX" Name="Resolution" Kind="OutputPin" />
                 <Pin Id="A58yMeePESxK9eVA5kGZiT" Name="Camera" Kind="OutputPin" />
                 <Pin Id="V7PMOmFwdeGQZyRotqkZAP" Name="Debug Mesh" Kind="OutputPin" />
+                <Pin Id="ACsETf4xNA3LbmQIKmqzGg" Name="Bicubic" Kind="InputPin" DefaultValue="False" />
               </Node>
               <Node Bounds="273,594,65,26" Id="DuOXeteqpn6QSaMZWdirSs">
                 <p:NodeReference>
