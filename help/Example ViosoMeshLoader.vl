@@ -14,7 +14,7 @@
       </p:NodeReference>
       <Patch Id="JqdeGvLPLyrQQE4uL8FX88">
         <Canvas Id="OxtvZ1FrBqELOz1Te8M3xy" CanvasType="Group">
-          <Pad Id="I9RIYdOlrjKLYMb6FZJCUG" Comment="Filename" Bounds="98,182,361,15" ShowValueBox="true" isIOBox="true" Value="..\..\..\Users\Public\Documents\AutoCal\Calibration\VIOSOWarpBlend.ini">
+          <Pad Id="I9RIYdOlrjKLYMb6FZJCUG" Comment="Filename" Bounds="98,182,361,15" ShowValueBox="true" isIOBox="true" Value="..\..\..\..\..\..\..\temp\vioso\EPFL-Dome\VIOSOWarpBlend.ini">
             <p:TypeAnnotation LastCategoryFullName="IO" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Path" />
             </p:TypeAnnotation>
@@ -171,7 +171,7 @@
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="SceneWindow" />
             </p:NodeReference>
-            <Pin Id="AwjsXxGzkFZMyCKSxtwWD5" Name="Bounds" Kind="InputPin" DefaultValue="1038, 502, 711, 486" />
+            <Pin Id="AwjsXxGzkFZMyCKSxtwWD5" Name="Bounds" Kind="InputPin" DefaultValue="1015, 502, 711, 486" />
             <Pin Id="Jaj91ZbHSghQE4neQHx21X" Name="Input" Kind="InputPin" />
             <Pin Id="KBhqvnF9oSDLnVAkxUXE1D" Name="Camera" Kind="InputPin" />
             <Pin Id="LxG4kDjoHbVLvp54synkX2" Name="Enable Default Camera" Kind="InputPin" DefaultValue="False" />
@@ -291,7 +291,7 @@
             <Pin Id="LgBp0cGyS2ZOiUbayE4Hji" Name="Rotation" Kind="InputPin" DefaultValue="0, 0.37, 0.15" />
             <Pin Id="MN6Djz3nzelPHCSXKOUdOR" Name="Output" Kind="OutputPin" />
           </Node>
-          <Pad Id="MEhWBrwHOq7QJXsPrCZRqA" Comment="Display Name" Bounds="120,217,47,15" ShowValueBox="true" isIOBox="true" Value="Display1">
+          <Pad Id="MEhWBrwHOq7QJXsPrCZRqA" Comment="Channel Name" Bounds="120,217,47,15" ShowValueBox="true" isIOBox="true" Value="Display1">
             <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -336,10 +336,17 @@
             </p:NodeReference>
             <Pin Id="REXLDRjvcxhMDFXLGAiubL" Name="Filename" Kind="InputPin" />
             <Pin Id="GD6YvNAAMMKPyFF3KRMgDk" Name="Channel Name" Kind="InputPin" />
+            <Pin Id="TtWd2fJSLhFMovttjJS7pW" Name="Enable Blacklevel Compensation" Kind="InputPin" DefaultValue="True" />
+            <Pin Id="NNmTo0nnm7oNLW8tMhf9xg" Name="Enable Blending" Kind="InputPin" DefaultValue="True" />
+            <Pin Id="DkDpPeyyyzOO3J7osflRFF" Name="Bicubic Sampling" Kind="InputPin" DefaultValue="False" />
+            <Pin Id="BuWmibx9BtcPZmW3abSko5" Name="Path" Kind="InputPin" />
+            <Pin Id="Bl3WApQO3pKPxgndRUFIIz" Name="Reload" Kind="InputPin" DefaultValue="False" />
             <Pin Id="Pwls4hwu4INQYAQQMWce4H" Name="Eye" Kind="InputPin" />
+            <Pin Id="I1KsHoH7GcTO4FJJ4G6EMS" Name="World" Kind="InputPin" />
             <Pin Id="Ai6yb2oRj0nO1bDp65Kvh7" Name="Output" Kind="OutputPin" />
             <Pin Id="Tna3xqg1jxLMpHNOv2iYnf" Name="Resolution" Kind="OutputPin" />
             <Pin Id="OHjPw5HW6yeLEL5pp3gUDx" Name="Camera" Kind="OutputPin" />
+            <Pin Id="ImlhMr64bL5NzMeNm2t5jn" Name="Debug Mesh" Kind="OutputPin" />
           </Node>
           <Pad Id="CA1Q2if4mFHMYuRlmkepMq" Comment="Eye" Bounds="334,215,35,43" ShowValueBox="true" isIOBox="true" Value="0, 0, 0">
             <p:TypeAnnotation LastCategoryFullName="3D" LastSymbolSource="CoreLibBasics.vl">
@@ -347,16 +354,25 @@
             </p:TypeAnnotation>
           </Pad>
           <Node Bounds="98,625,65,26" Id="T2aAdQf78YoOIXFfB3ijkD">
-            <p:NodeReference>
+            <p:NodeReference LastCategoryFullName="VIOSO.VIOSO" LastSymbolSource="VL.VIOSO.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <Choice Kind="OperationCallFlag" Name="SetTexture" />
               <CategoryReference Kind="ClassType" Name="VIOSO" NeedsToBeDirectParent="true" />
+              <Choice Kind="OperationCallFlag" Name="Mesh" />
             </p:NodeReference>
             <Pin Id="Gfjy1ZUjgGSPAbCekeA9Bu" Name="State Input" Kind="StateInputPin" />
             <Pin Id="GyYToGRqiiENGc60zigapz" Name="Input" Kind="InputPin" />
-            <Pin Id="UdYwHugivjoNpdptBDHvbR" Name="State Output" Kind="StateOutputPin" />
             <Pin Id="OsczGN296CMQTwGURft5ox" Name="Output" Kind="OutputPin" />
+            <Pin Id="QOJ2KbTOCqtOm4ov8Y6ktJ" Name="Mesh" Kind="OutputPin" />
           </Node>
+          <Pad Id="MfF8PlmWFaRLc28WbDPr0U" Comment="Reload" Bounds="460,117,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation>
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Toggle</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
         </Canvas>
         <Patch Id="LAX25CSsW2ZOMutweiHzHe" Name="Create" />
         <Patch Id="HeBpuZMxWgaLzpxOcXdKtf" Name="Update" />
@@ -387,8 +403,9 @@
         <Link Id="Dc8B5IMCMsDODmpQGS8PJW" Ids="OHjPw5HW6yeLEL5pp3gUDx,Sf9zfQpSC5qQKFGcSQd3Aj" />
         <Link Id="US1X27flpFLNQ8jkWCzZIw" Ids="OHjPw5HW6yeLEL5pp3gUDx,MDhr92aryZvL1W0ctKVGKX" />
         <Link Id="HVsazIfYiLgMu4wIEIN09X" Ids="OHjPw5HW6yeLEL5pp3gUDx,O4zw6f71ndALYARrLsZw8Y" />
-        <Link Id="EeThgFYk4lyLaUGSXwci9v" Ids="OsczGN296CMQTwGURft5ox,BX91DRd5PksNU5G6W0EqnG" />
         <Link Id="UF6znkOOKH7QMWyRzs5pEW" Ids="Tna3xqg1jxLMpHNOv2iYnf,C06TuiWa22FOAINo4UfFAb" />
+        <Link Id="NXUhea7JQkjNJ9k6ctzzna" Ids="QOJ2KbTOCqtOm4ov8Y6ktJ,BX91DRd5PksNU5G6W0EqnG" />
+        <Link Id="TgW4OGx32mkNGhADSFnfWY" Ids="MfF8PlmWFaRLc28WbDPr0U,Bl3WApQO3pKPxgndRUFIIz" />
       </Patch>
     </Node>
   </Patch>
