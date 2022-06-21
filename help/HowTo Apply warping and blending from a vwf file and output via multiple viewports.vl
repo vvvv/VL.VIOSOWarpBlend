@@ -344,7 +344,7 @@
             <Pin Id="HAXeliGrPUrLhAyjzRqE0o" Name="Enabled" Kind="InputPin" />
             <Pin Id="A1Y9ZITsBjzOnWeaLDU2ic" Name="Output" Kind="OutputPin" />
           </Node>
-          <Pad Id="HD9kcEasB34PqcXq3n75Jc" Comment="Filename" Bounds="228,308,259,-4" ShowValueBox="true" isIOBox="true" Value="..\..\..\..\..\..\..\temp\vioso\Curved_2x1_Landscape\manu3D.vwf">
+          <Pad Id="HD9kcEasB34PqcXq3n75Jc" Comment="Filename" Bounds="232,298,259,15" ShowValueBox="true" isIOBox="true" Value="..\..\..\..\..\..\..\temp\vioso\Curved_2x1_Landscape\manu3D.vwf">
             <p:TypeAnnotation LastCategoryFullName="IO" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Path" />
             </p:TypeAnnotation>
@@ -734,7 +734,7 @@
               <Choice Kind="TypeFlag" Name="Vector2" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="L5wbTZ4aysHOMBtM7AMi4c" Comment="3d mesh path" Bounds="537,362,123,15" ShowValueBox="true" isIOBox="true" Value="..\..\..\Users\Public\Documents\AutoCal\3DModel\QuarterCylinder.dae">
+          <Pad Id="L5wbTZ4aysHOMBtM7AMi4c" Comment="3d mesh path" Bounds="567,374,123,15" ShowValueBox="true" isIOBox="true" Value="..\..\..\Users\Public\Documents\AutoCal\3DModel\QuarterCylinder.dae">
             <p:TypeAnnotation LastCategoryFullName="IO" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Path" />
             </p:TypeAnnotation>
@@ -751,7 +751,7 @@
             <Pin Id="A5Lc3nz7N9OMZK5Ci7CA7Z" Name="Scaling" Kind="InputPin" DefaultValue="1000" />
             <Pin Id="VqSl1o5U4wUPLWXlKyTHKP" Name="Output" Kind="OutputPin" />
           </Node>
-          <Node Bounds="266,345,65,19" Id="FnYfDF1dNhSQV9YAY7IcBp">
+          <Node Bounds="267,329,65,19" Id="FnYfDF1dNhSQV9YAY7IcBp">
             <p:NodeReference>
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="VwfInfo" />
@@ -761,6 +761,7 @@
             <Pin Id="BpKADKEts66L7QNWdSxWrS" Name="Calibration Index" Kind="OutputPin" />
             <Pin Id="NyFcZ1LlHpVMXR09PlCf4h" Name="Primary Names" Kind="OutputPin" />
             <Pin Id="H6o4Wsvq5kMQLchpmCdfdO" Name="Names" Kind="OutputPin" />
+            <Pin Id="FBZ3PDvu3IaPjudgZ4oGy5" Name="Is 3D Mapping" Kind="OutputPin" />
             <Pin Id="A9C0jHZmpN3Qb3JDdG9m7N" Name="Changed" Kind="OutputPin" />
           </Node>
           <Pad Id="HofpQLje0ZHQRv3IIYTbbc" Comment="Ini Filename" Bounds="201,216,192,6" ShowValueBox="true" isIOBox="true" Value="..\..\..\..\..\..\..\temp\vioso\Curved_2x1_Landscape\VIOSOWarpBlend.ini">
@@ -768,7 +769,7 @@
               <Choice Kind="TypeFlag" Name="Path" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="IHnwlVi7swOMbaf5xI6USX" Bounds="419,170,177,19" ShowValueBox="true" isIOBox="true" Value="https://helpdesk.vioso.com/documentation/api/viosowarpblend-ini-reference/">
+          <Pad Id="IHnwlVi7swOMbaf5xI6USX" Bounds="442,168,177,19" ShowValueBox="true" isIOBox="true" Value="https://helpdesk.vioso.com/documentation/api/viosowarpblend-ini-reference/">
             <p:TypeAnnotation>
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -777,7 +778,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="A3WhQ1KLy7TPQ4ZSIs1cmy" Bounds="419,147,111,19" ShowValueBox="true" isIOBox="true" Value="Ini file reference:">
+          <Pad Id="A3WhQ1KLy7TPQ4ZSIs1cmy" Bounds="442,145,111,19" ShowValueBox="true" isIOBox="true" Value="Ini file reference:">
             <p:TypeAnnotation>
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -791,7 +792,7 @@
               <Choice Kind="TypeFlag" Name="Vector3" />
             </p:TypeAnnotation>
           </Pad>
-          <Pad Id="KTAUlgiL33UOeEbkDGl6Q1" Comment="Primary Names" Bounds="288,384,57,49" ShowValueBox="true" isIOBox="true">
+          <Pad Id="KTAUlgiL33UOeEbkDGl6Q1" Comment="Primary Names" Bounds="297,410,56,74" ShowValueBox="true" isIOBox="true">
             <p:Value>
               <Item></Item>
             </p:Value>
@@ -805,7 +806,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="MYMOsVU7XRBMv5GaXv8ds4" Bounds="226,264,179,36" ShowValueBox="true" isIOBox="true" Value="If no vwf file is specified, the one set in the ini file is used">
+          <Pad Id="MYMOsVU7XRBMv5GaXv8ds4" Bounds="226,249,198,42" ShowValueBox="true" isIOBox="true" Value="If no vwf file is specified, the one set in the ini file is used">
             <p:TypeAnnotation>
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
@@ -814,6 +815,8 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
+          <Pad Id="RjKsYWKVrSDNeQrrQVRJOU" Comment="Is 3D Mapping" Bounds="329,371,31,25" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="DuRPdLe429sQRuvarLPCC1" Comment="Changed" Bounds="455,371,35,35" ShowValueBox="true" isIOBox="true" />
         </Canvas>
         <Patch Id="LAX25CSsW2ZOMutweiHzHe" Name="Create" />
         <Patch Id="HeBpuZMxWgaLzpxOcXdKtf" Name="Update" />
@@ -899,6 +902,8 @@
         <Link Id="RQoSCur0KyzNMUVWfZUaBK" Ids="NyFcZ1LlHpVMXR09PlCf4h,KTAUlgiL33UOeEbkDGl6Q1" />
         <Link Id="So4NDubNSqSPqTgDMAp8Rh" Ids="A9C0jHZmpN3Qb3JDdG9m7N,V4587la0jbSP9yxUkEeOwW" />
         <Link Id="RIB012PvYpJQLugKK4asp5" Ids="M4AtKkooJWXMjbbA5lohPW,Ag3plJRQ5RbMGlc6t2Kcva" />
+        <Link Id="R8cP1Kp7bTQOKM4V2oD7Fh" Ids="FBZ3PDvu3IaPjudgZ4oGy5,RjKsYWKVrSDNeQrrQVRJOU" />
+        <Link Id="PYqKUY9Pzp9L3jXyWrfrUJ" Ids="A9C0jHZmpN3Qb3JDdG9m7N,DuRPdLe429sQRuvarLPCC1" />
       </Patch>
     </Node>
   </Patch>
