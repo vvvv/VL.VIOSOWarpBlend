@@ -142,7 +142,7 @@
             <Pin Id="OanhSgFpnr0MOE5cNpXVuW" Name="Cameras" Kind="InputPin" />
             <Pin Id="Rs7Uym9qtmhQc5YO2zTxlF" Name="Viewport Settings" Kind="OutputPin" />
           </Node>
-          <Node Bounds="245,454,393,286" Id="HfBEIeQscMJPVXhsAn4CMS">
+          <Node Bounds="245,454,362,286" Id="HfBEIeQscMJPVXhsAn4CMS">
             <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
               <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
@@ -156,7 +156,7 @@
               <Patch Id="AI3StG4fBZtNxAJZu7BzIE" Name="Create" ManuallySortedPins="true" />
               <Patch Id="VTqEOr13yDSPxsgxSE8wXf" Name="Update" ManuallySortedPins="true" />
               <Patch Id="CyF9tCYm0LDOctAG6YR1qk" Name="Dispose" ManuallySortedPins="true" />
-              <Node Bounds="257,552,205,19" Id="I1UUf6TY3SbLSEu6pSdkqr">
+              <Node Bounds="257,552,106,19" Id="I1UUf6TY3SbLSEu6pSdkqr">
                 <p:NodeReference LastCategoryFullName="VIOSO" LastSymbolSource="VL.VIOSOWarpBlend.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="ProcessAppFlag" Name="Warper (3d)" />
@@ -169,10 +169,11 @@
                 <Pin Id="EHKjjEOQJMiP5B6YHmAqlo" Name="Blacklevel Compensation" Kind="InputPin" />
                 <Pin Id="B70emorij0GPi3KYOgvBnU" Name="Bicubic" Kind="InputPin" />
                 <Pin Id="AMYarVoehtnPc3q4R1a0Tj" Name="Auto View" Kind="InputPin" />
+                <Pin Id="O0O35iKbmq4ODe5jvrdkPP" Name="Turn with View" Kind="InputPin" />
                 <Pin Id="Q9NnIxg8s6INNKAZRzqwBi" Name="Base" Kind="InputPin" />
-                <Pin Id="V4587la0jbSP9yxUkEeOwW" Name="Reload" Kind="InputPin" />
                 <Pin Id="KdZe2JKZKkqL6OYGoabXGP" Name="Eye" Kind="InputPin" />
                 <Pin Id="MKnBQsUbdrIQVN34s7R2ZW" Name="World Transformation" Kind="InputPin" />
+                <Pin Id="V4587la0jbSP9yxUkEeOwW" Name="Reload" Kind="InputPin" />
                 <Pin Id="E2OJfKKcNmZLGtIbWhuM0w" Name="Output" Kind="OutputPin" />
                 <Pin Id="AMww5u4mGWNPmw7rHR7JRX" Name="Resolution" Kind="OutputPin" />
                 <Pin Id="A58yMeePESxK9eVA5kGZiT" Name="Camera" Kind="OutputPin" />
@@ -206,7 +207,7 @@
                 <Pin Id="GprEnqBnSK9N7ajCIOulo4" Name="Output" Kind="OutputPin" />
                 <Pin Id="EHtyYtXpWvAMzehDvxWAJO" Name="Depth" Kind="OutputPin" />
               </Node>
-              <Node Bounds="546,519,80,19" Id="BGbvr2o7eLBOSubHpMsQmk">
+              <Node Bounds="515,520,80,19" Id="BGbvr2o7eLBOSubHpMsQmk">
                 <p:NodeReference LastCategoryFullName="3D.Transform" LastSymbolSource="CoreLibBasics.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="OperationCallFlag" Name="TransformSRT" />
@@ -551,7 +552,7 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="FXC7DIzQVYsP933xYiknUa" Comment="Eye" Bounds="623,401,35,43" ShowValueBox="true" isIOBox="true" Value="0, 0, 0">
+          <Pad Id="FXC7DIzQVYsP933xYiknUa" Comment="Eye" Bounds="592,407,35,43" ShowValueBox="true" isIOBox="true" Value="0, 0, 0">
             <p:TypeAnnotation LastCategoryFullName="3D" LastSymbolSource="CoreLibBasics.vl">
               <Choice Kind="TypeFlag" Name="Vector3" />
             </p:TypeAnnotation>
