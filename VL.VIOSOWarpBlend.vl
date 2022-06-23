@@ -114,7 +114,7 @@
               </Node>
               <ControlPoint Id="BJ7ZRja7MxKMhZ74HfznIq" Bounds="543,1023" />
               <Node Bounds="841,511,32,26" Id="I5LQvpzxAUkLX0fEIlOcna">
-                <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.CLIP" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.CLIP" LastSymbolSource="VIOSOWarpBlend.dll">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <CategoryReference Kind="AssemblyCategory" Name="CLIP" />
                   <Choice Kind="OperationCallFlag" Name="l" />
@@ -125,7 +125,7 @@
               </Node>
               <Pad Id="QrsDjIvBDAZOvlD4yBQNzg" SlotId="HwChwROjx3NO9n6nsjiPLi" Bounds="842,432" />
               <Node Bounds="890,551,32,26" Id="JPXvPHTGqmGMKzhy66PtIa">
-                <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.CLIP" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.CLIP" LastSymbolSource="VIOSOWarpBlend.dll">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <CategoryReference Kind="AssemblyCategory" Name="CLIP" />
                   <Choice Kind="OperationCallFlag" Name="r" />
@@ -135,7 +135,7 @@
                 <Pin Id="NK2oeQPiPPCNHGVpgLN4sj" Name="R" Kind="OutputPin" />
               </Node>
               <Node Bounds="909,611,32,26" Id="I9Cybkzde25PrybAdkf60D">
-                <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.CLIP" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.CLIP" LastSymbolSource="VIOSOWarpBlend.dll">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <CategoryReference Kind="AssemblyCategory" Name="CLIP" />
                   <Choice Kind="OperationCallFlag" Name="t" />
@@ -145,7 +145,7 @@
                 <Pin Id="EKUgoECWjgLMtg6J7rGomb" Name="T" Kind="OutputPin" />
               </Node>
               <Node Bounds="944,645,32,26" Id="TIhkBKpgdBEMbm3ggXip3k">
-                <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.CLIP" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.CLIP" LastSymbolSource="VIOSOWarpBlend.dll">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <CategoryReference Kind="AssemblyCategory" Name="CLIP" />
                   <Choice Kind="OperationCallFlag" Name="b" />
@@ -155,7 +155,7 @@
                 <Pin Id="IGAHfpsST0SNtPblytNzWm" Name="B" Kind="OutputPin" />
               </Node>
               <Node Bounds="958,726,32,26" Id="B38btFHNHc3PZPhdooAaRD">
-                <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.CLIP" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.CLIP" LastSymbolSource="VIOSOWarpBlend.dll">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <CategoryReference Kind="AssemblyCategory" Name="CLIP" />
                   <Choice Kind="OperationCallFlag" Name="n" />
@@ -165,7 +165,7 @@
                 <Pin Id="D0QeKiCmlbAPRN1hRfnOH1" Name="N" Kind="OutputPin" />
               </Node>
               <Node Bounds="956,778,32,26" Id="BFwdQPthLfwMHJ0wC84Vfy">
-                <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.CLIP" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.CLIP" LastSymbolSource="VIOSOWarpBlend.dll">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <CategoryReference Kind="AssemblyCategory" Name="CLIP" />
                   <Choice Kind="OperationCallFlag" Name="f" />
@@ -217,7 +217,7 @@
                 <Patch Id="HVComMHLIpkP5k82DSAcd4">
                   <Canvas Id="JAzaXHGqaciNjrxQNpWTfM" CanvasType="Group">
                     <Node Bounds="205,256,46,26" Id="Dh99tXssSX1MMrQF7hhqv7">
-                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper" LastSymbolSource="VIOSOWarpBlend.dll">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <CategoryReference Kind="AssemblyCategory" Name="Warper" />
                         <Choice Kind="OperationCallFlag" Name="Create" />
@@ -231,14 +231,14 @@
                     <ControlPoint Id="Q58ABKvRlZ9O8e5x8tOw1j" Bounds="289,333" />
                     <ControlPoint Id="SuINy4TD0N6LO4CoKumMiS" Bounds="371,549" />
                     <Node Bounds="120,216,81,19" Id="IE82anwsRX3MB8MJYxUmFj">
-                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper" LastSymbolSource="VIOSOWarpBlend.dll">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="DummyDevice" />
                       </p:NodeReference>
                       <Pin Id="AwIQaSn96TCMBHcFYzPI2f" Name="Dummy Device" Kind="OutputPin" />
                     </Node>
                     <Node Bounds="205,303,42,26" Id="Ik4iRuFvLX2MWpaMS2ZNuN">
-                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper" LastSymbolSource="VIOSOWarpBlend.dll">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="Get" />
                         <CategoryReference Kind="AssemblyCategory" Name="Warper" NeedsToBeDirectParent="true" />
@@ -248,7 +248,7 @@
                       <Pin Id="VFrv6z3ic08NTRlFiUzOPZ" Name="Result" Kind="OutputPin" />
                     </Node>
                     <Node Bounds="259,1769,42,26" Id="GClTX8jHcM8PeJV3cH7Zqp">
-                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper" LastSymbolSource="VIOSOWarpBlend.dll">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="Set" />
                         <CategoryReference Kind="AssemblyCategory" Name="Warper" NeedsToBeDirectParent="true" />
@@ -258,7 +258,7 @@
                       <Pin Id="Qs3yNZ6eaUxNgckmyNNk4t" Name="Output" Kind="StateOutputPin" />
                     </Node>
                     <Node Bounds="258,1840,42,26" Id="CTNJUwsHEVbM4ZeVyZKgFL">
-                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper" LastSymbolSource="VIOSOWarpBlend.dll">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="Init" />
                       </p:NodeReference>
@@ -267,7 +267,7 @@
                       <Pin Id="UlZMVuBMUcCNd6daQVhDh8" Name="Result" Kind="OutputPin" />
                     </Node>
                     <Node Bounds="1294,1701,74,26" Id="S4XmeOMYc2CPRdrKwFcotp">
-                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.VWB_Warper" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.VWB_Warper" LastSymbolSource="VIOSOWarpBlend.dll">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="bPartialInput" />
                       </p:NodeReference>
@@ -282,11 +282,13 @@
                         <CategoryReference Kind="Category" Name="Primitive" />
                       </p:NodeReference>
                       <Pin Id="JlhI5BYORT0OD9ckuRirhZ" Name="Condition" Kind="InputPin" />
+                      <ControlPoint Id="M1fpsWt0BRzNPmY0IKBgvJ" Bounds="2396,2110" Alignment="Bottom" />
+                      <ControlPoint Id="ScGDYV73EecONyCJ9HLsRl" Bounds="2242,1790" Alignment="Top" />
                       <Patch Id="F2ERPeFeaYpQUt2H9k7cMR" ManuallySortedPins="true">
                         <Patch Id="EYuJJPTqHzTPyXb4glSD3n" Name="Create" ManuallySortedPins="true" />
                         <Patch Id="NNh5VphFiZqMtxqY0mnSeS" Name="Then" ManuallySortedPins="true" />
                         <Node Bounds="2272,1821,70,26" Id="HldT61TwwKRMUTAROaWXUT">
-                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.VWB_Warper" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.VWB_Warper" LastSymbolSource="VIOSOWarpBlend.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="optimalRect" />
                           </p:NodeReference>
@@ -295,7 +297,7 @@
                           <Pin Id="LMD0fqZTE9AOn0PqaUBHJP" Name="Optimal Rect" Kind="OutputPin" />
                         </Node>
                         <Node Bounds="2355,1862,35,26" Id="ITRkFlL5gFLLJCiCmGUuY6">
-                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.RECT" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.RECT" LastSymbolSource="VIOSOWarpBlend.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="left" />
                           </p:NodeReference>
@@ -304,7 +306,7 @@
                           <Pin Id="DFHvjQnYbpFPXsNTxF4qBE" Name="Left" Kind="OutputPin" />
                         </Node>
                         <Node Bounds="2354,1897,31,26" Id="HttttOHqX5EM1tqulgRYE6">
-                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.SIZE" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.SIZE" LastSymbolSource="VIOSOWarpBlend.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="cx" />
                           </p:NodeReference>
@@ -313,7 +315,7 @@
                           <Pin Id="Tiskpbt3agsMWJ7GNq1Mre" Name="Cx" Kind="OutputPin" />
                         </Node>
                         <Node Bounds="2272,1860,67,26" Id="GZ7U3O9s4xSNvMNkctH7SE">
-                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.VWB_Warper" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.VWB_Warper" LastSymbolSource="VIOSOWarpBlend.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="optimalRes" />
                           </p:NodeReference>
@@ -344,7 +346,7 @@
                           <Pin Id="EbLx6zgi7DVNuxj1eO2lXG" Name="Output" Kind="StateOutputPin" />
                         </Node>
                         <Node Bounds="2424,1898,35,26" Id="LzZyfivzPNSNwoERb3tdLo">
-                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.RECT" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.RECT" LastSymbolSource="VIOSOWarpBlend.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="top" />
                           </p:NodeReference>
@@ -353,7 +355,7 @@
                           <Pin Id="CCx6WkR2zEeMMwPtq35Vuo" Name="Top" Kind="OutputPin" />
                         </Node>
                         <Node Bounds="2424,1933,31,26" Id="NPJYv2KfBrwNDKYwj60uZn">
-                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.SIZE" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.SIZE" LastSymbolSource="VIOSOWarpBlend.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="cy" />
                           </p:NodeReference>
@@ -372,7 +374,7 @@
                           <Pin Id="ENDnKGnJjFeQHT3tmWvsVl" Name="Output" Kind="OutputPin" />
                         </Node>
                         <Node Bounds="2494,1932,38,26" Id="VPoT17YyIs1QGXHBGrPeAU">
-                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.RECT" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.RECT" LastSymbolSource="VIOSOWarpBlend.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="right" />
                           </p:NodeReference>
@@ -400,7 +402,7 @@
                           <Pin Id="FZubrrtoudXNOG9CPgaP4X" Name="Output" Kind="OutputPin" />
                         </Node>
                         <Node Bounds="2559,1965,50,26" Id="UtVO0V69DZZMHyaMFFTSky">
-                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.RECT" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.RECT" LastSymbolSource="VIOSOWarpBlend.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="bottom" />
                           </p:NodeReference>
@@ -428,11 +430,9 @@
                           <Pin Id="UJ8KwTxSDltPkO1mFpRsdP" Name="Output" Kind="OutputPin" />
                         </Node>
                       </Patch>
-                      <ControlPoint Id="M1fpsWt0BRzNPmY0IKBgvJ" Bounds="2396,2110" Alignment="Bottom" />
-                      <ControlPoint Id="ScGDYV73EecONyCJ9HLsRl" Bounds="2242,1790" Alignment="Top" />
                     </Node>
                     <Node Bounds="259,1886,112,26" Id="PNekeOyCSh4O3S5rRPaXV8">
-                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper" LastSymbolSource="VIOSOWarpBlend.dll">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="GetWarpBlendHeader" />
                       </p:NodeReference>
@@ -442,7 +442,7 @@
                       <Pin Id="KP9Q0ad3q4zO7VCJvZyfio" Name="Header" Kind="OutputPin" />
                     </Node>
                     <Node Bounds="368,1939,77,26" Id="QW0U10fspJoMhD8CQnsmfz">
-                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.WarpFileHeader5" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.WarpFileHeader5" LastSymbolSource="VIOSOWarpBlend.dll">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="width" />
                       </p:NodeReference>
@@ -468,7 +468,7 @@
                       <Pin Id="PqGHU5aj7etN88N6Xnmmmj" Name="Result" Kind="OutputPin" />
                     </Node>
                     <Node Bounds="368,1982,77,26" Id="EPxBOW718IZP3DxRsDXrYs">
-                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.WarpFileHeader5" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.WarpFileHeader5" LastSymbolSource="VIOSOWarpBlend.dll">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="height" />
                       </p:NodeReference>
@@ -485,7 +485,7 @@
                       <Pin Id="DG0gKCOK2TAM0OGg54ltPE" Name="Result" Kind="OutputPin" />
                     </Node>
                     <Node Bounds="274,2066,74,26" Id="VdWzjbMU4SFPvqBYak9Nry">
-                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper" LastSymbolSource="VIOSOWarpBlend.dll">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="GetWarpMap" />
                       </p:NodeReference>
@@ -637,7 +637,7 @@
                       </Patch>
                     </Node>
                     <Node Bounds="282,2601,76,26" Id="K7GM5cjmoktOELYDB8chDt">
-                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper" LastSymbolSource="VIOSOWarpBlend.dll">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="GetBlendMap" />
                       </p:NodeReference>
@@ -942,7 +942,7 @@
                       <ControlPoint Id="C5hbVSLM34IP0UZXoycEXS" Bounds="841,3626" Alignment="Bottom" />
                     </Node>
                     <Node Bounds="303,3676,74,26" Id="V4reAt6EAF3OuqtSpqlYoV">
-                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper" LastSymbolSource="VIOSOWarpBlend.dll">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="GetBlackMap" />
                       </p:NodeReference>
@@ -1104,7 +1104,7 @@
                       </p:ValueBoxSettings>
                     </Pad>
                     <Node Bounds="1078,1799,77,26" Id="AVNNEjBSzUAPkiOASXNrLY">
-                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.WarpFileHeader5" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.WarpFileHeader5" LastSymbolSource="VIOSOWarpBlend.dll">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="flags" />
                       </p:NodeReference>
@@ -1118,7 +1118,7 @@
                       </p:TypeAnnotation>
                     </Pad>
                     <Node Bounds="1316,1935,76,26" Id="NXNwnC1fVQ0MNn4Dz9VQRc">
-                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.VWB_Warper" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.VWB_Warper" LastSymbolSource="VIOSOWarpBlend.dll">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="bDoNotBlend" />
                       </p:NodeReference>
@@ -1144,7 +1144,7 @@
                       </p:TypeAnnotation>
                     </Pad>
                     <Node Bounds="1493,1965,76,26" Id="NI2iEiU2bSwMyNspNSvrVH">
-                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.VWB_Warper" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.VWB_Warper" LastSymbolSource="VIOSOWarpBlend.dll">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="bBicubic" />
                       </p:NodeReference>
@@ -1165,7 +1165,7 @@
                       <Pin Id="C6HUEC75ycJNM49kflylQJ" Name="Output" Kind="StateOutputPin" />
                     </Node>
                     <Node Bounds="1086,2262,77,26" Id="A6oOSs0139OQOlQxrAWsAr">
-                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.WarpFileHeader5" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.WarpFileHeader5" LastSymbolSource="VIOSOWarpBlend.dll">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="blackScale" />
                       </p:NodeReference>
@@ -1174,7 +1174,7 @@
                       <Pin Id="RXFvCufJOdhNJenslsZgO3" Name="Black Scale" Kind="OutputPin" />
                     </Node>
                     <Node Bounds="1185,2261,77,26" Id="JHXzl0QbAQDQD8GqTHj7pX">
-                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.WarpFileHeader5" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.WarpFileHeader5" LastSymbolSource="VIOSOWarpBlend.dll">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="blackDark" />
                       </p:NodeReference>
@@ -1183,7 +1183,7 @@
                       <Pin Id="C7bmmqDtq4GNwEnyILUPtc" Name="Black Dark" Kind="OutputPin" />
                     </Node>
                     <Node Bounds="1297,2260,77,26" Id="AmD5TRtttEMPYJOe19aGbw">
-                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.WarpFileHeader5" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.WarpFileHeader5" LastSymbolSource="VIOSOWarpBlend.dll">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="blackBright" />
                       </p:NodeReference>
@@ -1201,7 +1201,7 @@
                       <Pin Id="OVIkR8rbL3qNLilkj22MG0" Name="Output" Kind="OutputPin" />
                     </Node>
                     <Node Bounds="1392,2262,71,26" Id="J1vo7WIyi9KMBijqHnnNHE">
-                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.VWB_Warper" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.VWB_Warper" LastSymbolSource="VIOSOWarpBlend.dll">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="bDoNoBlack" />
                       </p:NodeReference>
@@ -1371,7 +1371,7 @@
                       <Pin Id="QncF0m10jytM9LtWaXNoKO" Name="Output" Kind="OutputPin" />
                     </Node>
                     <Node Bounds="270,573,79,26" Id="RwH0cgHhnmPLyaFMkZlyvc">
-                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.VWB_Warper" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.VWB_Warper" LastSymbolSource="VIOSOWarpBlend.dll">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <CategoryReference Kind="AssemblyCategory" Name="VWB_Warper" />
                         <Choice Kind="OperationCallFlag" Name="SetcalibIndex" />
@@ -1382,7 +1382,7 @@
                     </Node>
                     <ControlPoint Id="MfNKd7RTtiFLu2L9cuIzz4" Bounds="387,1505" />
                     <Node Bounds="286,4171,76,26" Id="MKO2r3mmIdQMEAJULGs7x3">
-                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper" LastSymbolSource="VIOSOWarpBlend.dll">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <Choice Kind="OperationCallFlag" Name="GetWhiteMap" />
                       </p:NodeReference>
@@ -1682,6 +1682,8 @@
                         <CategoryReference Kind="Category" Name="Primitive" />
                       </p:NodeReference>
                       <Pin Id="HbqfWyoHtfGPLDjtkkEqk2" Name="Condition" Kind="InputPin" />
+                      <ControlPoint Id="Pvv0ceLI8PFPnuwHDoraVz" Bounds="272,412" Alignment="Top" />
+                      <ControlPoint Id="UWqoDmWFPocL2l0TmhzSpP" Bounds="272,523" Alignment="Bottom" />
                       <Patch Id="TwsBEUr5BFgNj2lNguWINo" ManuallySortedPins="true">
                         <Patch Id="OU5DxUJLMjjMt5svSVmYaM" Name="Create" ManuallySortedPins="true" />
                         <Patch Id="U7yhqXvYTjtMOkXUGqVvzW" Name="Then" ManuallySortedPins="true" />
@@ -1694,7 +1696,7 @@
                           <Pin Id="DoHLRo6TLNtOv3qMEUf5xa" Name="Result" Kind="OutputPin" />
                         </Node>
                         <Node Bounds="270,476,67,26" Id="OjNDCpurPn2OU1bqoB3yFw">
-                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.VWB_Warper" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.VWB_Warper" LastSymbolSource="VIOSOWarpBlend.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="SetcalibFile" />
                           </p:NodeReference>
@@ -1703,8 +1705,6 @@
                           <Pin Id="NNIq4vqP8QuQZJMLMwMwrM" Name="Output" Kind="StateOutputPin" />
                         </Node>
                       </Patch>
-                      <ControlPoint Id="Pvv0ceLI8PFPnuwHDoraVz" Bounds="272,412" Alignment="Top" />
-                      <ControlPoint Id="UWqoDmWFPocL2l0TmhzSpP" Bounds="272,523" Alignment="Bottom" />
                     </Node>
                     <Node Bounds="259,891,58,26" Id="F3wb3WEppqFOyb3H48Cme5">
                       <p:NodeReference LastCategoryFullName="Primitive.Optional" LastSymbolSource="CoreLibBasics.vl">
@@ -1753,11 +1753,13 @@
                         <FullNameCategoryReference ID="Primitive" />
                       </p:NodeReference>
                       <Pin Id="QPqJBe2KZorPXgXtb2bCyO" Name="Condition" Kind="InputPin" />
+                      <ControlPoint Id="P6MtoeMr1NqPOT8yNsIldQ" Bounds="274,701" Alignment="Top" />
+                      <ControlPoint Id="K2SSrz1S6h9M9TfB0CTzv5" Bounds="274,834" Alignment="Bottom" />
                       <Patch Id="CBSltKA7QSIO75CRZ0nYyT" ManuallySortedPins="true">
                         <Patch Id="SFySvPjCTczNZ13fK9sdDV" Name="Create" ManuallySortedPins="true" />
                         <Patch Id="GhByIKQcg9lPm5EvFepn3b" Name="Then" ManuallySortedPins="true" />
                         <Node Bounds="272,791,90,26" Id="E9ZANOhpQkOOlCInWBAW36">
-                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.VWB_Warper" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.VWB_Warper" LastSymbolSource="VIOSOWarpBlend.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="SetbDoNotBlend" />
                           </p:NodeReference>
@@ -1782,8 +1784,6 @@
                           <Pin Id="FNEKfeGWr1XQOwHncfuTuO" Name="Value" Kind="OutputPin" />
                         </Node>
                       </Patch>
-                      <ControlPoint Id="P6MtoeMr1NqPOT8yNsIldQ" Bounds="274,701" Alignment="Top" />
-                      <ControlPoint Id="K2SSrz1S6h9M9TfB0CTzv5" Bounds="274,834" Alignment="Bottom" />
                     </Node>
                     <Node Bounds="259,661,58,26" Id="FgMIt1adezgP2ALP3ZnoSi">
                       <p:NodeReference LastCategoryFullName="Primitive.Optional" LastSymbolSource="CoreLibBasics.vl">
@@ -1801,11 +1801,13 @@
                         <FullNameCategoryReference ID="Primitive" />
                       </p:NodeReference>
                       <Pin Id="LE6DZvr3fEBQc7hjyoPBtE" Name="Condition" Kind="InputPin" />
+                      <ControlPoint Id="JbExb4lfS3ZPMtn5Q2fR5p" Bounds="274,937" Alignment="Top" />
+                      <ControlPoint Id="T7ZskpNODxYNfe7m0GZOLJ" Bounds="274,1068" Alignment="Bottom" />
                       <Patch Id="BLCn9VfW4U3N560J9DiXVb" ManuallySortedPins="true">
                         <Patch Id="O78ldEG8AzsNfPYFhgsJW5" Name="Create" ManuallySortedPins="true" />
                         <Patch Id="DUdPtJVrX27O6ES1BbJbkm" Name="Then" ManuallySortedPins="true" />
                         <Node Bounds="270,1024,85,26" Id="Cja6uaUI1JFLfsu2Gid2fh">
-                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.VWB_Warper" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.VWB_Warper" LastSymbolSource="VIOSOWarpBlend.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="SetbDoNoBlack" />
                           </p:NodeReference>
@@ -1830,8 +1832,6 @@
                           <Pin Id="A75vndGmK7APwCbTVYSiwt" Name="Value" Kind="OutputPin" />
                         </Node>
                       </Patch>
-                      <ControlPoint Id="JbExb4lfS3ZPMtn5Q2fR5p" Bounds="274,937" Alignment="Top" />
-                      <ControlPoint Id="T7ZskpNODxYNfe7m0GZOLJ" Bounds="274,1068" Alignment="Bottom" />
                     </Node>
                     <Node Bounds="269,1146,133,111" Id="La0MeMa3AvCOpmh9A25oRD">
                       <p:NodeReference>
@@ -1840,11 +1840,13 @@
                         <FullNameCategoryReference ID="Primitive" />
                       </p:NodeReference>
                       <Pin Id="V7TtaF0Ho6sPy7aQb09t7M" Name="Condition" Kind="InputPin" />
+                      <ControlPoint Id="PbEIuPprWItMSk7ANCqC7A" Bounds="284,1153" Alignment="Top" />
+                      <ControlPoint Id="EHMuFNbvONTQdmmgy66FZZ" Bounds="284,1252" Alignment="Bottom" />
                       <Patch Id="EUIqHqgSgUENm8C7YyW9BX" ManuallySortedPins="true">
                         <Patch Id="SG4H5MU5WiBNdp2flG24gH" Name="Create" ManuallySortedPins="true" />
                         <Patch Id="SehMgcFDMFnLU2gPpzGU1P" Name="Then" ManuallySortedPins="true" />
                         <Node Bounds="281,1210,68,26" Id="KVCICGO8XZZQOCWbiqC1RL">
-                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.VWB_Warper" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.VWB_Warper" LastSymbolSource="VIOSOWarpBlend.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <CategoryReference Kind="AssemblyCategory" Name="VWB_Warper" />
                             <Choice Kind="OperationCallFlag" Name="SetbBicubic" />
@@ -1863,8 +1865,6 @@
                           <Pin Id="VXKTsEBAbPlNqMoicJf1Oz" Name="Value" Kind="OutputPin" />
                         </Node>
                       </Patch>
-                      <ControlPoint Id="PbEIuPprWItMSk7ANCqC7A" Bounds="284,1153" Alignment="Top" />
-                      <ControlPoint Id="EHMuFNbvONTQdmmgy66FZZ" Bounds="284,1252" Alignment="Bottom" />
                     </Node>
                     <Node Bounds="281,1360,147,106" Id="O0d7RPJK07JP9mNKrszxMW">
                       <p:NodeReference>
@@ -1873,11 +1873,13 @@
                         <FullNameCategoryReference ID="Primitive" />
                       </p:NodeReference>
                       <Pin Id="NPeujCWU4yJOsEEJabcEDw" Name="Condition" Kind="InputPin" />
+                      <ControlPoint Id="PvntDQk3TyWP7LysAG45Lh" Bounds="295,1367" Alignment="Top" />
+                      <ControlPoint Id="B8djbutNkcALWu1qpqteaB" Bounds="295,1460" Alignment="Bottom" />
                       <Patch Id="QvtW4CEMdJKN7EjbDK68gM" ManuallySortedPins="true">
                         <Patch Id="AB7QEZC8WolNofrVSUUP6O" Name="Create" ManuallySortedPins="true" />
                         <Patch Id="ODQZP27aqqNLJF0vzSFXKq" Name="Then" ManuallySortedPins="true" />
                         <Node Bounds="295,1419,79,26" Id="E2GgVg4FXR4NW8UQebva2Y">
-                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.VWB_Warper" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.VWB_Warper" LastSymbolSource="VIOSOWarpBlend.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="SetbAutoView" />
                           </p:NodeReference>
@@ -1895,8 +1897,6 @@
                           <Pin Id="ROctzNsZVaLNMQ6SvRTddG" Name="Value" Kind="OutputPin" />
                         </Node>
                       </Patch>
-                      <ControlPoint Id="PvntDQk3TyWP7LysAG45Lh" Bounds="295,1367" Alignment="Top" />
-                      <ControlPoint Id="B8djbutNkcALWu1qpqteaB" Bounds="295,1460" Alignment="Bottom" />
                     </Node>
                     <Node Bounds="281,1575,178,172" Id="JO4QyQOo9hyM2mknC6dnIg">
                       <p:NodeReference>
@@ -1905,11 +1905,13 @@
                         <FullNameCategoryReference ID="Primitive" />
                       </p:NodeReference>
                       <Pin Id="IOALv8AWDNNMu7P3gRzXjg" Name="Condition" Kind="InputPin" />
+                      <ControlPoint Id="D15O2nEtaWSNr8tqRb08ey" Bounds="295,1582" Alignment="Top" />
+                      <ControlPoint Id="UTfavqMxIBrNpyM99aj7iL" Bounds="298,1742" Alignment="Bottom" />
                       <Patch Id="HN3vTBT2MB5PWLFLAy1lk4" ManuallySortedPins="true">
                         <Patch Id="UaLF14x5ln8MnvPa61v5Zf" Name="Create" ManuallySortedPins="true" />
                         <Patch Id="Enm2lY2NwaLL11WL5W9wy9" Name="Then" ManuallySortedPins="true" />
                         <Node Bounds="295,1693,60,26" Id="HrPRqlzBuUqPaiCJcFcOIk">
-                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.VWB_Warper" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.VWB_Warper" LastSymbolSource="VIOSOWarpBlend.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="Settrans" />
                           </p:NodeReference>
@@ -1943,8 +1945,6 @@
                           <Pin Id="ThXyMaJMU54QDFTRh8IF5b" Name="Value" Kind="OutputPin" />
                         </Node>
                       </Patch>
-                      <ControlPoint Id="D15O2nEtaWSNr8tqRb08ey" Bounds="295,1582" Alignment="Top" />
-                      <ControlPoint Id="UTfavqMxIBrNpyM99aj7iL" Bounds="298,1742" Alignment="Bottom" />
                     </Node>
                   </Canvas>
                   <ProcessDefinition Id="BXG2lG49gfqL7dgrqGZHT3">
@@ -2368,7 +2368,7 @@
                     <Pin Id="MtBMGEEWih2LYRMocpYieD" Name="Z" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="1121,401,46,26" Id="PB9JpEbp3cBOD2gaWRCbd2">
-                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.VEC3" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.VEC3" LastSymbolSource="VIOSOWarpBlend.dll">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="AssemblyCategory" Name="VEC3" />
                       <Choice Kind="OperationCallFlag" Name="Create" />
@@ -2412,7 +2412,7 @@
                 </p:NodeReference>
                 <Patch Id="QhJrGIvust1QQ8R3o2UWWs">
                   <Node Bounds="1264,361,46,26" Id="IXxyNu8lrrSOXEDPV1j1Qm">
-                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.MAT4X4" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.MAT4X4" LastSymbolSource="VIOSOWarpBlend.dll">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="AssemblyCategory" Name="MAT4X4" />
                       <Choice Kind="OperationCallFlag" Name="_11" />
@@ -2426,7 +2426,7 @@
                   <Pin Id="Iz4Kk0E6FyuMHVVBwenu6a" Name="Input" Kind="InputPin" Bounds="1713,852" />
                   <Link Id="SZIbbxeYDIHPIgPq1pQGZk" Ids="Iz4Kk0E6FyuMHVVBwenu6a,R8gaxR1cxUiLIdwHxHQ3Nw" IsHidden="true" />
                   <Node Bounds="1264,402,46,26" Id="SAYBYKW7UI4PSrix6bL2rC">
-                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.MAT4X4" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.MAT4X4" LastSymbolSource="VIOSOWarpBlend.dll">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="AssemblyCategory" Name="MAT4X4" />
                       <Choice Kind="OperationCallFlag" Name="_12" />
@@ -2436,7 +2436,7 @@
                     <Pin Id="F1nkEIUVsthPGOvysnwmS2" Name="_12" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="1264,443,46,26" Id="VIH9mvFOeX5NFdNAPfZ7zq">
-                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.MAT4X4" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.MAT4X4" LastSymbolSource="VIOSOWarpBlend.dll">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="AssemblyCategory" Name="MAT4X4" />
                       <Choice Kind="OperationCallFlag" Name="_13" />
@@ -2446,7 +2446,7 @@
                     <Pin Id="CObpsQoLtYXLjQbNoYxGZD" Name="_13" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="1264,484,46,26" Id="S7Sx3Ozr5AGOXl5kB5XKI6">
-                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.MAT4X4" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.MAT4X4" LastSymbolSource="VIOSOWarpBlend.dll">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="AssemblyCategory" Name="MAT4X4" />
                       <Choice Kind="OperationCallFlag" Name="_14" />
@@ -2456,7 +2456,7 @@
                     <Pin Id="DAdbWbVy2MiQFZ72hfTPut" Name="_14" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="1264,525,46,26" Id="MzA5edQUuPmPvwUQe7werz">
-                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.MAT4X4" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.MAT4X4" LastSymbolSource="VIOSOWarpBlend.dll">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="AssemblyCategory" Name="MAT4X4" />
                       <Choice Kind="OperationCallFlag" Name="_21" />
@@ -2466,7 +2466,7 @@
                     <Pin Id="FqLmNtSAXyVPuRc24t7Uvl" Name="_21" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="1264,566,46,26" Id="L28pHiKJX8QNcEmNuYgStX">
-                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.MAT4X4" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.MAT4X4" LastSymbolSource="VIOSOWarpBlend.dll">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="AssemblyCategory" Name="MAT4X4" />
                       <Choice Kind="OperationCallFlag" Name="_22" />
@@ -2476,7 +2476,7 @@
                     <Pin Id="DISfK7OJHxRMIHDhdK5zFC" Name="_22" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="1264,607,46,26" Id="MQrtNNYB7PhMBiK877jOFo">
-                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.MAT4X4" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.MAT4X4" LastSymbolSource="VIOSOWarpBlend.dll">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="AssemblyCategory" Name="MAT4X4" />
                       <Choice Kind="OperationCallFlag" Name="_23" />
@@ -2486,7 +2486,7 @@
                     <Pin Id="F1KkI4PErPvMo2buAuJvpG" Name="_23" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="1264,648,46,26" Id="NS5KPq0LsEyLgMHUbCY8Q1">
-                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.MAT4X4" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.MAT4X4" LastSymbolSource="VIOSOWarpBlend.dll">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="AssemblyCategory" Name="MAT4X4" />
                       <Choice Kind="OperationCallFlag" Name="_24" />
@@ -2496,7 +2496,7 @@
                     <Pin Id="Nu9kICtG8MXNG8DBvStNOY" Name="_24" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="1264,689,46,26" Id="MxrDlgMW8jGPOGdvOy5krS">
-                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.MAT4X4" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.MAT4X4" LastSymbolSource="VIOSOWarpBlend.dll">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="AssemblyCategory" Name="MAT4X4" />
                       <Choice Kind="OperationCallFlag" Name="_31" />
@@ -2506,7 +2506,7 @@
                     <Pin Id="QzTiOHIfTszLoQxdXblULk" Name="_31" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="1264,730,46,26" Id="D49CR1ri2AtLhcYJAbj6Dj">
-                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.MAT4X4" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.MAT4X4" LastSymbolSource="VIOSOWarpBlend.dll">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="AssemblyCategory" Name="MAT4X4" />
                       <Choice Kind="OperationCallFlag" Name="_32" />
@@ -2516,7 +2516,7 @@
                     <Pin Id="Q0hANyfwsdgOzWjH2dYqK5" Name="_32" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="1264,771,46,26" Id="PQ4hzYLGu9GMvzb81zgGJL">
-                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.MAT4X4" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.MAT4X4" LastSymbolSource="VIOSOWarpBlend.dll">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="AssemblyCategory" Name="MAT4X4" />
                       <Choice Kind="OperationCallFlag" Name="_33" />
@@ -2570,7 +2570,7 @@
                   <Link Id="PC61aGC8ZFwMghRDy4h7w4" Ids="Q0hANyfwsdgOzWjH2dYqK5,MqecyNQNmqEOprRhUhfejW" />
                   <Link Id="LpxrwVndpd2LY9PXv1XvK0" Ids="Q2NESiABhnULsuOiK8jcXM,UEqqHEgplbyMn2KpNivJTX" />
                   <Node Bounds="1264,813,46,26" Id="GYXTSyWS800PgPy9vXK046">
-                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.MAT4X4" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.MAT4X4" LastSymbolSource="VIOSOWarpBlend.dll">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="AssemblyCategory" Name="MAT4X4" />
                       <Choice Kind="OperationCallFlag" Name="_34" />
@@ -2586,7 +2586,7 @@
                   <Pin Id="KkfxXZFvaQCQGWZtzEW8ER" Name="Output" Kind="OutputPin" Bounds="1803,1474" />
                   <Link Id="PJu9Yj0xPAtO1fdIpQj6Ew" Ids="DvCWIUbE3uwOVNx0qxDDOn,KkfxXZFvaQCQGWZtzEW8ER" IsHidden="true" />
                   <Node Bounds="1264,856,46,26" Id="ErydMMP8qCTML2wVIJe3Yb">
-                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.MAT4X4" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.MAT4X4" LastSymbolSource="VIOSOWarpBlend.dll">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="AssemblyCategory" Name="MAT4X4" />
                       <Choice Kind="OperationCallFlag" Name="_41" />
@@ -2596,7 +2596,7 @@
                     <Pin Id="E1Ref80hwx0Ngx9unGOjsH" Name="_41" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="1264,897,46,26" Id="NZXZpsQtJ26M2B3L7piVkl">
-                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.MAT4X4" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.MAT4X4" LastSymbolSource="VIOSOWarpBlend.dll">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="AssemblyCategory" Name="MAT4X4" />
                       <Choice Kind="OperationCallFlag" Name="_42" />
@@ -2606,7 +2606,7 @@
                     <Pin Id="PokC0tycrQgMZPBPWrJL4i" Name="_42" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="1264,938,46,26" Id="DVJ3waDmoeoNSbfQ2HUSka">
-                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.MAT4X4" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.MAT4X4" LastSymbolSource="VIOSOWarpBlend.dll">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="AssemblyCategory" Name="MAT4X4" />
                       <Choice Kind="OperationCallFlag" Name="_43" />
@@ -2616,7 +2616,7 @@
                     <Pin Id="CVkyEEvoNYZQURKm2VvC9G" Name="_43" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="1264,980,46,26" Id="EuEhgpmJH8zMx7QfyswcL5">
-                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.MAT4X4" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.MAT4X4" LastSymbolSource="VIOSOWarpBlend.dll">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="AssemblyCategory" Name="MAT4X4" />
                       <Choice Kind="OperationCallFlag" Name="_44" />
@@ -2720,11 +2720,15 @@
                   <FullNameCategoryReference ID="Primitive" />
                 </p:NodeReference>
                 <Pin Id="OxHcLdISaYCLHXiyHTfUb1" Name="Condition" Kind="InputPin" />
+                <ControlPoint Id="I4UH27YUWi4QHHblFnkNwW" Bounds="619,583" Alignment="Bottom" />
+                <ControlPoint Id="JPuQqnDmt5hOnuxVSttaOf" Bounds="594,475" Alignment="Top" />
+                <ControlPoint Id="JXQAeSFLEtUMo4OwZuVskq" Bounds="631,583" Alignment="Bottom" />
+                <ControlPoint Id="OeQatg2jDHFPe3T4EnmgZo" Bounds="631,475" Alignment="Top" />
                 <Patch Id="LihFjVGoPNgMMwAS44yrVH" ManuallySortedPins="true">
                   <Patch Id="DsL68LKEePHL0bWeSo9WL7" Name="Create" ManuallySortedPins="true" />
                   <Patch Id="PF2ZZVyKN6TNUgmbkgAynN" Name="Then" ManuallySortedPins="true" />
                   <Node Bounds="526,492,85,26" Id="PWNqYIqNfCaLHcrDs2AYHO">
-                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper" LastSymbolSource="VIOSOWarpBlend.dll">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="OperationCallFlag" Name="GetViewClip" />
                       <PinReference Kind="InputPin" Name="Eye" ParameterModifier="ref" />
@@ -2738,7 +2742,7 @@
                     <Pin Id="KQYfX1owDbRMxKCnSvwozu" Name="Result" Kind="OutputPin" />
                   </Node>
                   <Node Bounds="526,543,103,26" Id="MJGAiP0SPTbNqhuNepezCJ">
-                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper" LastSymbolSource="VIOSOWarpBlend.dll">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <Choice Kind="OperationCallFlag" Name="GetShaderVPMatrix" />
                     </p:NodeReference>
@@ -2748,10 +2752,6 @@
                     <Pin Id="VPLpGUwXrLpLQJTDDmcqVJ" Name="Result" Kind="OutputPin" />
                   </Node>
                 </Patch>
-                <ControlPoint Id="I4UH27YUWi4QHHblFnkNwW" Bounds="619,583" Alignment="Bottom" />
-                <ControlPoint Id="JPuQqnDmt5hOnuxVSttaOf" Bounds="594,475" Alignment="Top" />
-                <ControlPoint Id="JXQAeSFLEtUMo4OwZuVskq" Bounds="631,583" Alignment="Bottom" />
-                <ControlPoint Id="OeQatg2jDHFPe3T4EnmgZo" Bounds="631,475" Alignment="Top" />
               </Node>
               <Node Bounds="516,434,65,19" Id="H3kpLB6VuesNxXaJdZXbfm">
                 <p:NodeReference LastCategoryFullName="Primitive.Object" LastSymbolSource="CoreLibBasics.vl">
@@ -2796,7 +2796,7 @@
                   <Pin Id="ENgxLcPyuvMPHnfWK5pisP" Name="Input" Kind="InputPin" Bounds="1713,852" />
                   <Link Id="H94pJA5vD7SLxMHCPLj51K" Ids="ENgxLcPyuvMPHnfWK5pisP,ItdrNy7zhE0NNv9uIK69RO" IsHidden="true" />
                   <Node Bounds="1702,459,305,26" Id="KehKn2dd0KkPQcGPM7IIfU">
-                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.MAT4X4" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                    <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.MAT4X4" LastSymbolSource="VIOSOWarpBlend.dll">
                       <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                       <CategoryReference Kind="AssemblyCategory" Name="MAT4X4" />
                       <Choice Kind="OperationCallFlag" Name="Create" />
@@ -3042,6 +3042,12 @@
               <Pin Id="UdYms7REqQ0OnA3Ur59D7J" Name="Force" Kind="InputPin" DefaultValue="False" />
               <Pin Id="JZ6dHY4PJkqLGyb0BgyHpy" Name="Dispose Cached Outputs" Kind="InputPin" />
               <Pin Id="SP5ZiHLpSCDQUQEzmAA477" Name="Has Changed" Kind="OutputPin" />
+              <ControlPoint Id="TuqTU3e4EakLtO9lrsVjFi" Bounds="340,196" Alignment="Top" />
+              <ControlPoint Id="ID8Z7lFWWCxPHSEasCoaZ0" Bounds="575,986" Alignment="Bottom" />
+              <ControlPoint Id="GLCkRklulMuQY77YDcGNS3" Bounds="537,986" Alignment="Bottom" />
+              <ControlPoint Id="FArrry4kc7qMclMUMBMWGM" Bounds="307,986" Alignment="Bottom" />
+              <ControlPoint Id="BEtce1FzeE8PNJli7ca0yi" Bounds="722,986" Alignment="Bottom" />
+              <ControlPoint Id="MxrlNwZJEI7OcCmeV1NfuU" Bounds="454,986" Alignment="Bottom" />
               <Patch Id="CwFBjgJBEesNjb7KkgyxWn" ManuallySortedPins="true">
                 <Patch Id="VMrckJKFLDLLBQVaekR5Yf" Name="Create" ManuallySortedPins="true" />
                 <Patch Id="Lcw0cAGMqTCN2VcyyTHT7P" Name="Then" ManuallySortedPins="true" />
@@ -3086,11 +3092,21 @@
                     <FullNameCategoryReference ID="Primitive" />
                   </p:NodeReference>
                   <Pin Id="GA4vMajVRBDNCcH8KdtD0l" Name="Condition" Kind="InputPin" />
+                  <ControlPoint Id="PHHoLDiKVoNLwmCHvj92Tv" Bounds="532,920" Alignment="Bottom" />
+                  <ControlPoint Id="IqhFJkXZdtGNavthSoy3ZG" Bounds="513,339" Alignment="Top" />
+                  <ControlPoint Id="FFyxKzvwUtGPUvBRx8TheQ" Bounds="571,920" Alignment="Bottom" />
+                  <ControlPoint Id="T6tonxu10r9NlDgpyk6ZYP" Bounds="552,339" Alignment="Top" />
+                  <ControlPoint Id="ONSntw6xzCgP1fDBZ9gTbb" Bounds="308,920" Alignment="Bottom" />
+                  <ControlPoint Id="Gja0PVEM1KPPoNn8kO9mmn" Bounds="359,339" Alignment="Top" />
+                  <ControlPoint Id="QAxLO13blwcNV4zWf5hRkd" Bounds="721,920" Alignment="Bottom" />
+                  <ControlPoint Id="A9l7mQfseqMN57tnCfhyiJ" Bounds="690,339" Alignment="Top" />
+                  <ControlPoint Id="EtaO9ipBHr5NI3ziM2yKyl" Bounds="448,920" Alignment="Bottom" />
+                  <ControlPoint Id="LhqEd2dyncnOa2ZE1hRwh3" Bounds="448,339" Alignment="Top" />
                   <Patch Id="I575PPfk0d8PwGBXmA5siC" ManuallySortedPins="true">
                     <Patch Id="JM3m6JD9bAwLPsPSYOaAvB" Name="Create" ManuallySortedPins="true" />
                     <Patch Id="FUxtvipGfaiL7bRsK2dV6N" Name="Then" ManuallySortedPins="true" />
                     <Node Bounds="337,390,66,19" Id="SJrY4SYxuDXNaBDmsnUEVt">
-                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                      <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper" LastSymbolSource="VIOSOWarpBlend.dll">
                         <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                         <CategoryReference Kind="AssemblyCategory" Name="VIOSOWarpBlend" />
                         <CategoryReference Kind="AssemblyCategory" Name="Warper" />
@@ -3109,6 +3125,10 @@
                       <Pin Id="BEXvOFhehNjQKFeghfURVy" Name="Break" Kind="OutputPin" />
                       <ControlPoint Id="EVnSWJOKzKfOrCJ8dzplbN" Bounds="405,447" Alignment="Top" />
                       <ControlPoint Id="Na6NgVuHSnAPp7HJbwrSCW" Bounds="570,900" Alignment="Bottom" />
+                      <ControlPoint Id="NVVyfKAn8MvMGOqzzzv59x" Bounds="533,900" Alignment="Bottom" />
+                      <ControlPoint Id="QdHiM5TBQ51Mjc8xb6n3i0" Bounds="307,900" Alignment="Bottom" />
+                      <ControlPoint Id="OvBbka7aBpvMjF3NvaK1ku" Bounds="722,900" Alignment="Bottom" />
+                      <ControlPoint Id="EsKHE1boVTOPFBDvSN2Xmc" Bounds="452,900" Alignment="Bottom" />
                       <Patch Id="SpPhWxaJtu0QZ2HPdBnT7h" ManuallySortedPins="true">
                         <Patch Id="I9rS14HG7klO2nzNc54TCF" Name="Create" ManuallySortedPins="true" />
                         <Patch Id="AgqT62XqGgJOYpWlCBU6V1" Name="Update" ManuallySortedPins="true">
@@ -3116,7 +3136,7 @@
                         </Patch>
                         <Patch Id="UGJKNRYPXX3QTubWN3Iqwp" Name="Dispose" ManuallySortedPins="true" />
                         <Node Bounds="403,462,79,26" Id="RWhdECJDZlwQDVv2wUDMcr">
-                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.WarpBlendHeader" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.WarpBlendHeader" LastSymbolSource="VIOSOWarpBlend.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <CategoryReference Kind="AssemblyCategory" Name="WarpBlendHeader" />
                             <Choice Kind="OperationCallFlag" Name="header" />
@@ -3126,7 +3146,7 @@
                           <Pin Id="BzgnoFU8j3tMs5nIYBsLAc" Name="Header" Kind="OutputPin" />
                         </Node>
                         <Node Bounds="477,500,77,26" Id="GboHNPiAbs2QcnvGmmYp6q">
-                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.WarpFileHeader5" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.WarpFileHeader5" LastSymbolSource="VIOSOWarpBlend.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <CategoryReference Kind="AssemblyCategory" Name="WarpFileHeader5" />
                             <Choice Kind="OperationCallFlag" Name="name" />
@@ -3136,7 +3156,7 @@
                           <Pin Id="Gz6m52gil61QENekwRhubl" Name="Name" Kind="OutputPin" />
                         </Node>
                         <Node Bounds="459,549,77,26" Id="S93llMrupdgPCXKrtEWTkW">
-                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.WarpFileHeader5" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.WarpFileHeader5" LastSymbolSource="VIOSOWarpBlend.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <CategoryReference Kind="AssemblyCategory" Name="WarpFileHeader5" />
                             <Choice Kind="OperationCallFlag" Name="primName" />
@@ -3147,7 +3167,7 @@
                         </Node>
                         <ControlPoint Id="Do6hjkLpKtYMDHGeLZHyRm" Bounds="306,867" />
                         <Node Bounds="459,596,77,26" Id="ToJSKPwCdNiMk6ItPdTG73">
-                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.WarpFileHeader5" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.WarpFileHeader5" LastSymbolSource="VIOSOWarpBlend.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="flags" />
                           </p:NodeReference>
@@ -3170,7 +3190,7 @@
                           <Pin Id="S85VPzUWxhOQJyFamcGaRo" Name="Output" Kind="OutputPin" />
                         </Node>
                         <Node Bounds="367,672,77,26" Id="PaNljwyBt6rNZ6r3xtshEV">
-                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.WarpFileHeader5" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.WarpFileHeader5" LastSymbolSource="VIOSOWarpBlend.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="width" />
                           </p:NodeReference>
@@ -3196,7 +3216,7 @@
                           <Pin Id="OBJPDULECcoQKnIqA2srYn" Name="Result" Kind="OutputPin" />
                         </Node>
                         <Node Bounds="367,715,77,26" Id="S6v5IGG4oFSMCLG8nRmjIH">
-                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.WarpFileHeader5" LastSymbolSource="VL.VIOSOWarpBlend.dll">
+                          <p:NodeReference LastCategoryFullName="VIOSOWarpBlend.Warper.WarpFileHeader5" LastSymbolSource="VIOSOWarpBlend.dll">
                             <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                             <Choice Kind="OperationCallFlag" Name="height" />
                           </p:NodeReference>
@@ -3213,10 +3233,6 @@
                           <Pin Id="VhLBMvn13hBLAA1Tl0NOBw" Name="Result" Kind="OutputPin" />
                         </Node>
                       </Patch>
-                      <ControlPoint Id="NVVyfKAn8MvMGOqzzzv59x" Bounds="533,900" Alignment="Bottom" />
-                      <ControlPoint Id="QdHiM5TBQ51Mjc8xb6n3i0" Bounds="307,900" Alignment="Bottom" />
-                      <ControlPoint Id="OvBbka7aBpvMjF3NvaK1ku" Bounds="722,900" Alignment="Bottom" />
-                      <ControlPoint Id="EsKHE1boVTOPFBDvSN2Xmc" Bounds="452,900" Alignment="Bottom" />
                     </Node>
                     <Node Bounds="340,357,55,19" Id="HRPPCor1cT6LGSn1r3jBiW">
                       <p:NodeReference LastCategoryFullName="System.Conversion" LastSymbolSource="CoreLibBasics.vl">
@@ -3227,16 +3243,6 @@
                       <Pin Id="T9Fxq8TOlWjPxd8qe55fjr" Name="Result" Kind="OutputPin" />
                     </Node>
                   </Patch>
-                  <ControlPoint Id="PHHoLDiKVoNLwmCHvj92Tv" Bounds="532,920" Alignment="Bottom" />
-                  <ControlPoint Id="IqhFJkXZdtGNavthSoy3ZG" Bounds="513,339" Alignment="Top" />
-                  <ControlPoint Id="FFyxKzvwUtGPUvBRx8TheQ" Bounds="571,920" Alignment="Bottom" />
-                  <ControlPoint Id="T6tonxu10r9NlDgpyk6ZYP" Bounds="552,339" Alignment="Top" />
-                  <ControlPoint Id="ONSntw6xzCgP1fDBZ9gTbb" Bounds="308,920" Alignment="Bottom" />
-                  <ControlPoint Id="Gja0PVEM1KPPoNn8kO9mmn" Bounds="359,339" Alignment="Top" />
-                  <ControlPoint Id="QAxLO13blwcNV4zWf5hRkd" Bounds="721,920" Alignment="Bottom" />
-                  <ControlPoint Id="A9l7mQfseqMN57tnCfhyiJ" Bounds="690,339" Alignment="Top" />
-                  <ControlPoint Id="EtaO9ipBHr5NI3ziM2yKyl" Bounds="448,920" Alignment="Bottom" />
-                  <ControlPoint Id="LhqEd2dyncnOa2ZE1hRwh3" Bounds="448,339" Alignment="Top" />
                 </Node>
                 <Node Bounds="284,305,37,19" Id="EDZs8ejY1PpMVnE0Uimuwr">
                   <p:NodeReference LastCategoryFullName="Primitive.Boolean" LastSymbolSource="CoreLibBasics.vl">
@@ -3267,12 +3273,6 @@
                   </p:TypeAnnotation>
                 </Pad>
               </Patch>
-              <ControlPoint Id="TuqTU3e4EakLtO9lrsVjFi" Bounds="340,196" Alignment="Top" />
-              <ControlPoint Id="ID8Z7lFWWCxPHSEasCoaZ0" Bounds="575,986" Alignment="Bottom" />
-              <ControlPoint Id="GLCkRklulMuQY77YDcGNS3" Bounds="537,986" Alignment="Bottom" />
-              <ControlPoint Id="FArrry4kc7qMclMUMBMWGM" Bounds="307,986" Alignment="Bottom" />
-              <ControlPoint Id="BEtce1FzeE8PNJli7ca0yi" Bounds="722,986" Alignment="Bottom" />
-              <ControlPoint Id="MxrlNwZJEI7OcCmeV1NfuU" Bounds="454,986" Alignment="Bottom" />
             </Node>
             <ControlPoint Id="OdZJiIBmSt5LkVSNher6iF" Bounds="531,1037" />
             <ControlPoint Id="DZUy0ddIAeZN0RHKaJ07lQ" Bounds="307,1015" />
@@ -3669,8 +3669,8 @@
     </Node>
   </Patch>
   <NugetDependency Id="GzaUff0DP1pQb025GasXpY" Location="VL.CoreLib" Version="2021.4.9" />
-  <PlatformDependency Id="DNCtz5avvJSPm6qUWYcpkv" Location="./lib/Debug/netstandard2.0/VL.VIOSOWarpBlend.dll" />
   <NugetDependency Id="Lux2phtNZqyMoaTG1bLOev" Location="VL.Stride" Version="2021.4.9" />
   <PlatformDependency Id="VNF55YTLpMkMk6zBy2wwkq" Location="netstandard" />
   <PlatformDependency Id="OHaH5jdsF3VODV1CTktDrL" Location="../../vvvv/public-vl/VL.Stride/packages/VL.Stride.Runtime/src/bin/Release/net472/Stride.dll" />
+  <PlatformDependency Id="BChMxORIjm7Nt2RW5jKf2j" Location="./lib/Debug/netstandard2.0/VIOSOWarpBlend.dll" />
 </Document>

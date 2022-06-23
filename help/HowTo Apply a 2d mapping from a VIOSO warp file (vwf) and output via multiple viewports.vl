@@ -1,0 +1,337 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Document xmlns:p="property" Id="VsLRwHPWooeMKlfBB5CywM" LanguageVersion="2021.4.9.982" Version="0.128">
+  <Patch Id="UF0vrGRxqz7LMCD9AndiJ0">
+    <Canvas Id="R8qxmTwFimULjGm8M5aRQz" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory">
+      <!--
+
+    ************************ Main ************************
+
+-->
+      <Node Name="Main" Bounds="200,100" Id="N08dBUKKV3LNfdTc1CKe5Z">
+        <p:NodeReference>
+          <Choice Kind="ContainerDefinition" Name="Process" />
+          <FullNameCategoryReference ID="Primitive" />
+        </p:NodeReference>
+        <Patch Id="V2XVwRfdKXpP3D0zTQGNHb">
+          <Canvas Id="BU17N3N7HeNMw2cJuk9acO" CanvasType="Group" />
+          <Patch Id="AVusuGP6CaPPLdbjlVAvwl" Name="Create" />
+          <Patch Id="AlnIYvflAaNPjbmQGprrvI" Name="Update" />
+          <ProcessDefinition Id="Dde3tQhqoVZMw2a8tKpmSL">
+            <Fragment Id="JK7vHMKvNNKNkXVYWL78UH" Patch="AVusuGP6CaPPLdbjlVAvwl" Enabled="true" />
+            <Fragment Id="JJ3Z7S7FaqyN6qoGJyxkeH" Patch="AlnIYvflAaNPjbmQGprrvI" Enabled="true" />
+          </ProcessDefinition>
+        </Patch>
+      </Node>
+    </Canvas>
+    <!--
+
+    ************************ Application ************************
+
+-->
+    <Node Name="Application" Bounds="100,100" Id="K5HQgBcBhl0PLAIdyrJBoQ">
+      <p:NodeReference>
+        <Choice Kind="ContainerDefinition" Name="Process" />
+        <FullNameCategoryReference ID="Primitive" />
+      </p:NodeReference>
+      <Patch Id="JqdeGvLPLyrQQE4uL8FX88">
+        <Canvas Id="OxtvZ1FrBqELOz1Te8M3xy" CanvasType="Group">
+          <Node Bounds="150,728,245,19" Id="D2F8SxvDuNzOK50yCKcT78">
+            <p:NodeReference LastCategoryFullName="Stride" LastSymbolSource="VL.Stride.Engine.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="SceneWindow" />
+            </p:NodeReference>
+            <Pin Id="UCM1C8AEPj2LvP0FId23RH" Name="Bounds" Kind="InputPin" DefaultValue="1054, 86, 786, 432" />
+            <Pin Id="ChSlVgxBUl2Nr8QE8mXGDu" Name="Back Buffer Format" Kind="InputPin" />
+            <Pin Id="QidqrEV95f1LCku6eOO1Mg" Name="Input" Kind="InputPin" />
+            <Pin Id="QNe3IzTJor8LftGRFpybze" Name="Camera" Kind="InputPin" />
+            <Pin Id="GTXoedSNO3kQSBESH6s6uB" Name="Enable Default Camera" Kind="InputPin" DefaultValue="False" />
+            <Pin Id="Clqxifh0dBELKc7bRrlVNF" Name="Title" Kind="InputPin" DefaultValue="FINAL OUTPUT" />
+            <Pin Id="F7F0ACYTgRENk3ZC3zYriO" Name="Clear Color" Kind="InputPin" DefaultValue="0, 0, 0, 1" />
+            <Pin Id="J1HKcmwNpoWPowtMnIm2C9" Name="Clear" Kind="InputPin" DefaultValue="True" />
+            <Pin Id="VBiuUjhRoKNPExRhQyGIpO" Name="Post Effects" Kind="InputPin" />
+            <Pin Id="O0gdxTdCPgwPsu22JK1RDg" Name="Enable Default Post Effects" Kind="InputPin" DefaultValue="False" />
+            <Pin Id="QYYJhp0Hx9PP2DunT9ZAbK" Name="Enable Keyboard Shortcuts" Kind="InputPin" />
+            <Pin Id="NFr1r8suc0rMB6SHVX1TjE" Name="Enabled" Kind="InputPin" />
+            <Pin Id="KksZGs15rKoNv1Tt5hXXJJ" Name="Viewport Settings" Kind="InputPin" />
+            <Pin Id="UjW4wROHDsNOCV6gwLtDlD" Name="Output" Kind="OutputPin" />
+            <Pin Id="PW8qn1KzgfeLNghvkPB6a0" Name="Client Bounds" Kind="OutputPin" />
+            <Pin Id="HF8anAJopKsOmi6oynTlBZ" Name="Input Source" Kind="OutputPin" />
+            <Pin Id="FxiK9NRO3ZcPSjw3QRGKAp" Name="Back Buffer" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="156,869,205,19" Id="RQRwFreXF6hQQKchPUEWJA">
+            <p:NodeReference LastCategoryFullName="Stride.Windowing" LastSymbolSource="VL.Stride.Engine.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <FullNameCategoryReference ID="Stride.Windowing" />
+              <Choice Kind="ProcessAppFlag" Name="SetWindowState" />
+            </p:NodeReference>
+            <Pin Id="A6lbx6UY87RQBgD9h8PIh6" Name="Input" Kind="InputPin" />
+            <Pin Id="DKhofhSbgDiMHTRrbot5PT" Name="Resizeable" Kind="InputPin" />
+            <Pin Id="VM4aFfR3UFFPDViejpvXw7" Name="Mouse Visible" Kind="InputPin" />
+            <Pin Id="CYpHmNqihP3NfktiYzD0dP" Name="Title" Kind="InputPin" DefaultValue="FINAL OUTPUT" />
+            <Pin Id="Go3rzXb29MQMP3T5sBR0Z4" Name="Border Less" Kind="InputPin" DefaultValue="False" />
+            <Pin Id="IJKMgCtFfvBLHjma6qtsr8" Name="Position" Kind="InputPin" DefaultValue="-3840, 0" />
+            <Pin Id="GY81mSsI12gLrRznjAtW2c" Name="Set Position" Kind="InputPin" DefaultValue="True" />
+            <Pin Id="OJ2yN5TgkvANPNbUqv25if" Name="Size" Kind="InputPin" DefaultValue="3840, 1080" />
+            <Pin Id="AH1RqCOQdkDQYZvaVDqoAl" Name="Set Size" Kind="InputPin" />
+            <Pin Id="KaKo8pXuAedLxlPNL2v0zf" Name="Show" Kind="InputPin" />
+            <Pin Id="D4BDU6H6GaJMbvPR4zrCPy" Name="Hide" Kind="InputPin" />
+            <Pin Id="EzaWgPv7Ls2NKNG8WrUYO3" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Pad Id="DSnPrwPrR6YOre7SG6iiA7" Comment="" Bounds="298,821,35,35" ShowValueBox="true" isIOBox="true" Value="False">
+            <p:TypeAnnotation>
+              <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
+              <FullNameCategoryReference ID="Primitive" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:buttonmode p:Assembly="VL.UI.Forms" p:Type="VL.HDE.PatchEditor.Editors.ButtonModeEnum">Bang</p:buttonmode>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="296,774,54,19" Id="VTJWgxiBhsrMtqbZOTgaW5">
+            <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <FullNameCategoryReference ID="Control" />
+              <Choice Kind="ProcessAppFlag" Name="OnOpen" />
+            </p:NodeReference>
+            <Pin Id="RN19Fhr8XjBLaHvC2jyfvt" Name="Simulate" Kind="InputPin" />
+            <Pin Id="HcCEGjS3Z3NMmTC69BdESh" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="322,668,76,19" Id="LRYMCehVMgoPfhPn2SyXJK">
+            <p:NodeReference LastCategoryFullName="Mapping" LastSymbolSource="VL.BadMapper.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <CategoryReference Kind="Category" Name="Mapping" />
+              <Choice Kind="ProcessAppFlag" Name="ViewportGrid" />
+            </p:NodeReference>
+            <Pin Id="MZ29iS1RIGxPddaTnIOX29" Name="Viewport Grid Resolution" Kind="InputPin" />
+            <Pin Id="CtNbatatmEYMR405BZxn0m" Name="Renderers" Kind="InputPin" />
+            <Pin Id="OanhSgFpnr0MOE5cNpXVuW" Name="Cameras" Kind="InputPin" />
+            <Pin Id="Rs7Uym9qtmhQc5YO2zTxlF" Name="Viewport Settings" Kind="OutputPin" />
+          </Node>
+          <Node Bounds="310,480,189,80" Id="HfBEIeQscMJPVXhsAn4CMS">
+            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
+              <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+              <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
+              <CategoryReference Kind="Category" Name="Primitive" />
+            </p:NodeReference>
+            <Pin Id="T621yfCebOlM2N8Tq53gzW" Name="Break" Kind="OutputPin" />
+            <ControlPoint Id="PUgyQ1MU0xcNwz5yngWfH3" Bounds="324,554" Alignment="Bottom" />
+            <ControlPoint Id="AbrKxY9qrYPOEbeiVtv8aJ" Bounds="364,486" Alignment="Top" />
+            <Patch Id="QaqWMMGrQCCP9vscMyUgx2" ManuallySortedPins="true">
+              <Patch Id="AI3StG4fBZtNxAJZu7BzIE" Name="Create" ManuallySortedPins="true" />
+              <Patch Id="VTqEOr13yDSPxsgxSE8wXf" Name="Update" ManuallySortedPins="true" />
+              <Patch Id="CyF9tCYm0LDOctAG6YR1qk" Name="Dispose" ManuallySortedPins="true" />
+              <Node Bounds="322,512,100,19" Id="N42RZtqdXIjNT4IbM918bH">
+                <p:NodeReference LastCategoryFullName="VIOSO" LastSymbolSource="VL.VIOSOWarpBlend.vl">
+                  <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                  <Choice Kind="ProcessAppFlag" Name="Warper (2d)" />
+                </p:NodeReference>
+                <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
+                <Pin Id="PfQq1jLUtr7Nx8DUZI2zVw" Name="Ini Filename" Kind="InputPin" />
+                <Pin Id="MI6KrdCngDLM9HQv6GdO8Q" Name="Vwf Filename" Kind="InputPin" />
+                <Pin Id="Hh2Rzdyv2yROGyRzMI6iWu" Name="Calibration Index" Kind="InputPin" />
+                <Pin Id="QMaUijdaPIDL9zUCxeKwaY" Name="Blending" Kind="InputPin" />
+                <Pin Id="Sd8j6dOYid0OsFnh7M2pId" Name="Blacklevel Compensation" Kind="InputPin" />
+                <Pin Id="Nobgh5tj2XGMIxM1YtFV9K" Name="Bicubic" Kind="InputPin" />
+                <Pin Id="C2iiGVLwGhkP7Q5O3jfI0c" Name="Reload" Kind="InputPin" />
+                <Pin Id="JcBDyd5bYLqMyZlcJ2Li9f" Name="Texture" Kind="InputPin" />
+                <Pin Id="I2yTE9ZkFxAMSj76JJ7j4d" Name="Mesh" Kind="OutputPin" />
+              </Node>
+            </Patch>
+          </Node>
+          <Pad Id="HD9kcEasB34PqcXq3n75Jc" Comment="Filename" Bounds="344,282,259,15" ShowValueBox="true" isIOBox="true" Value="..\..\..\Users\Public\Documents\AutoCal\Calibration\settings.vwf">
+            <p:TypeAnnotation LastCategoryFullName="IO" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Path" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="322,633,34,19" Id="RRonfsYhlzmPVaqwfyHuY5">
+            <p:NodeReference LastCategoryFullName="Primitive.Int2" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="Int2 (Create)" />
+            </p:NodeReference>
+            <Pin Id="BRrnsr0ii7ePypN2p4VhOC" Name="X" Kind="InputPin" />
+            <Pin Id="KN8KY4YHRTnLVexndBbWcl" Name="Y" Kind="InputPin" DefaultValue="1" />
+            <Pin Id="Brl6OQ7w4HDO3hYb1jmNIZ" Name="Output" Kind="StateOutputPin" />
+          </Node>
+          <Node Bounds="322,590,44,26" Id="Kcm6wLWZCMdOsXulQWb6MW">
+            <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.Collections.vl">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="OperationCallFlag" Name="Count" />
+              <CategoryReference Kind="RecordType" Name="Spread" NeedsToBeDirectParent="true" />
+            </p:NodeReference>
+            <Pin Id="HWEImWchU31OWLgsbyljzQ" Name="Input" Kind="StateInputPin" />
+            <Pin Id="Qby8U9cd0d5MdJadlKUxLh" Name="Count" Kind="OutputPin" />
+          </Node>
+          <Pad Id="OyTPWAyQkImO3mrWSbQUAv" Comment="Position" Bounds="183,809,52,28" ShowValueBox="true" isIOBox="true" Value="1920, 0">
+            <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Vector2" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Node Bounds="362,311,105,19" Id="FnYfDF1dNhSQV9YAY7IcBp">
+            <p:NodeReference>
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessAppFlag" Name="VwfInfo" />
+            </p:NodeReference>
+            <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
+            <Pin Id="M4ap4bXOh0GOTRPtm7RaxS" Name="Filename" Kind="InputPin" />
+            <Pin Id="BpKADKEts66L7QNWdSxWrS" Name="Calibration Index" Kind="OutputPin" />
+            <Pin Id="PVrXJbGoiA6PdfktLCosGy" Name="Resolution" Kind="OutputPin" />
+            <Pin Id="NyFcZ1LlHpVMXR09PlCf4h" Name="Primary Name" Kind="OutputPin" />
+            <Pin Id="H6o4Wsvq5kMQLchpmCdfdO" Name="Name" Kind="OutputPin" />
+            <Pin Id="FBZ3PDvu3IaPjudgZ4oGy5" Name="Is 3D Mapping" Kind="OutputPin" />
+            <Pin Id="A9C0jHZmpN3Qb3JDdG9m7N" Name="Changed" Kind="OutputPin" />
+          </Node>
+          <Pad Id="HofpQLje0ZHQRv3IIYTbbc" Comment="Ini Filename" Bounds="324,200,192,15" ShowValueBox="true" isIOBox="true" Value="..\..\..\Users\Public\Documents\AutoCal\Calibration\VIOSOWarpBlend.ini">
+            <p:TypeAnnotation LastCategoryFullName="IO" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Path" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="IHnwlVi7swOMbaf5xI6USX" Bounds="604,147,177,19" ShowValueBox="true" isIOBox="true" Value="https://helpdesk.vioso.com/documentation/api/viosowarpblend-ini-reference/">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="A3WhQ1KLy7TPQ4ZSIs1cmy" Bounds="604,127,111,19" ShowValueBox="true" isIOBox="true" Value="Ini file reference:">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="KTAUlgiL33UOeEbkDGl6Q1" Comment="Primary Names" Bounds="404,389,119,60" ShowValueBox="true" isIOBox="true">
+            <p:Value>
+              <Item></Item>
+            </p:Value>
+          </Pad>
+          <Pad Id="FgkhDQ8xQvnP8W82YimfLC" Bounds="324,130,216,63" ShowValueBox="true" isIOBox="true" Value="Specifying an ini file is optional. Many of its parameters can also be set via inputs on the Warper node">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="MYMOsVU7XRBMv5GaXv8ds4" Bounds="348,233,198,42" ShowValueBox="true" isIOBox="true" Value="If no vwf file is specified, the one set in the ini file is used">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="RjKsYWKVrSDNeQrrQVRJOU" Comment="Is 3D Mapping" Bounds="444,348,35,25" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="SoLeR4w5ITdOIp42ka9wlt" Bounds="51,204,172,19" ShowValueBox="true" isIOBox="true" Value="Step by step 2d calibration:">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="I0y6zDHfh5fP5cXvI5rKF1" Bounds="51,225,140,19" ShowValueBox="true" isIOBox="true" Value="https://helpdesk.vioso.com/documentation/core-video-tutorial/">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="CUZdppGMlpjMMWe8keK2X6" Bounds="51,125,169,35" ShowValueBox="true" isIOBox="true" Value="Download VIOSO Integrate trial version:">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="EM69Qz2NF6SMX9m7CJ9PRi" Bounds="51,164,140,19" ShowValueBox="true" isIOBox="true" Value="https://vioso.com/downloads/">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Node Bounds="634,485,85,19" Id="DQNzr65lo2xLP9UMDjOelx">
+            <p:NodeReference LastCategoryFullName="Stride.Textures.Source" LastSymbolSource="VL.Stride.Rendering.EffectShaderNodes">
+              <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+              <Choice Kind="ProcessNode" Name="Checkerboard" />
+            </p:NodeReference>
+            <Pin Id="Ei5wh4fglCELHj158FtpH5" Name="Cell Count" Kind="InputPin" />
+            <Pin Id="PzLEk3OPhVpNwtjinUYzwC" Name="Black" Kind="InputPin" />
+            <Pin Id="NlKfBzuDtJ3PzA67DosTZz" Name="White" Kind="InputPin" />
+            <Pin Id="FHHi7rS2kYcNToMI8R8raZ" Name="Output Size" Kind="InputPin" />
+            <Pin Id="E81xnIqqfVjQCYmvP3VGE3" Name="Enabled" Kind="InputPin" />
+            <Pin Id="VrFnRMpPaSyPUFTs9vhJEk" Name="Output" Kind="OutputPin" />
+          </Node>
+          <Pad Id="HHCq3hHMEfCQVvfQVrUVWW" Comment="Cell Count" Bounds="636,436,35,28" ShowValueBox="true" isIOBox="true" Value="42, 42">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
+              <Choice Kind="TypeFlag" Name="Int2" />
+            </p:TypeAnnotation>
+          </Pad>
+          <Pad Id="SmGk4XFXSeCP9Z2YDrG3C3" Comment="" Bounds="636,540,171,158" ShowValueBox="true" isIOBox="true" />
+          <ControlPoint Id="SJmKX9ub1qkMHREQ6RqhWR" Bounds="378,589" />
+          <Pad Id="Up8E8jUUermQCFBGBZ9mcm" Bounds="362,833,208,19" ShowValueBox="true" isIOBox="true" Value="&lt; Use to set window to fullscreen">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="NGS5S3z569SObJmFm0eDte" Bounds="720,491,213,24" ShowValueBox="true" isIOBox="true" Value="&lt; The texture you want to project">
+            <p:TypeAnnotation>
+              <Choice Kind="TypeFlag" Name="String" />
+            </p:TypeAnnotation>
+            <p:ValueBoxSettings>
+              <p:fontsize p:Type="Int32">9</p:fontsize>
+              <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
+            </p:ValueBoxSettings>
+          </Pad>
+        </Canvas>
+        <Patch Id="LAX25CSsW2ZOMutweiHzHe" Name="Create" />
+        <Patch Id="HeBpuZMxWgaLzpxOcXdKtf" Name="Update" />
+        <ProcessDefinition Id="M9evdjoYJY5QEhZqmuK1mg">
+          <Fragment Id="Dx8cNM4rpXuQSES0BPvHP7" Patch="LAX25CSsW2ZOMutweiHzHe" Enabled="true" />
+          <Fragment Id="PdKUoJLFleFLnpjE2A0Yeu" Patch="HeBpuZMxWgaLzpxOcXdKtf" Enabled="true" />
+        </ProcessDefinition>
+        <Link Id="UqqZMxiA5otOeYEcl4e6z9" Ids="DSnPrwPrR6YOre7SG6iiA7,AH1RqCOQdkDQYZvaVDqoAl" />
+        <Link Id="GkUtYR8S80zMWusMH56Opg" Ids="DSnPrwPrR6YOre7SG6iiA7,GY81mSsI12gLrRznjAtW2c" />
+        <Link Id="AECO0tzNawUMvwGuIrHwct" Ids="Rs7Uym9qtmhQc5YO2zTxlF,KksZGs15rKoNv1Tt5hXXJJ" />
+        <Link Id="UgV6vo16JcgMoTielsSp4Y" Ids="PUgyQ1MU0xcNwz5yngWfH3,SJmKX9ub1qkMHREQ6RqhWR,CtNbatatmEYMR405BZxn0m" />
+        <Link Id="TRuBbrKaLadMojqbNyZcd5" Ids="PUgyQ1MU0xcNwz5yngWfH3,HWEImWchU31OWLgsbyljzQ" />
+        <Link Id="IZVBNusER3ULqI0TldO1CN" Ids="Qby8U9cd0d5MdJadlKUxLh,BRrnsr0ii7ePypN2p4VhOC" />
+        <Link Id="VKokMeFT2GDQYuLwzq18Wl" Ids="Brl6OQ7w4HDO3hYb1jmNIZ,MZ29iS1RIGxPddaTnIOX29" />
+        <Link Id="EQD62JOBWwUPRnQwq0ppgA" Ids="OyTPWAyQkImO3mrWSbQUAv,IJKMgCtFfvBLHjma6qtsr8" />
+        <Link Id="Oe73psGOsF5OInj6TfKmFb" Ids="HD9kcEasB34PqcXq3n75Jc,M4ap4bXOh0GOTRPtm7RaxS" />
+        <Link Id="IoH9HmpV0IdPhkM9aBx7HO" Ids="BpKADKEts66L7QNWdSxWrS,AbrKxY9qrYPOEbeiVtv8aJ" />
+        <Link Id="Kn2IkfHpOwhPO4ojQii7XK" Ids="HcCEGjS3Z3NMmTC69BdESh,DSnPrwPrR6YOre7SG6iiA7" />
+        <Link Id="RQoSCur0KyzNMUVWfZUaBK" Ids="NyFcZ1LlHpVMXR09PlCf4h,KTAUlgiL33UOeEbkDGl6Q1" />
+        <Link Id="R8cP1Kp7bTQOKM4V2oD7Fh" Ids="FBZ3PDvu3IaPjudgZ4oGy5,RjKsYWKVrSDNeQrrQVRJOU" />
+        <Link Id="KJhtrH1mBXvOVyJDj0iAIP" Ids="HHCq3hHMEfCQVvfQVrUVWW,Ei5wh4fglCELHj158FtpH5" />
+        <Link Id="SSqBxoiaxezOKkpib5W6vu" Ids="VrFnRMpPaSyPUFTs9vhJEk,SmGk4XFXSeCP9Z2YDrG3C3" />
+        <Link Id="SKBtrNYpLyiQRULydm9mMP" Ids="HofpQLje0ZHQRv3IIYTbbc,PfQq1jLUtr7Nx8DUZI2zVw" />
+        <Link Id="V5FrnXs0MXIMQRA7L1U8QN" Ids="HD9kcEasB34PqcXq3n75Jc,MI6KrdCngDLM9HQv6GdO8Q" />
+        <Link Id="BUZKGRpJyDcLtUeWmvwcLT" Ids="AbrKxY9qrYPOEbeiVtv8aJ,Hh2Rzdyv2yROGyRzMI6iWu" />
+        <Link Id="UVik7szGAEQM35VYf4cmEL" Ids="A9C0jHZmpN3Qb3JDdG9m7N,C2iiGVLwGhkP7Q5O3jfI0c" />
+        <Link Id="OTGveVyAKCnPZiddsD8UUB" Ids="VrFnRMpPaSyPUFTs9vhJEk,JcBDyd5bYLqMyZlcJ2Li9f" />
+        <Link Id="Qpcd3TMwqCDNuWf5cBIJC8" Ids="I2yTE9ZkFxAMSj76JJ7j4d,PUgyQ1MU0xcNwz5yngWfH3" />
+      </Patch>
+    </Node>
+  </Patch>
+  <NugetDependency Id="CwkGn2gIWRTPAB3DmqFL9p" Location="VL.CoreLib" Version="2021.4.9" />
+  <NugetDependency Id="DFhKcsElVaULBTcrxV6nnz" Location="VL.Stride" Version="2021.4.9" />
+  <NugetDependency Id="I3Ns9chxffGObKZLaxdnyS" Location="VL.VIOSOWarpBlend" Version="0.0.0.0" />
+  <NugetDependency Id="Hi5TnPVFtERPN62k5OvFSz" Location="VL.BadMapper" Version="0.0.0.0" />
+</Document>
