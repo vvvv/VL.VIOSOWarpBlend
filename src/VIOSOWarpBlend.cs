@@ -1,4 +1,8 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 using System.Runtime.InteropServices;
 
 // use with VIOSOWarpBlend 1.6.9 or newer
@@ -263,7 +267,7 @@ namespace VIOSOWarpBlend
             public UInt32 magicNumber;                            ///<   "vwf0"
             public UInt32 szHdr;                                 ///<   used to communicate the size of this header struct
             public UInt32 flags;                                 ///<   additional informations
-                                                                 ///<  @see ESPWarpFileHeaderFlag for details
+                                                                 ///<  @see FLAGS for details
             public UInt32 hMonitor;                              ///<   set to the HMONITOR of the treated display
             public UInt32 size;                                  ///<   actual size of the following data block; the size of the raw data can be calculated from dimensions
             public UInt32 width;                                  ///<   count of warp records per row
@@ -332,6 +336,36 @@ namespace VIOSOWarpBlend
             public WarpFileHeader5 header;
             [MarshalAs(UnmanagedType.ByValTStr, SizeConst = MAX_PATH)]
             public String path;
+        }
+
+        [StructLayout(LayoutKind.Sequential, Pack = 4, CharSet = CharSet.Ansi)]
+        public struct Vertex
+        {
+            public float x; // position
+            public float y;
+            public float z;
+            public float u; // texcoord
+            public float v;
+            public float r; // blend
+            public float g;
+            public float b;
+        }
+
+        [StructLayout(LayoutKind.Sequential, Pack = 4, CharSet = CharSet.Ansi)]
+        struct MarshalMesh
+        {
+            public UInt32 nVtx;
+            public IntPtr vtx;
+            public UInt32 nIdx;
+            public IntPtr idx;
+            public SIZE dim;
+        }
+
+        public struct Mesh
+        {
+            public Vertex[] vtx; // the vertex list
+            public UInt32[] idx; // the index list
+            public SIZE res; // the display resolution
         }
 
         public enum ERROR
@@ -483,6 +517,24 @@ namespace VIOSOWarpBlend
         [DllImport("VIOSOWarpBlend64.dll", EntryPoint = "VWB_getWarpBlend", CallingConvention = CallingConvention.Cdecl)]
         public static extern int VWB_getWarpBlend(IntPtr warper, out IntPtr wb);
 
+        /** fills a VWB_WarpBlendMesh from currently loaded data. It uses cols * rows vertices or less depending on how .vwf is filled. Warper needs to be initialized as VWB_DUMMYDEVICE.
+        * @param [IN]			pWarper	a valid warper
+        * @param [IN]			cols	sets the number of columns
+        * @param [IN]			rows	sets the number of rows
+        * @param [OUT]			mesh	the resulting mesh, the mesh will be emptied before filled
+        * @return VWB_ERROR_NONE on success, VWB_ERROR_PARAMETER, if parameters are out of range, VWB_ERROR_GENERIC otherwise */
+        //VIOSOWARPBLEND_API(VWB_ERROR, VWB_getWarpBlendMeshC, (VWB_Warper* pWarper, VWB_int cols, VWB_int rows, VWB_WarpBlendMesh* mesh) );
+        [DllImport("VIOSOWarpBlend64.dll", EntryPoint = "VWB_getWarpBlendMeshC", CallingConvention = CallingConvention.Cdecl)]
+        static extern int VWB_getWarpBlendMesh(IntPtr warper, Int32 cols, Int32 rows, ref MarshalMesh mesh);
+
+        /** destroys a VWB_WarpBlendMesh .
+         * @param [IN]			pWarper	a valid warper
+         * @param [INOUT]		mesh	the mesh to be destroyed
+         * @return VWB_ERROR_NONE on success, VWB_ERROR_PARAMETER, if parameters are out of range, VWB_ERROR_GENERIC otherwise */
+        //VIOSOWARPBLEND_API(VWB_ERROR, VWB_destroyWarpBlendMeshC, (VWB_Warper* pWarper, VWB_WarpBlendMesh* mesh) );
+        [DllImport("VIOSOWarpBlend64.dll", EntryPoint = "VWB_destroyWarpBlendMeshC", CallingConvention = CallingConvention.Cdecl)]
+        static extern int VWB_destroyWarpBlendMesh(IntPtr warper, ref MarshalMesh mesh);
+
         /* get the version of the API
         * @param[OUT]			major	major version
         * @param[OUT]			minor	minor version
@@ -587,6 +639,10 @@ namespace VIOSOWarpBlend
         {
             return (ERROR)VWB_getViewClip(_warper, ref eye, ref dir, ref view, ref clip);
         }
+        public ERROR GetPosDirClip(ref VEC3 eye, ref VEC3 dir, ref VEC3 rot, ref VEC3 pos, ref CLIP clip)
+        {
+            return (ERROR)VWB_getPosDirClip(_warper, ref eye, ref dir, ref rot, ref pos, ref clip);
+        }
 
         public ERROR GetShaderVPMatrix(ref MAT4X4 mat)
         {
@@ -669,6 +725,33 @@ namespace VIOSOWarpBlend
             else
                 white = IntPtr.Zero;
             return err;
+        }
+
+        public ERROR GetWarpBlendMesh( Int32 cols, Int32 rows, out Mesh mesh )
+        {
+            mesh = new Mesh();
+            MarshalMesh m = new MarshalMesh();
+            ERROR res = (ERROR)VWB_getWarpBlendMesh(_warper, cols, rows, ref m);
+            if( ERROR.NONE == res )
+            {
+                mesh.vtx = new Vertex[m.nVtx];
+                mesh.idx = new UInt32[m.nIdx];
+                IntPtr p = m.vtx;
+                for (UInt32 i = 0; i != m.nVtx; i++)
+                {
+                    mesh.vtx[i] = Marshal.PtrToStructure<Vertex>(p);
+                    p += Marshal.SizeOf(mesh.vtx[i]);
+                }
+                p = m.idx;
+                for (UInt32 i = 0; i != m.nIdx; i++)
+                {
+                    mesh.idx[i] = Marshal.PtrToStructure<UInt32>(p);
+                    p += Marshal.SizeOf(mesh.idx[i]);
+                }
+                mesh.res = m.dim;
+                VWB_destroyWarpBlendMesh(_warper, ref m);
+            }
+            return res;
         }
 
         static public ERROR SetCryptoKey(byte[] key)

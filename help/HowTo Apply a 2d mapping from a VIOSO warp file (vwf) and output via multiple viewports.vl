@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="VsLRwHPWooeMKlfBB5CywM" LanguageVersion="2021.4.9.982" Version="0.128">
+<Document xmlns:p="property" Id="VsLRwHPWooeMKlfBB5CywM" LanguageVersion="2021.4.10.1007" Version="0.128">
   <Patch Id="UF0vrGRxqz7LMCD9AndiJ0">
     <Canvas Id="R8qxmTwFimULjGm8M5aRQz" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory">
       <!--
@@ -96,9 +96,8 @@
             <Pin Id="HcCEGjS3Z3NMmTC69BdESh" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="322,668,76,19" Id="LRYMCehVMgoPfhPn2SyXJK">
-            <p:NodeReference LastCategoryFullName="Mapping" LastSymbolSource="VL.BadMapper.vl">
+            <p:NodeReference LastCategoryFullName="Stride.Rendering.Compositing" LastSymbolSource="VL.Stride.Engine.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-              <CategoryReference Kind="Category" Name="Mapping" />
               <Choice Kind="ProcessAppFlag" Name="ViewportGrid" />
             </p:NodeReference>
             <Pin Id="MZ29iS1RIGxPddaTnIOX29" Name="Viewport Grid Resolution" Kind="InputPin" />
@@ -330,8 +329,7 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="CwkGn2gIWRTPAB3DmqFL9p" Location="VL.CoreLib" Version="2021.4.9" />
-  <NugetDependency Id="DFhKcsElVaULBTcrxV6nnz" Location="VL.Stride" Version="2021.4.9" />
+  <NugetDependency Id="CwkGn2gIWRTPAB3DmqFL9p" Location="VL.CoreLib" Version="2021.4.10-1007-g66c84f8e50" />
+  <NugetDependency Id="DFhKcsElVaULBTcrxV6nnz" Location="VL.Stride" Version="2021.4.10-1007-g66c84f8e50" />
   <NugetDependency Id="I3Ns9chxffGObKZLaxdnyS" Location="VL.VIOSOWarpBlend" Version="0.0.0.0" />
-  <NugetDependency Id="Hi5TnPVFtERPN62k5OvFSz" Location="VL.BadMapper" Version="0.0.0.0" />
 </Document>
