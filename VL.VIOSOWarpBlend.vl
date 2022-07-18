@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="MyRBDehz5BmLwPDGABp3KW" LanguageVersion="2021.4.10.1016" Version="0.128">
+<Document xmlns:p="property" Id="MyRBDehz5BmLwPDGABp3KW" LanguageVersion="2021.4.10.1018" Version="0.128">
   <Patch Id="HwDsnHoEpmtMd0XjUheelZ">
     <Canvas Id="OQEtU8KkpI6LeYJjHsJmMw" DefaultCategory="VIOSO" CanvasType="FullCategory">
       <Canvas Id="Jc2iBsu0BVnLDAaC26IPZ6" Name="Internal" Position="366,439">
@@ -3984,27 +3984,46 @@
               <Pin Id="GOiyyilQtObMrK0M8YIG9k" Name="Mesh" Kind="OutputPin" />
             </Node>
             <Pad Id="RUXg2NAvJLKLM45ZrVFDlL" Bounds="207,370" />
-            <Node Bounds="313,409,70,26" Id="OgTGdmkbO2UO2eNRYMwnSP">
-              <p:NodeReference LastCategoryFullName="VIOSO.Warper" LastSymbolSource="VL.VIOSOWarpBlend.vl">
-                <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
-                <Choice Kind="OperationCallFlag" Name="DebugMesh" />
+            <Node Bounds="346,371,185,135" Id="KaaAJ84m5FiMCkqTz3bpA6">
+              <p:NodeReference>
+                <Choice Kind="ProcessAppFlag" Name="Comment" />
+                <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
+                <FullNameCategoryReference ID="Control" />
               </p:NodeReference>
-              <Pin Id="OnDZ4NtYXACOjhUrlktyjq" Name="Input" Kind="StateInputPin" />
-              <Pin Id="EkIffLVlJdPMpr2Rtsg2pq" Name="Tesselation" Kind="InputPin" />
-              <Pin Id="E8GyTCyEmqJQYgNBrEdNOs" Name="Output" Kind="StateOutputPin" />
-              <Pin Id="FWXzOFw6q12ORFLo1n7m6s" Name="Debug Mesh" Kind="OutputPin" />
+              <Patch Id="ELaqJUFh5JoM5ptY74Da3N" ManuallySortedPins="true">
+                <Patch Id="HihI6kJ5OiKNJicvU5UnxP" Name="Create" ManuallySortedPins="true" />
+                <Patch Id="FUbu3LbYhGBQIGale9CfYu" Name="Update" ManuallySortedPins="true" />
+                <Patch Id="JXySy37yGF3LbGmFmrehvU" Name="DebugMesh">
+                  <Pin Id="JFwx4x2eJ7ONW5YqOeUVBx" MergeId="318584" Name="Tesselation" Kind="InputPin" Bounds="380,381" />
+                  <Pin Id="QESaZeV8FumMlGcd4Yc1Yg" MergeId="318585" Name="Debug Mesh" Kind="OutputPin" Bounds="381,464" />
+                </Patch>
+                <Node Bounds="313,409,70,26" Id="OgTGdmkbO2UO2eNRYMwnSP">
+                  <p:NodeReference LastCategoryFullName="VIOSO.Warper" LastSymbolSource="VL.VIOSOWarpBlend.vl">
+                    <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
+                    <Choice Kind="OperationCallFlag" Name="DebugMesh" />
+                  </p:NodeReference>
+                  <Pin Id="OnDZ4NtYXACOjhUrlktyjq" Name="Input" Kind="StateInputPin" />
+                  <Pin Id="EkIffLVlJdPMpr2Rtsg2pq" Name="Tesselation" Kind="InputPin" />
+                  <Pin Id="E8GyTCyEmqJQYgNBrEdNOs" Name="Output" Kind="StateOutputPin" />
+                  <Pin Id="FWXzOFw6q12ORFLo1n7m6s" Name="Debug Mesh" Kind="OutputPin" />
+                </Node>
+                <ControlPoint Id="PQqU9jai9xGOz6qoZ2NJHB" Bounds="380,381" />
+                <ControlPoint Id="BjhWK1W6L4UOb5e7JPDV0t" Bounds="382,464" />
+              </Patch>
             </Node>
-            <ControlPoint Id="PQqU9jai9xGOz6qoZ2NJHB" Bounds="380,381" />
-            <ControlPoint Id="BjhWK1W6L4UOb5e7JPDV0t" Bounds="382,464" />
           </Canvas>
           <ProcessDefinition Id="PVGZoL1XmMOOGmNplVaBsx" HasStateOut="true">
             <Fragment Id="H771tXF4xAaN6sPjyVYlab" Patch="TAPdmsnMmhfPrHbkT5IMOU" Enabled="true" />
             <Fragment Id="SxCx8KMVl7QMfDJiXrHydr" Patch="Aak5M37ivVyPIELlxbZ1tu" Enabled="true" />
             <Fragment Id="ArLe14cHfUwLX0rEfi2nEk" Patch="Gu0DMq3v5JBPOzON06Qy2V" />
-            <Fragment Id="C9o0Gjqbj9NMYatkZHiVgr" Patch="P3Z9ZmKUFVcNQhnbzp9v2D" />
           </ProcessDefinition>
           <Link Id="FC1nWLlTyNHNhWwYJiI9wO" Ids="Nang2dIYZBMPNwolAZ2CjV,RUXg2NAvJLKLM45ZrVFDlL" />
           <Link Id="M080WdbupvfMbAu1JW3oCt" Ids="RUXg2NAvJLKLM45ZrVFDlL,KVdCipKzaKKMrzMI9c6B8N" />
+          <Link Id="Qt3MNzGgB1oLVTzEL9PGbM" Ids="RUXg2NAvJLKLM45ZrVFDlL,OnDZ4NtYXACOjhUrlktyjq" />
+          <Link Id="Bsiu8MQ3ysWM9W2W7V6anO" Ids="PQqU9jai9xGOz6qoZ2NJHB,EkIffLVlJdPMpr2Rtsg2pq" />
+          <Link Id="Dt26I2x7xpaNPcI8UvQ6f9" Ids="JFwx4x2eJ7ONW5YqOeUVBx,PQqU9jai9xGOz6qoZ2NJHB" IsHidden="true" />
+          <Link Id="JMbOmPFNhBFNr26LqZKR4S" Ids="FWXzOFw6q12ORFLo1n7m6s,BjhWK1W6L4UOb5e7JPDV0t" />
+          <Link Id="CFbJfsiJA0ROWNFqQ3Kzk9" Ids="BjhWK1W6L4UOb5e7JPDV0t,QESaZeV8FumMlGcd4Yc1Yg" IsHidden="true" />
           <Patch Id="TAPdmsnMmhfPrHbkT5IMOU" Name="Create (Internal)" />
           <Patch Id="Aak5M37ivVyPIELlxbZ1tu" Name="Update (Internal)" ManuallySortedPins="true">
             <Pin Id="HmZ1DWnBXETOkOsxkdqKNs" Name="Ini Filename" Kind="InputPin" />
@@ -4027,15 +4046,6 @@
             <Pin Id="J1gd1JJ72MuMfdmZlnDVDC" Name="Output" Kind="OutputPin" Visibility="Hidden" />
             <Pin Id="RwVnJNffacDLIZeh0OTIGU" Name="Mesh" Kind="OutputPin" />
           </Patch>
-          <Link Id="Qt3MNzGgB1oLVTzEL9PGbM" Ids="RUXg2NAvJLKLM45ZrVFDlL,OnDZ4NtYXACOjhUrlktyjq" />
-          <Patch Id="P3Z9ZmKUFVcNQhnbzp9v2D" Name="DebugMesh" ParticipatingElements="OgTGdmkbO2UO2eNRYMwnSP">
-            <Pin Id="JFwx4x2eJ7ONW5YqOeUVBx" Name="Tesselation" Kind="InputPin" Bounds="380,381" />
-            <Pin Id="QESaZeV8FumMlGcd4Yc1Yg" Name="Debug Mesh" Kind="OutputPin" Bounds="381,464" />
-          </Patch>
-          <Link Id="Bsiu8MQ3ysWM9W2W7V6anO" Ids="PQqU9jai9xGOz6qoZ2NJHB,EkIffLVlJdPMpr2Rtsg2pq" />
-          <Link Id="Dt26I2x7xpaNPcI8UvQ6f9" Ids="JFwx4x2eJ7ONW5YqOeUVBx,PQqU9jai9xGOz6qoZ2NJHB" IsHidden="true" />
-          <Link Id="JMbOmPFNhBFNr26LqZKR4S" Ids="FWXzOFw6q12ORFLo1n7m6s,BjhWK1W6L4UOb5e7JPDV0t" />
-          <Link Id="CFbJfsiJA0ROWNFqQ3Kzk9" Ids="BjhWK1W6L4UOb5e7JPDV0t,QESaZeV8FumMlGcd4Yc1Yg" IsHidden="true" />
         </Patch>
       </Node>
     </Canvas>
@@ -4060,8 +4070,8 @@
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="GzaUff0DP1pQb025GasXpY" Location="VL.CoreLib" Version="2021.4.10-1007-g66c84f8e50" />
-  <NugetDependency Id="Lux2phtNZqyMoaTG1bLOev" Location="VL.Stride" Version="2021.4.10-1016-g23b9b6b1da" />
+  <NugetDependency Id="GzaUff0DP1pQb025GasXpY" Location="VL.CoreLib" Version="2021.4.10-1018-g933c4b477f" />
+  <NugetDependency Id="Lux2phtNZqyMoaTG1bLOev" Location="VL.Stride" Version="2021.4.10-1018-g933c4b477f" />
   <PlatformDependency Id="VNF55YTLpMkMk6zBy2wwkq" Location="netstandard" />
   <PlatformDependency Id="OHaH5jdsF3VODV1CTktDrL" Location="../../vvvv/public-vl/VL.Stride/packages/VL.Stride.Runtime/src/bin/Release/net472/Stride.dll" />
   <PlatformDependency Id="BChMxORIjm7Nt2RW5jKf2j" Location="./lib/Debug/netstandard2.0/VIOSOWarpBlend.dll" />
