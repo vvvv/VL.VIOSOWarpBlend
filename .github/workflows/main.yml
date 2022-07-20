@@ -4,7 +4,7 @@ name: push_nuget
 on:
   push:
     branches:
-      - master
+      - main
     paths-ignore:
       - README.md
 
@@ -24,7 +24,8 @@ jobs:
     - name: Publish VL Nuget
       uses: vvvv/PublishVLNuget@1.0.40
       with:
-        nuspec: deployment\VL.VIOSOWarpBlend.nuspec
+        csproj: src/VIOSOWarpBlend.csproj
+        nuspec: deployment/VL.VIOSOWarpBlend.nuspec
         icon-src: https://raw.githubusercontent.com/vvvv/PublicContent/master/nugeticon.png
         icon-dst: ./deployment/nugeticon.png
         nuget-key: ${{ secrets.NUGET_KEY }}
