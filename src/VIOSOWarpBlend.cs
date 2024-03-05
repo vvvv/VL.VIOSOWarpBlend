@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 // make sure to set x64 as build target
 namespace VIOSOWarpBlend
 {
-    public class Warper
+    public class Warper : IDisposable
     {
 
         public const int MAX_PATH = 260;
@@ -88,25 +88,40 @@ namespace VIOSOWarpBlend
             }
         };
 
+        [StructLayout(LayoutKind.Sequential, Pack = 4)]
         public struct SIZE
         {
             public Int32 cx, cy;
-            SIZE(Int32 vcx, Int32 vcy)
+            public SIZE(Int32 vcx, Int32 vcy)
             {
                 cx = vcx;
                 cy = vcy;
             }
         };
 
+        [StructLayout(LayoutKind.Sequential, Pack = 4)]
         public struct RECT
         {
             public Int32 left, top, right, bottom;
-            RECT(Int32 l, Int32 t, Int32 r, Int32 b)
+            public RECT(Int32 l, Int32 t, Int32 r, Int32 b)
             {
                 left = l;
                 top = t;
                 right = r;
                 bottom = b;
+            }
+        };
+
+        [StructLayout(LayoutKind.Sequential, Pack = 2)]
+        public struct SPLIT
+        {
+            public Int16 rows, columns, rowIndex, columnIndex;
+            public SPLIT(Int16 r, Int16 c, Int16 ri, Int16 ci)
+            {
+                rows = r;
+                columns = c;
+                rowIndex = ri;
+                columnIndex = ci;
             }
         };
 
@@ -235,6 +250,30 @@ namespace VIOSOWarpBlend
             /// set to true to disable black level offset, defaults to false
             [MarshalAs(UnmanagedType.I1)]
             public bool bDoNoBlack;
+
+            /// set to a port a UDP broadcast is sent every 3 seconds, defaults to 0, which means no heartbeat is sent; only avaliable if "port" is set
+            public UInt16 heartBeatPort;
+
+            /// split info, a vector4 x: number of columns y: number of rows, z: column index, w: row index, defaults to [0,0,0,0]
+            /// If you want to split a map into 2 side-by side parts set to [2,1,0,0] for the left side and [2,1,1,0] for the right part
+            /// setting x or y to 0, indicates no split and z and w are not evaluated
+            public SPLIT calibSplit;
+
+            /// override statemask, set to some value other than 0 to bring this into effect; implemented only for DX11 so far
+            public UInt32 overrideStatemask;
+
+            /// set to true to generate one coherent content space on wrap-arounds (360Â° panorama). Defaults to false.
+            /// note: In case there is a seam in the warp map, the optimal content rect will be the whole content, as we need content from both ends.
+            /// We try to fix that, by translating high to negative uv-coordinates, so the optimal content rect becomes small but contains negative coordinates.
+            /// As we need to sample uv-wraped anyway, this is not a problem and a texture to feed has aprox. projector resolution again, even though it has been filled from up to 4 corners
+            [MarshalAs(UnmanagedType.I1)]
+            public bool bFixWraparound;
+
+            /// optional DXGI_FORMAT for D3D12 render pipeline creation, defaults to DXGI_FORMAT_R8G8B8A8_UNORM
+            public UInt32 D3D12RTVF;
+
+            /// the screen distance this is where the render plane is, defaults to 1
+            public float blackScale;
         };
 
         [StructLayout(LayoutKind.Sequential, Pack = 4)]
@@ -381,6 +420,7 @@ namespace VIOSOWarpBlend
             VWF_FILE_NOT_FOUND = -8, /// cannot find mapping file
             NOT_IMPLEMENTED = -9,     /// Not implemented, this function is yet to come
             NETWORK = -10,        /// Network could not be initialized
+            VWB_ERROR_NDI = -11,		/// NDI could not be initialized
             FALSE = -16,		/// No error, but nothing has been done
         };
         public enum FLAGS
@@ -578,8 +618,14 @@ namespace VIOSOWarpBlend
 
         ~Warper()
         {
+            Dispose();
+        }
+
+        public void Dispose()
+        {
             if (IntPtr.Zero != _warper)
                 VWB_Destroy(_warper);
+            _warper = IntPtr.Zero;
         }
 
         public ERROR Init()
@@ -597,14 +643,14 @@ namespace VIOSOWarpBlend
             headers = new WarpBlendHeader[0];
             uint len = 0;
             IntPtr ob = IntPtr.Zero;
-            ERROR err = (ERROR)VWB_vwfInfo(path, ob, ref len );
-            if (ERROR.NONE == err )
+            ERROR err = (ERROR)VWB_vwfInfo(path, ob, ref len);
+            if (ERROR.NONE == err)
             {
                 headers = new WarpBlendHeader[len];
                 int sz = Marshal.SizeOf(headers[0]);
                 ob = Marshal.AllocHGlobal((int)len * sz);
                 err = (ERROR)VWB_vwfInfo(path, ob, ref len);
-                if( ERROR.NONE == err )
+                if (ERROR.NONE == err)
                 {
                     IntPtr p = ob;
                     for (uint i = 0; i != len; i++)
@@ -727,12 +773,12 @@ namespace VIOSOWarpBlend
             return err;
         }
 
-        public ERROR GetWarpBlendMesh( Int32 cols, Int32 rows, out Mesh mesh )
+        public ERROR GetWarpBlendMesh(Int32 cols, Int32 rows, out Mesh mesh)
         {
             mesh = new Mesh();
             MarshalMesh m = new MarshalMesh();
             ERROR res = (ERROR)VWB_getWarpBlendMesh(_warper, cols, rows, ref m);
-            if( ERROR.NONE == res )
+            if (ERROR.NONE == res)
             {
                 mesh.vtx = new Vertex[m.nVtx];
                 mesh.idx = new UInt32[m.nIdx];
@@ -758,7 +804,7 @@ namespace VIOSOWarpBlend
         {
             if (null == key)
             {
-                if (null != cryptoKeyMem)
+                if (IntPtr.Zero != cryptoKeyMem)
                 {
                     Marshal.FreeHGlobal(cryptoKeyMem);
                 }
@@ -769,7 +815,7 @@ namespace VIOSOWarpBlend
                 if (key.Length < 16)
                     return ERROR.PARAMETER;
 
-                if (cryptoKeyMem == null)
+                if (cryptoKeyMem == IntPtr.Zero)
                 {
                     cryptoKeyMem = Marshal.AllocHGlobal(16);
                 }
