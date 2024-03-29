@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Document xmlns:p="property" Id="VsLRwHPWooeMKlfBB5CywM" LanguageVersion="2021.4.10.1043" Version="0.128">
+<Document xmlns:p="property" xmlns:r="reflection" Id="VsLRwHPWooeMKlfBB5CywM" LanguageVersion="2024.6.0-0319-gb1d68057dc" Version="0.128">
   <Patch Id="UF0vrGRxqz7LMCD9AndiJ0">
     <Canvas Id="R8qxmTwFimULjGm8M5aRQz" DefaultCategory="Main" BordersChecked="false" CanvasType="FullCategory">
       <!--
@@ -35,13 +35,18 @@
       </p:NodeReference>
       <Patch Id="JqdeGvLPLyrQQE4uL8FX88">
         <Canvas Id="OxtvZ1FrBqELOz1Te8M3xy" CanvasType="Group">
-          <Node Bounds="150,728,245,19" Id="D2F8SxvDuNzOK50yCKcT78">
-            <p:NodeReference LastCategoryFullName="Stride" LastSymbolSource="VL.Stride.Engine.vl">
+          <Node Bounds="150,728,265,19" Id="D2F8SxvDuNzOK50yCKcT78">
+            <p:NodeReference LastCategoryFullName="Stride" LastDependency="VL.Stride.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="SceneWindow" />
             </p:NodeReference>
-            <Pin Id="UCM1C8AEPj2LvP0FId23RH" Name="Bounds" Kind="InputPin" DefaultValue="1152, 96, 694, 426" />
+            <Pin Id="BBERalhL6FTPlce4hf9chb" Name="Node Context" Kind="InputPin" IsHidden="true" />
+            <Pin Id="UCM1C8AEPj2LvP0FId23RH" Name="Bounds" Kind="InputPin" DefaultValue="1152, 94, 694, 428" />
+            <Pin Id="HGalm8h0SU3MHKs7mll63J" Name="Bound to Document" Kind="InputPin" IsHidden="true" />
+            <Pin Id="JErdugYpuqyLzjAPqdgDYX" Name="Dialog If Document Changed" Kind="InputPin" IsHidden="true" />
+            <Pin Id="Q9tYBieEhlIQQOBpdAWNoJ" Name="Save Bounds" Kind="InputPin" IsHidden="true" />
             <Pin Id="ChSlVgxBUl2Nr8QE8mXGDu" Name="Back Buffer Format" Kind="InputPin" />
+            <Pin Id="Fl3EdEQEKGJM8dJrzLN5u0" Name="Depth Buffer Format" Kind="InputPin" IsHidden="true" />
             <Pin Id="QidqrEV95f1LCku6eOO1Mg" Name="Input" Kind="InputPin" />
             <Pin Id="QNe3IzTJor8LftGRFpybze" Name="Camera" Kind="InputPin" />
             <Pin Id="GTXoedSNO3kQSBESH6s6uB" Name="Enable Default Camera" Kind="InputPin" DefaultValue="False" />
@@ -50,20 +55,33 @@
             <Pin Id="J1HKcmwNpoWPowtMnIm2C9" Name="Clear" Kind="InputPin" DefaultValue="True" />
             <Pin Id="VBiuUjhRoKNPExRhQyGIpO" Name="Post Effects" Kind="InputPin" />
             <Pin Id="O0gdxTdCPgwPsu22JK1RDg" Name="Enable Default Post Effects" Kind="InputPin" DefaultValue="False" />
+            <Pin Id="Iav0WY8aR8LMeh48uR0KJh" Name="Render Group Mask" Kind="InputPin" IsHidden="true" />
+            <Pin Id="DoiaCvYS7X2PQn63dihP3p" Name="Commands" Kind="InputPin" IsHidden="true" />
             <Pin Id="QYYJhp0Hx9PP2DunT9ZAbK" Name="Enable Keyboard Shortcuts" Kind="InputPin" />
+            <Pin Id="AqKHyUXM8TnLHbPVfO82bg" Name="Model Effect Name" Kind="InputPin" IsHidden="true" />
+            <Pin Id="Jp8PEHcuRdSQXZ9X1uD2C7" Name="Additional Scene Renderers" Kind="InputPin" IsHidden="true" />
             <Pin Id="NFr1r8suc0rMB6SHVX1TjE" Name="Enabled" Kind="InputPin" />
+            <Pin Id="MSYft4KdQXCLeiBWi8NT3t" Name="Present Interval" Kind="InputPin" />
+            <Pin Id="F34YKnHnXEeOvsFx6sxD3f" Name="MSAALevel" Kind="InputPin" IsHidden="true" />
+            <Pin Id="HTjIZg9A8RrM2iT4TBM4qM" Name="MSAAResolver" Kind="InputPin" IsHidden="true" />
+            <Pin Id="Ji6KCVwaENJO009Vpa7hzg" Name="Light Shafts" Kind="InputPin" IsHidden="true" />
+            <Pin Id="QNLoM4A5WC8QJu3uUvar9c" Name="VR Settings" Kind="InputPin" IsHidden="true" />
             <Pin Id="KksZGs15rKoNv1Tt5hXXJJ" Name="Viewport Settings" Kind="InputPin" />
+            <Pin Id="DzffvhePcmdO4e1H6BL4Du" Name="Subsurface Scattering Blur Settings" Kind="InputPin" IsHidden="true" />
+            <Pin Id="VOdZqMISG4wMKOUMBoPfPS" Name="Bind Depth As Resource During Transparent Rendering" Kind="InputPin" IsHidden="true" />
             <Pin Id="UjW4wROHDsNOCV6gwLtDlD" Name="Output" Kind="OutputPin" />
             <Pin Id="PW8qn1KzgfeLNghvkPB6a0" Name="Client Bounds" Kind="OutputPin" />
             <Pin Id="HF8anAJopKsOmi6oynTlBZ" Name="Input Source" Kind="OutputPin" />
             <Pin Id="FxiK9NRO3ZcPSjw3QRGKAp" Name="Back Buffer" Kind="OutputPin" />
+            <Pin Id="UAj03UP685kMTYpDTBEFI3" Name="Depth Buffer" Kind="OutputPin" IsHidden="true" />
           </Node>
           <Node Bounds="150,869,205,19" Id="RQRwFreXF6hQQKchPUEWJA">
-            <p:NodeReference LastCategoryFullName="Stride.Windowing" LastSymbolSource="VL.Stride.Engine.vl">
+            <p:NodeReference LastCategoryFullName="Stride.Windowing" LastDependency="VL.Stride.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <FullNameCategoryReference ID="Stride.Windowing" />
               <Choice Kind="ProcessAppFlag" Name="SetWindowState" />
             </p:NodeReference>
+            <Pin Id="Tozgv5fIsqdPKDtHDA4KnP" Name="Node Context" Kind="InputPin" IsHidden="true" />
             <Pin Id="A6lbx6UY87RQBgD9h8PIh6" Name="Input" Kind="InputPin" />
             <Pin Id="DKhofhSbgDiMHTRrbot5PT" Name="Resizeable" Kind="InputPin" />
             <Pin Id="VM4aFfR3UFFPDViejpvXw7" Name="Mouse Visible" Kind="InputPin" />
@@ -78,7 +96,7 @@
             <Pin Id="EzaWgPv7Ls2NKNG8WrUYO3" Name="Output" Kind="OutputPin" />
           </Node>
           <Pad Id="DSnPrwPrR6YOre7SG6iiA7" Comment="" Bounds="292,821,35,35" ShowValueBox="true" isIOBox="true" Value="False">
-            <p:TypeAnnotation>
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="ImmutableTypeFlag" Name="Boolean" />
               <FullNameCategoryReference ID="Primitive" />
             </p:TypeAnnotation>
@@ -87,26 +105,28 @@
             </p:ValueBoxSettings>
           </Pad>
           <Node Bounds="290,774,54,19" Id="VTJWgxiBhsrMtqbZOTgaW5">
-            <p:NodeReference LastCategoryFullName="Control" LastSymbolSource="CoreLibBasics.vl">
+            <p:NodeReference LastCategoryFullName="Control" LastDependency="VL.CoreLib.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <FullNameCategoryReference ID="Control" />
               <Choice Kind="ProcessAppFlag" Name="OnOpen" />
             </p:NodeReference>
+            <Pin Id="K9szSIPGRyjLN3wt9PLuDU" Name="Node Context" Kind="InputPin" IsHidden="true" />
             <Pin Id="RN19Fhr8XjBLaHvC2jyfvt" Name="Simulate" Kind="InputPin" />
             <Pin Id="HcCEGjS3Z3NMmTC69BdESh" Name="Output" Kind="OutputPin" />
           </Node>
           <Node Bounds="322,668,76,19" Id="LRYMCehVMgoPfhPn2SyXJK">
-            <p:NodeReference LastCategoryFullName="Stride.Rendering.Compositing" LastSymbolSource="VL.Stride.Engine.vl">
+            <p:NodeReference LastCategoryFullName="Stride.Rendering.Compositing" LastDependency="VL.Stride.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="ViewportGrid" />
             </p:NodeReference>
+            <Pin Id="HQL0mjbuUS3QVRc5fKYsYT" Name="Node Context" Kind="InputPin" IsHidden="true" />
             <Pin Id="MZ29iS1RIGxPddaTnIOX29" Name="Viewport Grid Resolution" Kind="InputPin" />
             <Pin Id="CtNbatatmEYMR405BZxn0m" Name="Renderers" Kind="InputPin" />
             <Pin Id="OanhSgFpnr0MOE5cNpXVuW" Name="Cameras" Kind="InputPin" />
             <Pin Id="Rs7Uym9qtmhQc5YO2zTxlF" Name="Viewport Settings" Kind="OutputPin" />
           </Node>
           <Node Bounds="310,480,189,80" Id="HfBEIeQscMJPVXhsAn4CMS">
-            <p:NodeReference LastCategoryFullName="Primitive" LastSymbolSource="VL.CoreLib.dll">
+            <p:NodeReference LastCategoryFullName="Primitive" LastDependency="Builtin">
               <Choice Kind="StatefulRegion" Name="Region (Stateful)" Fixed="true" />
               <Choice Kind="ApplicationStatefulRegion" Name="ForEach" />
               <CategoryReference Kind="Category" Name="Primitive" />
@@ -118,31 +138,41 @@
               <Patch Id="AI3StG4fBZtNxAJZu7BzIE" Name="Create" ManuallySortedPins="true" />
               <Patch Id="VTqEOr13yDSPxsgxSE8wXf" Name="Update" ManuallySortedPins="true" />
               <Patch Id="CyF9tCYm0LDOctAG6YR1qk" Name="Dispose" ManuallySortedPins="true" />
-              <Node Bounds="322,512,100,19" Id="N42RZtqdXIjNT4IbM918bH">
-                <p:NodeReference LastCategoryFullName="VIOSO" LastSymbolSource="VL.VIOSOWarpBlend.vl">
+              <Node Bounds="322,512,165,19" Id="N42RZtqdXIjNT4IbM918bH">
+                <p:NodeReference LastCategoryFullName="VIOSO" LastDependency="VL.VIOSOWarpBlend.vl">
                   <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
                   <Choice Kind="ProcessAppFlag" Name="Warper (2d)" />
                 </p:NodeReference>
                 <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
+                <Pin Id="LBINsDtlM7MMQONwv43tqK" Name="Node Context" Kind="InputPin" IsHidden="true" />
                 <Pin Id="PfQq1jLUtr7Nx8DUZI2zVw" Name="Ini Filename" Kind="InputPin" />
                 <Pin Id="MI6KrdCngDLM9HQv6GdO8Q" Name="Vwf Filename" Kind="InputPin" />
                 <Pin Id="Hh2Rzdyv2yROGyRzMI6iWu" Name="Calibration Index" Kind="InputPin" />
                 <Pin Id="QMaUijdaPIDL9zUCxeKwaY" Name="Blending" Kind="InputPin" />
                 <Pin Id="Sd8j6dOYid0OsFnh7M2pId" Name="Blacklevel Compensation" Kind="InputPin" />
                 <Pin Id="Nobgh5tj2XGMIxM1YtFV9K" Name="Bicubic" Kind="InputPin" />
+                <Pin Id="JVe1vxf4Ak9Pm1fUYln20j" Name="Auto View" Kind="InputPin" IsHidden="true" />
+                <Pin Id="UXywh6lhWGyNA8AVItOg8g" Name="Base" Kind="InputPin" IsHidden="true" />
                 <Pin Id="C2iiGVLwGhkP7Q5O3jfI0c" Name="Reload" Kind="InputPin" />
+                <Pin Id="EvEZrm8LXxmPCOnEzZuUM0" Name="Turn with View" Kind="InputPin" IsHidden="true" />
+                <Pin Id="HEvNFDwNeDZNocTyrMxglk" Name="Channel Name" Kind="InputPin" />
+                <Pin Id="LzNgfwC2vqtMBOPI6us8FW" Name="World Transformation" Kind="InputPin" IsHidden="true" />
+                <Pin Id="DmmpgdAS3liQH30XA0cdE4" Name="Eye" Kind="InputPin" IsHidden="true" />
                 <Pin Id="JcBDyd5bYLqMyZlcJ2Li9f" Name="Texture" Kind="InputPin" />
+                <Pin Id="Slfq93awRjHQVBlKi1BzGH" Name="Output" Kind="OutputPin" IsHidden="true" />
                 <Pin Id="I2yTE9ZkFxAMSj76JJ7j4d" Name="Mesh" Kind="OutputPin" />
+                <Pin Id="I0IgbprfgzPNmAWWJ8X6Br" Name="Resolution" Kind="OutputPin" IsHidden="true" />
+                <Pin Id="H2KsfoIx041OyRgwvQYRjE" Name="Camera" Kind="OutputPin" IsHidden="true" />
               </Node>
             </Patch>
           </Node>
-          <Pad Id="HD9kcEasB34PqcXq3n75Jc" Comment="Filename" Bounds="344,282,259,15" ShowValueBox="true" isIOBox="true" Value="..\..\..\..\..\..\..\..\Public\Documents\AutoCal\Calibration\settings.vwf">
-            <p:TypeAnnotation LastCategoryFullName="IO" LastSymbolSource="CoreLibBasics.vl">
+          <Pad Id="HD9kcEasB34PqcXq3n75Jc" Comment="Filename" Bounds="344,282,259,15" ShowValueBox="true" isIOBox="true" Value="">
+            <p:TypeAnnotation LastCategoryFullName="IO" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Path" />
             </p:TypeAnnotation>
           </Pad>
           <Node Bounds="322,633,34,19" Id="RRonfsYhlzmPVaqwfyHuY5">
-            <p:NodeReference LastCategoryFullName="Primitive.Int2" LastSymbolSource="CoreLibBasics.vl">
+            <p:NodeReference LastCategoryFullName="Primitive.Int2" LastDependency="VL.CoreLib.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="Int2 (Create)" />
             </p:NodeReference>
@@ -151,7 +181,7 @@
             <Pin Id="Brl6OQ7w4HDO3hYb1jmNIZ" Name="Output" Kind="StateOutputPin" />
           </Node>
           <Node Bounds="322,590,44,26" Id="Kcm6wLWZCMdOsXulQWb6MW">
-            <p:NodeReference LastCategoryFullName="Collections.Spread" LastSymbolSource="VL.Collections.vl">
+            <p:NodeReference LastCategoryFullName="Collections.Spread" LastDependency="VL.CoreLib.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="OperationCallFlag" Name="Count" />
               <CategoryReference Kind="RecordType" Name="Spread" NeedsToBeDirectParent="true" />
@@ -160,16 +190,17 @@
             <Pin Id="Qby8U9cd0d5MdJadlKUxLh" Name="Count" Kind="OutputPin" />
           </Node>
           <Pad Id="OyTPWAyQkImO3mrWSbQUAv" Comment="Position" Bounds="177,809,52,28" ShowValueBox="true" isIOBox="true" Value="1920, 0">
-            <p:TypeAnnotation LastCategoryFullName="2D" LastSymbolSource="CoreLibBasics.vl">
+            <p:TypeAnnotation LastCategoryFullName="2D" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Vector2" />
             </p:TypeAnnotation>
           </Pad>
           <Node Bounds="362,311,105,19" Id="FnYfDF1dNhSQV9YAY7IcBp">
-            <p:NodeReference>
+            <p:NodeReference LastCategoryFullName="VIOSO" LastDependency="VL.VIOSOWarpBlend.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessAppFlag" Name="VwfInfo" />
             </p:NodeReference>
             <p:HelpFocus p:Assembly="VL.Lang" p:Type="VL.Model.HelpPriority">High</p:HelpFocus>
+            <Pin Id="MiRXRcxzXqPQI3KStc29vF" Name="Node Context" Kind="InputPin" IsHidden="true" />
             <Pin Id="M4ap4bXOh0GOTRPtm7RaxS" Name="Filename" Kind="InputPin" />
             <Pin Id="BpKADKEts66L7QNWdSxWrS" Name="Calibration Index" Kind="OutputPin" />
             <Pin Id="PVrXJbGoiA6PdfktLCosGy" Name="Resolution" Kind="OutputPin" />
@@ -178,13 +209,13 @@
             <Pin Id="FBZ3PDvu3IaPjudgZ4oGy5" Name="Is 3D Mapping" Kind="OutputPin" />
             <Pin Id="A9C0jHZmpN3Qb3JDdG9m7N" Name="Changed" Kind="OutputPin" />
           </Node>
-          <Pad Id="HofpQLje0ZHQRv3IIYTbbc" Comment="Ini Filename" Bounds="324,200,192,15" ShowValueBox="true" isIOBox="true" Value="..\..\..\Users\Public\Documents\AutoCal\Calibration\VIOSOWarpBlend.ini">
-            <p:TypeAnnotation LastCategoryFullName="IO" LastSymbolSource="CoreLibBasics.vl">
+          <Pad Id="HofpQLje0ZHQRv3IIYTbbc" Comment="Ini Filename" Bounds="324,200,192,15" ShowValueBox="true" isIOBox="true" Value="">
+            <p:TypeAnnotation LastCategoryFullName="IO" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="Path" />
             </p:TypeAnnotation>
           </Pad>
           <Pad Id="IHnwlVi7swOMbaf5xI6USX" Bounds="602,196,177,19" ShowValueBox="true" isIOBox="true" Value="https://helpdesk.vioso.com/documentation/api/viosowarpblend-ini-reference/">
-            <p:TypeAnnotation>
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
             <p:ValueBoxSettings>
@@ -193,7 +224,7 @@
             </p:ValueBoxSettings>
           </Pad>
           <Pad Id="A3WhQ1KLy7TPQ4ZSIs1cmy" Bounds="602,176,111,19" ShowValueBox="true" isIOBox="true" Value="Ini file reference:">
-            <p:TypeAnnotation>
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
             <p:ValueBoxSettings>
@@ -207,7 +238,7 @@
             </p:Value>
           </Pad>
           <Pad Id="FgkhDQ8xQvnP8W82YimfLC" Bounds="324,130,216,63" ShowValueBox="true" isIOBox="true" Value="Specifying an ini file is optional. Many of its parameters can also be set via inputs on the Warper node">
-            <p:TypeAnnotation>
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
             <p:ValueBoxSettings>
@@ -216,7 +247,7 @@
             </p:ValueBoxSettings>
           </Pad>
           <Pad Id="MYMOsVU7XRBMv5GaXv8ds4" Bounds="348,233,198,42" ShowValueBox="true" isIOBox="true" Value="If no vwf file is specified, the one set in the ini file is used">
-            <p:TypeAnnotation>
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
             <p:ValueBoxSettings>
@@ -226,7 +257,7 @@
           </Pad>
           <Pad Id="RjKsYWKVrSDNeQrrQVRJOU" Comment="Is 3D Mapping" Bounds="444,348,35,25" ShowValueBox="true" isIOBox="true" />
           <Pad Id="SoLeR4w5ITdOIp42ka9wlt" Bounds="51,204,172,19" ShowValueBox="true" isIOBox="true" Value="Step by step 2d calibration:">
-            <p:TypeAnnotation>
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
             <p:ValueBoxSettings>
@@ -235,7 +266,7 @@
             </p:ValueBoxSettings>
           </Pad>
           <Pad Id="I0y6zDHfh5fP5cXvI5rKF1" Bounds="51,225,140,19" ShowValueBox="true" isIOBox="true" Value="https://helpdesk.vioso.com/documentation/core-video-tutorial/">
-            <p:TypeAnnotation>
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
             <p:ValueBoxSettings>
@@ -243,8 +274,8 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="CUZdppGMlpjMMWe8keK2X6" Bounds="51,125,169,35" ShowValueBox="true" isIOBox="true" Value="Download VIOSO Integrate trial version:">
-            <p:TypeAnnotation>
+          <Pad Id="CUZdppGMlpjMMWe8keK2X6" Bounds="51,140,188,19" ShowValueBox="true" isIOBox="true" Value="Download VIOSO trial version:">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
             <p:ValueBoxSettings>
@@ -252,8 +283,8 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="EM69Qz2NF6SMX9m7CJ9PRi" Bounds="51,164,140,19" ShowValueBox="true" isIOBox="true" Value="https://vioso.com/downloads/">
-            <p:TypeAnnotation>
+          <Pad Id="EM69Qz2NF6SMX9m7CJ9PRi" Bounds="51,159,161,19" ShowValueBox="true" isIOBox="true" Value="https://vioso.com/demo/">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
             <p:ValueBoxSettings>
@@ -261,8 +292,8 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Link</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Node Bounds="634,485,85,19" Id="DQNzr65lo2xLP9UMDjOelx">
-            <p:NodeReference LastCategoryFullName="Stride.Textures.Source" LastSymbolSource="VL.Stride.Rendering.EffectShaderNodes">
+          <Node Bounds="634,470,85,19" Id="DQNzr65lo2xLP9UMDjOelx">
+            <p:NodeReference LastCategoryFullName="Stride.Textures.Source" LastDependency="VL.Stride.TextureFX.vl">
               <Choice Kind="NodeFlag" Name="Node" Fixed="true" />
               <Choice Kind="ProcessNode" Name="Checkerboard" />
             </p:NodeReference>
@@ -270,18 +301,16 @@
             <Pin Id="PzLEk3OPhVpNwtjinUYzwC" Name="Black" Kind="InputPin" />
             <Pin Id="NlKfBzuDtJ3PzA67DosTZz" Name="White" Kind="InputPin" />
             <Pin Id="FHHi7rS2kYcNToMI8R8raZ" Name="Output Size" Kind="InputPin" />
+            <Pin Id="JhrMrVvLFGDLJBqX1Hlkma" Name="Output Format" Kind="InputPin" IsHidden="true" />
+            <Pin Id="FGtLnoX1WL4QDVcCfqL2m7" Name="Render Format" Kind="InputPin" IsHidden="true" />
+            <Pin Id="NH9tfIw425kN2mDAHWDQu6" Name="Output Texture" Kind="InputPin" IsHidden="true" />
             <Pin Id="E81xnIqqfVjQCYmvP3VGE3" Name="Enabled" Kind="InputPin" />
             <Pin Id="VrFnRMpPaSyPUFTs9vhJEk" Name="Output" Kind="OutputPin" />
           </Node>
-          <Pad Id="HHCq3hHMEfCQVvfQVrUVWW" Comment="Cell Count" Bounds="636,436,35,28" ShowValueBox="true" isIOBox="true" Value="42, 42">
-            <p:TypeAnnotation LastCategoryFullName="Primitive" LastSymbolSource="CoreLibBasics.vl">
-              <Choice Kind="TypeFlag" Name="Int2" />
-            </p:TypeAnnotation>
-          </Pad>
-          <Pad Id="SmGk4XFXSeCP9Z2YDrG3C3" Comment="" Bounds="636,540,171,158" ShowValueBox="true" isIOBox="true" />
+          <Pad Id="SmGk4XFXSeCP9Z2YDrG3C3" Comment="" Bounds="636,525,171,158" ShowValueBox="true" isIOBox="true" />
           <ControlPoint Id="SJmKX9ub1qkMHREQ6RqhWR" Bounds="378,589" />
           <Pad Id="Up8E8jUUermQCFBGBZ9mcm" Bounds="356,833,208,19" ShowValueBox="true" isIOBox="true" Value="&lt; Use to set window to fullscreen">
-            <p:TypeAnnotation>
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
             <p:ValueBoxSettings>
@@ -289,14 +318,19 @@
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
           </Pad>
-          <Pad Id="NGS5S3z569SObJmFm0eDte" Bounds="720,491,213,24" ShowValueBox="true" isIOBox="true" Value="&lt; The texture you want to project">
-            <p:TypeAnnotation>
+          <Pad Id="NGS5S3z569SObJmFm0eDte" Bounds="720,476,213,24" ShowValueBox="true" isIOBox="true" Value="&lt; The texture you want to project">
+            <p:TypeAnnotation LastCategoryFullName="Primitive" LastDependency="VL.CoreLib.vl">
               <Choice Kind="TypeFlag" Name="String" />
             </p:TypeAnnotation>
             <p:ValueBoxSettings>
               <p:fontsize p:Type="Int32">9</p:fontsize>
               <p:stringtype p:Assembly="VL.Core" p:Type="VL.Core.StringType">Comment</p:stringtype>
             </p:ValueBoxSettings>
+          </Pad>
+          <Pad Id="TIFweLxDH6AP0OWhWmedqN" Comment="Cell Count" Bounds="636,427,35,28" ShowValueBox="true" isIOBox="true" Value="42, 42">
+            <p:TypeAnnotation LastCategoryFullName="2D" LastDependency="VL.CoreLib.vl">
+              <Choice Kind="TypeFlag" Name="Vector2" />
+            </p:TypeAnnotation>
           </Pad>
         </Canvas>
         <Patch Id="LAX25CSsW2ZOMutweiHzHe" Name="Create" />
@@ -318,7 +352,6 @@
         <Link Id="Kn2IkfHpOwhPO4ojQii7XK" Ids="HcCEGjS3Z3NMmTC69BdESh,DSnPrwPrR6YOre7SG6iiA7" />
         <Link Id="RQoSCur0KyzNMUVWfZUaBK" Ids="NyFcZ1LlHpVMXR09PlCf4h,KTAUlgiL33UOeEbkDGl6Q1" />
         <Link Id="R8cP1Kp7bTQOKM4V2oD7Fh" Ids="FBZ3PDvu3IaPjudgZ4oGy5,RjKsYWKVrSDNeQrrQVRJOU" />
-        <Link Id="KJhtrH1mBXvOVyJDj0iAIP" Ids="HHCq3hHMEfCQVvfQVrUVWW,Ei5wh4fglCELHj158FtpH5" />
         <Link Id="SSqBxoiaxezOKkpib5W6vu" Ids="VrFnRMpPaSyPUFTs9vhJEk,SmGk4XFXSeCP9Z2YDrG3C3" />
         <Link Id="SKBtrNYpLyiQRULydm9mMP" Ids="HofpQLje0ZHQRv3IIYTbbc,PfQq1jLUtr7Nx8DUZI2zVw" />
         <Link Id="V5FrnXs0MXIMQRA7L1U8QN" Ids="HD9kcEasB34PqcXq3n75Jc,MI6KrdCngDLM9HQv6GdO8Q" />
@@ -326,10 +359,12 @@
         <Link Id="UVik7szGAEQM35VYf4cmEL" Ids="A9C0jHZmpN3Qb3JDdG9m7N,C2iiGVLwGhkP7Q5O3jfI0c" />
         <Link Id="OTGveVyAKCnPZiddsD8UUB" Ids="VrFnRMpPaSyPUFTs9vhJEk,JcBDyd5bYLqMyZlcJ2Li9f" />
         <Link Id="Qpcd3TMwqCDNuWf5cBIJC8" Ids="I2yTE9ZkFxAMSj76JJ7j4d,PUgyQ1MU0xcNwz5yngWfH3" />
+        <Link Id="KUuBUnk8zezOjG2McvQD7K" Ids="TIFweLxDH6AP0OWhWmedqN,Ei5wh4fglCELHj158FtpH5" />
       </Patch>
     </Node>
   </Patch>
-  <NugetDependency Id="CwkGn2gIWRTPAB3DmqFL9p" Location="VL.CoreLib" Version="2021.4.10" />
-  <NugetDependency Id="DFhKcsElVaULBTcrxV6nnz" Location="VL.Stride" Version="2021.4.10" />
+  <NugetDependency Id="CwkGn2gIWRTPAB3DmqFL9p" Location="VL.CoreLib" Version="2024.6.0-0319-gb1d68057dc" />
+  <NugetDependency Id="DFhKcsElVaULBTcrxV6nnz" Location="VL.Stride" Version="2024.6.0-0319-gb1d68057dc" />
   <NugetDependency Id="I3Ns9chxffGObKZLaxdnyS" Location="VL.VIOSOWarpBlend" Version="0.0.1-alpha" />
+  <NugetDependency Id="PzNPFaoHv0wO457lujssbP" Location="VL.Stride.TextureFX" Version="2024.6.0-0319-gb1d68057dc" />
 </Document>

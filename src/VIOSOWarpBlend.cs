@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -116,7 +116,7 @@ namespace VIOSOWarpBlend
         public struct SPLIT
         {
             public Int16 rows, columns, rowIndex, columnIndex;
-            public SPLIT(Int16 r, Int16 c, Int16 ri, Int16 ci)
+            public SPLIT( Int16 r, Int16 c, Int16 ri, Int16 ci )
             {
                 rows = r;
                 columns = c;
@@ -262,7 +262,7 @@ namespace VIOSOWarpBlend
             /// override statemask, set to some value other than 0 to bring this into effect; implemented only for DX11 so far
             public UInt32 overrideStatemask;
 
-            /// set to true to generate one coherent content space on wrap-arounds (360Â° panorama). Defaults to false.
+            /// set to true to generate one coherent content space on wrap-arounds (360° panorama). Defaults to false.
             /// note: In case there is a seam in the warp map, the optimal content rect will be the whole content, as we need content from both ends.
             /// We try to fix that, by translating high to negative uv-coordinates, so the optimal content rect becomes small but contains negative coordinates.
             /// As we need to sample uv-wraped anyway, this is not a problem and a texture to feed has aprox. projector resolution again, even though it has been filled from up to 4 corners
@@ -503,7 +503,7 @@ namespace VIOSOWarpBlend
 
         //VIOSOWARPBLEND_API(VWB_ERROR, VWB_getPosDirClip, (VWB_Warper* pWarper, VWB_float* pEye, VWB_float* pRot, VWB_float* pPos, VWB_float* pDir, VWB_float* pClip, bool symmetric, VWB_float aspect) );
         [DllImport("VIOSOWarpBlend64.dll", EntryPoint = "VWB_getPosDirClip", CallingConvention = CallingConvention.Cdecl)]
-        public static extern int VWB_getPosDirClip(IntPtr warper, ref VEC3 eye, ref VEC3 dir, ref VEC3 rot, ref VEC3 pos, ref CLIP clip);
+        public static extern int VWB_getPosDirClip(IntPtr warper, ref VEC3 eye, ref VEC3 dir, ref VEC3 rot, ref VEC3 pos, ref CLIP clip, bool symmetric, float aspect );
 
         /** query the corners of the screen plane
         * @param [IN]			pWarper	a valid warper 
@@ -643,14 +643,14 @@ namespace VIOSOWarpBlend
             headers = new WarpBlendHeader[0];
             uint len = 0;
             IntPtr ob = IntPtr.Zero;
-            ERROR err = (ERROR)VWB_vwfInfo(path, ob, ref len);
-            if (ERROR.NONE == err)
+            ERROR err = (ERROR)VWB_vwfInfo(path, ob, ref len );
+            if (ERROR.NONE == err )
             {
                 headers = new WarpBlendHeader[len];
                 int sz = Marshal.SizeOf(headers[0]);
                 ob = Marshal.AllocHGlobal((int)len * sz);
                 err = (ERROR)VWB_vwfInfo(path, ob, ref len);
-                if (ERROR.NONE == err)
+                if( ERROR.NONE == err )
                 {
                     IntPtr p = ob;
                     for (uint i = 0; i != len; i++)
@@ -685,9 +685,9 @@ namespace VIOSOWarpBlend
         {
             return (ERROR)VWB_getViewClip(_warper, ref eye, ref dir, ref view, ref clip);
         }
-        public ERROR GetPosDirClip(ref VEC3 eye, ref VEC3 dir, ref VEC3 rot, ref VEC3 pos, ref CLIP clip)
+        public ERROR GetPosDirClip(ref VEC3 eye, ref VEC3 rot, ref VEC3 pos, ref VEC3 dir, ref CLIP clip, bool symmetric = false, float aspect = 0 )
         {
-            return (ERROR)VWB_getPosDirClip(_warper, ref eye, ref dir, ref rot, ref pos, ref clip);
+            return (ERROR)VWB_getPosDirClip(_warper, ref eye, ref rot, ref pos, ref dir, ref clip, symmetric, aspect );
         }
 
         public ERROR GetShaderVPMatrix(ref MAT4X4 mat)
@@ -710,7 +710,12 @@ namespace VIOSOWarpBlend
             {
                 WarpFileHeader5 header = (WarpFileHeader5)Marshal.PtrToStructure(wb, typeof(WarpFileHeader5));
                 IntPtr ipo = new IntPtr(wb.ToInt64() + header.szHdr);
+                // the string size is 260, so we copy it all, in case there is no terminating 0
                 path = Marshal.PtrToStringAnsi(ipo, 260);
+                // set string length
+                int i = path.IndexOf('\0');
+                if( -1 != i )
+                    path = path.Substring( 0, i );
             }
             else
                 path = "";
@@ -773,12 +778,12 @@ namespace VIOSOWarpBlend
             return err;
         }
 
-        public ERROR GetWarpBlendMesh(Int32 cols, Int32 rows, out Mesh mesh)
+        public ERROR GetWarpBlendMesh( Int32 cols, Int32 rows, out Mesh mesh )
         {
             mesh = new Mesh();
             MarshalMesh m = new MarshalMesh();
             ERROR res = (ERROR)VWB_getWarpBlendMesh(_warper, cols, rows, ref m);
-            if (ERROR.NONE == res)
+            if( ERROR.NONE == res )
             {
                 mesh.vtx = new Vertex[m.nVtx];
                 mesh.idx = new UInt32[m.nIdx];
